@@ -7,6 +7,7 @@ const passport = require('passport');
 const promisify = require('es6-promisify');
 const flash = require('connect-flash');
 const expressValidator = require('express-validator');
+const MySQLStore = require('express-mysql-session')(session);
 const routes = require('./routes/index');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
@@ -34,13 +35,15 @@ app.use(expressValidator());
 app.use(cookieParser());
 
 // set up for user sessions to keep them logged in and send flash messages
+/*
 app.use(session({
     secret: process.env.SECRET,
     key: process.env.KEY,
     resave: false,
     saveUninitialized: false,
-    //store: new 
+    store: new MySQLStore({ })
 }));
+*/
 
 // user authentication is done via Passport JS
 app.use(passport.initialize());
