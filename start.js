@@ -1,13 +1,15 @@
 
 // import environmental variables from .env file
 require('dotenv').config({ path: '.env' });
-const PORT = process.env.PORT || 8080;
+const app = require('./app');
+app.set('PORT' = process.env.PORT || 8080);
+
 // import all models for sql database 
 const db = require('./models');
 
 // syncs the database and starts the server
 db.sequelize.sync().then(function () {
-    http.listen(PORT, function () {
-        console.log("App listening on PORT " + PORT);
+    const server = app.listen(app.get('port'), () => {
+        console.log(`Express running → PORT " + PORT ${server.address().port}`);
     });
 });
