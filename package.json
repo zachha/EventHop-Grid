@@ -1,0 +1,19 @@
+{
+  "name": "eventhop-grid",
+  "version": "1.0.0",
+  "description": "EventHop is a web application that lets you join or create your own 'Event' around Durham, NC!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zachha/EventHop-Grid.git"
+  },
+  "author": "Zach Harmon, Harris Joseph",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zachha/EventHop-Grid/issues"
+  },
+  "homepage": "https://github.com/zachha/EventHop-Grid#readme"
+}
