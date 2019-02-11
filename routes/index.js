@@ -3,6 +3,7 @@ const router = express.Router();
 const eventController = require('../controllers/eventController');
 const { catchErrors } = require('../handlers/errorHandlers');
 
-router.get('/', catchErrors(eventController.getEvents));
+// Home page for EventHop
+router.get('/', catchErrors(eventController.homePage));
 
 module.exports = router;
