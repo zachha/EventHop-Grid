@@ -6,7 +6,7 @@ This is a complete overhaul of my EventHop web application that was originally m
 
 # EventHop
 
-![EventHop Logo](public/img/photos/favicon-310.png "EventHop Logo")
+![EventHop Logo](public/img/icons/favicon-310.png "EventHop Logo")
 
 ## Application Description
 
