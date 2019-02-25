@@ -69,7 +69,7 @@ We've provided a guest login for curious users to check out the application with
 	• NPM
 	• Express.js
 	• Passport.js
-	• passport.jwt
+	• SASS
 	• MySQL
 	• Sequelize
 	• Handlebars
