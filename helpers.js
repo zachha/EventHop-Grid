@@ -1,3 +1,5 @@
+
+// FS is a built in module that lets us read files from the system we're running on
 const fs = require('fs');
 
 // moment.js library for displaying times and dates and integrating them into posts
