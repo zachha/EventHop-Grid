@@ -1,0 +1,42 @@
+html {
+    font-size: 16px;
+}
+
+body {
+    color: $primaryText;
+}
+
+h1, h2, h3, h4, h5, h6, {
+    font-weight: 400;
+    font-family: 'Montserrat', $fontFallbacks;
+}
+
+a {
+    text-decoration: none;
+    color: $primaryText;
+    &:hover {
+        color: #132E5E;
+    }
+}
+
+p {
+    line-height: 1.75;
+}
+
+section h2.section-heading {
+    font-size: 40px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    letter-spacing: 4px;
+}
+
+section h3.section-subheading {
+    font-style: italic;
+    text-transform: none;
+    color: #fff;
+    font-family: 'Droid Serif', $fontFallbacks;
+}
+
+span .red {
+    color: $red;
+}
