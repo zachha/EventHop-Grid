@@ -6,7 +6,7 @@ This is a complete overhaul of my EventHop web application that was originally m
 
 # EventHop
 
-![EventHop Logo](public/img/favicon-310.png "EventHop Logo")
+![EventHop Logo](public/img/icon/favicon-310.png "EventHop Logo")
 
 ## Application Description
 
@@ -69,7 +69,7 @@ We've provided a guest login for curious users to check out the application with
 	• NPM
 	• Express.js
 	• Passport.js
-	• passport.jwt
+	• SASS
 	• MySQL
 	• Sequelize
 	• Handlebars
