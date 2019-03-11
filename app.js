@@ -35,7 +35,7 @@ app.use(expressValidator());
 app.use(cookieParser());
 
 // set up for user sessions to keep them logged in and send flash messages
-/*
+
 app.use(session({
     secret: process.env.SECRET,
     key: process.env.KEY,
@@ -43,7 +43,7 @@ app.use(session({
     saveUninitialized: false,
     store: new MySQLStore({ })
 }));
-*/
+
 
 // user authentication is done via Passport JS
 app.use(passport.initialize());
