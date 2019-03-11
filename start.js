@@ -5,7 +5,7 @@ const app = require('./app');
 
 
 // import all models for sql database 
-const db = require('./models');
+//const db = require('./models');
 //const User = require('./models/User');
 //const Group = require('./models/Groups');
 
