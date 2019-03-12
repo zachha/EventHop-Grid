@@ -7,10 +7,11 @@ const passport = require('passport');
 const promisify = require('es6-promisify');
 const flash = require('connect-flash');
 const expressValidator = require('express-validator');
-const MySQLStore = require('express-mysql-session')(session);
+const MySQLStore = require('connect-session-sequelize')(session);
 const routes = require('./routes/index');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
+const db = require('./models');
 require('./handlers/passport');
 
 // create Express app
@@ -35,14 +36,19 @@ app.use(expressValidator());
 app.use(cookieParser());
 
 // set up for user sessions to keep them logged in and send flash messages
+const sessionStore = new MySQLStore({
+    db: db
+});
 
 app.use(session({
     secret: process.env.SECRET,
     key: process.env.KEY,
     resave: false,
     saveUninitialized: false,
-    store: new MySQLStore({ })
+    store: sessionStore
 }));
+
+sessionStore.sync();
 
 
 // user authentication is done via Passport JS
