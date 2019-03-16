@@ -63,8 +63,6 @@ We've provided a guest login for curious users to check out the application with
 
 ## Libraries and Technology
 	• Heroku
-	• Bootstrap 4
-	• GSAP
 	• Node.js
 	• NPM
 	• Express.js
@@ -72,7 +70,7 @@ We've provided a guest login for curious users to check out the application with
 	• SASS
 	• MySQL
 	• Sequelize
-	• Handlebars
+	• Pug
 	• SendGrid
 
 
