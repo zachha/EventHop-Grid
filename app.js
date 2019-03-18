@@ -81,11 +81,13 @@ app.use((req, res, next) => {
     next();
 });
 
+/*
 // promisify some callback based APIs
 app.use((req, res, next) => {
     //req.login = promisify(req.login, req);
     next();
 });
+*/
 
 // handle our routes
 app.use('/', routes);
