@@ -7,7 +7,7 @@ const passport = require('passport');
 const promisify = require('es6-promisify');
 const flash = require('connect-flash');
 const expressValidator = require('express-validator');
-const MySQLStore = require('connect-session-sequelize')(session);
+const MySQLStore = require('connect-session-sequelize')(session.Store);
 const routes = require('./routes/index');
 const helpers = require('./helpers');
 const errorHandlers = require('./handlers/errorHandlers');
@@ -35,9 +35,10 @@ app.use(expressValidator());
 // populates req.cookies with any cookies that came along with the request
 app.use(cookieParser());
 
+
 // set up for user sessions to keep them logged in and send flash messages
 const sessionStore = new MySQLStore({
-    db: db
+    db: db.sequelize
 });
 
 app.use(session({
@@ -50,14 +51,28 @@ app.use(session({
 
 sessionStore.sync();
 
+/* 
+CHECKS TO SEE IF DB CONNECTION IS WORKING
+
+db.sequelize
+    .authenticate()
+    .then(() => {
+        console.log('Connection has been established successfully.');
+    })
+    .catch(err => {
+        console.error('Unable to connect to the database:', err);
+    });
+
+*/
 
 // user authentication is done via Passport JS
-app.use(passport.initialize());
-app.use(passport.session());
+//app.use(passport.initialize());
+//app.use(passport.session());
 
 // Flash middleware lets us use req.flash for errors or success boxes that follow the user to the requested page
 app.use(flash());
 
+// passes variables to templates and requests
 app.use((req, res, next) => {
     res.locals.h = helpers;
     res.locals.flashes = req.flash();
@@ -68,7 +83,7 @@ app.use((req, res, next) => {
 
 // promisify some callback based APIs
 app.use((req, res, next) => {
-    req.login = promisify(req.login, req);
+    //req.login = promisify(req.login, req);
     next();
 });
 
