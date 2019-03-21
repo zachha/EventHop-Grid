@@ -12,7 +12,7 @@
     "type": "git",
     "url": "git+https://github.com/zachha/EventHop-Grid.git"
   },
-  "author": "Zach Harmon, Harris Joseph",
+  "author": "Zach Harmon",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zachha/EventHop-Grid/issues"
