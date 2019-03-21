@@ -1,5 +1,15 @@
 .nav {
     background-color: #212529;
+    &__brand {
+        color: #fff;
+        font-family: 'Kaushan Script', $fontFallbacks;
+        letter-spacing: 0.4rem;
+        &:hover 
+        &:focus 
+        &:active {
+            color: $red;
+        }
+    }
     &__section {
 
     }
@@ -7,6 +17,6 @@
 
     }
     &__link {
-        
+
     }
 }
