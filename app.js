@@ -89,8 +89,10 @@ app.use((req, res, next) => {
 });
 */
 
+
 // handle our routes
 app.use('/', routes);
+
 
 // if routes didnt work, they get 404d and forwarded to error handler
 app.use(errorHandlers.notFound);
