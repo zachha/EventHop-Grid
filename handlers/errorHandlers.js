@@ -45,6 +45,8 @@ exports.developmentErrors = (err, req, res, next) => {
         'text/html': () => {
             res.render('error', errorDetails);
         }, // Form Submit, Reload the page
+        'application/json': () => res.json(errorDetails)
+        // Ajax call, send JSON back
     });
 };
 
