@@ -1,5 +1,7 @@
+
 html {
     font-size: 62.5%;
+    list-style: none;
 }
 
 body {
@@ -8,15 +10,12 @@ body {
 
 h1, h2, h3, h4, h5, h6, {
     font-weight: 400;
-    font-family: 'Montserrat', $fontFallbacks;
+    font-family: $headerFonts, $fontFallbacks;
 }
 
 a {
     text-decoration: none;
-    color: $primaryText;
-    &:hover {
-        color: #132E5E;
-    }
+    color: white;
 }
 
 p {
@@ -34,10 +33,16 @@ section h2.section-heading {
 section h3.section-subheading {
     font-style: italic;
     text-transform: none;
-    color: #fff;
-    font-family: 'Droid Serif', $fontFallbacks;
 }
 
-span .red {
+nav {
+    background-color: #212529;
+    color: white;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+}
+
+span.red {
     color: $red;
 }
+

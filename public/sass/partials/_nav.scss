@@ -1,22 +1,47 @@
 .nav {
-    background-color: #212529;
+    padding: 15px 0px;
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr;
+    grid-template-areas: "logo pages user";
+    justify-items: center;
+    align-items: center;
     &__brand {
-        color: #fff;
-        font-family: 'Kaushan Script', $fontFallbacks;
-        letter-spacing: 0.4rem;
+    
+        
+    }
+    &__section {
+        &--logo {
+            
+        }
+        &--pages {
+            justify-self: end;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+        &--user {
+            justify-self: end;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+    &__item {
+       padding: 10px 20px; 
+    }
+    &__link {
+
+    }
+    & a.nav__link {
+        font-family: $headerFonts, $fontFallbacks;
         &:hover 
         &:focus 
         &:active {
             color: $red;
         }
-    }
-    &__section {
-
-    }
-    &__item {
-
-    }
-    &__link {
-
+        &--logo {
+            font-size: 2.2rem;
+            font-family: $logoFont, $fontFallbacks;
+        }
     }
 }
