@@ -28,6 +28,7 @@ exports.flashValidationErrors = (err, req, res, next) => {
     res.redirect('back');
 };
 
+
 /* Development Error Handler
 
     In dev, shows the stack trace so we can pinpoint what happened more easily.

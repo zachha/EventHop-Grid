@@ -100,6 +100,7 @@ app.use(errorHandlers.notFound);
 // this error handler will check for validation errors
 app.use(errorHandlers.flashValidationErrors);
 
+
 // if still not handled, the error will print the stack trace
 if (app.get('env') === 'development') {
     app.use(errorHandlers.developmentErrors);
