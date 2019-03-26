@@ -1,21 +1,30 @@
 extends layout
 
 block content
-    section.hero
-        p HERO HERO HERO
+    section#hero__content.hero
+        .inner
+            .hero__section
+                .hero__title
+                    h1 Welcome To <span class="red">Event</span><span class="hop">Hop</span>
+                .hero__subtitle
+                    h2 Let's <span class="red">Do </span>Something
+                .hero__click
+                    a.hero__click--anchor(href="#popGroups") Durham Style . . .
     
-    section.about
-        p ABOUT ABOUT ABOUT
+    section#about__content.about
+        .inner
+            .about__section
+                h2 About
 
-    section.featuredEvents
+    section#featEvents__content.featuredEvents
         p EVENTS EVENTS EVENTS
         block featEvents
 
-    section.mainCreate
+    section#mainCreate__content.mainCreate
         p CREATE CREATE CREATE
         block mainCreate
 
-    section.popularGroups
+    section#popGroups__content.popularGroups
         p GROUPS GROUPS GROUPS
         block popGroups
     
