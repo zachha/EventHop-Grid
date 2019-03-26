@@ -5,14 +5,7 @@
     grid-template-areas: "logo pages user";
     justify-items: center;
     align-items: center;
-    &__brand {
-    
-        
-    }
     &__section {
-        &--logo {
-            
-        }
         &--pages {
             justify-self: end;
             display: flex;
@@ -28,7 +21,6 @@
     }
     &__item {
         padding: 10px 20px;
-        
     }
     &__link {
         font-family: $headerFonts, $fontFallbacks;
@@ -40,7 +32,6 @@
         &--logo {
             font-size: 2.2rem;
             font-family: $logoFont, $fontFallbacks;
-            
         }
     }
 }
