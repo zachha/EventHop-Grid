@@ -477,13 +477,13 @@ html {
 .nav__item {
   padding: 10px 20px;
 }
-.nav a.nav__link {
+.nav__link {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.nav a.nav__link:hover .nav a.nav__link:focus .nav a.nav__link:active {
+.nav__link--active, .nav__link:focus, .nav__link:hover {
   color: #db0011;
 }
-.nav a.nav__link--logo {
+.nav__link--logo {
   font-size: 2.2rem;
   font-family: "Kaushan Script", cursive, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
