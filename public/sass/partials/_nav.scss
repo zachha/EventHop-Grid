@@ -1,5 +1,5 @@
 .nav {
-    padding: 15px 0px;
+    padding: 1.5rem 0;
     display: grid;
     grid-template-columns: 2fr 4fr 2fr;
     grid-template-areas: "logo pages user";
@@ -20,7 +20,7 @@
         }
     }
     &__item {
-        padding: 10px 20px;
+        padding: 1rem 2rem;
     }
     &__link {
         font-family: $headerFonts, $fontFallbacks;
@@ -31,17 +31,17 @@
             border-color: $red;
         } 
         &--logo {
-            font-size: 2.2rem;
+            font-size: 3.0rem;
             font-family: $logoFont, $fontFallbacks;
         }
         &--signup {
-            font-size: 1.3rem;
-            padding: 10px;
+            font-size: 1.9rem;
+            padding: 1rem;
             border: 1px solid white;
             border-radius: 5px;
         }
         &--login {
-            font-size: 1rem;
+            font-size: 1.5rem;
         }
     }
 }
