@@ -1,5 +1,5 @@
 
 
 exports.homePage = async (req, res) => {
-    res.render('index', { title: 'Main'});
+    res.render('indexGroups', { title: 'Main'});
 };
