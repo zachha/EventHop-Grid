@@ -25,12 +25,6 @@
     }
     &__link {
         font-family: $headerFonts, $fontFallbacks;
-        &--active,
-        &:focus,
-        &:hover {
-            color: $red;
-            border-color: $red;
-        } 
         &--logo {
             font-size: 3.0rem;
             font-family: $logoFont, $fontFallbacks;
@@ -44,5 +38,11 @@
         &--login {
             font-size: 1.5rem;
         }
+        &--active,
+        &:focus,
+        &:hover {
+            color: $red;
+            border-color: $red;
+        } 
     }
 }

@@ -618,10 +618,6 @@ section.hero .inner .hero__section a.hero__click--anchor {
 .nav__link {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.nav__link--active, .nav__link:focus, .nav__link:hover {
-  color: #db0011;
-  border-color: #db0011;
-}
 .nav__link--logo {
   font-size: 3rem;
   font-family: "Kaushan Script", cursive, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -634,6 +630,47 @@ section.hero .inner .hero__section a.hero__click--anchor {
 }
 .nav__link--login {
   font-size: 1.5rem;
+}
+.nav__link--active, .nav__link:focus, .nav__link:hover {
+  color: #db0011;
+  border-color: #db0011;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid black;
+}
+input.input--error, textarea.input--error {
+  border-color: #db0011;
+}
+
+label {
+  padding: 1rem 0;
+  display: block;
+  font-size: 2rem;
+}
+
+.form {
+  background: white;
+  padding: 2rem;
+}
+
+form .form__title {
+  text-align: center;
+}
+
+.submit__button {
+  margin-top: 3rem;
+}
+
+.button {
+  cursor: pointer;
+  border: none;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #db0011;
+  background-color: black;
+  font-size: 2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
