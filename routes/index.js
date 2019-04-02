@@ -12,4 +12,10 @@ router.get('/flash', function (req, res) {
     res.redirect('/');
 });
 
+// login + register page for EventHop
+router.get('/login', userController.loginForm);
+router.post('/login', userController.login);
+
+router.get('/register', userController.registerForm);
+
 module.exports = router;
