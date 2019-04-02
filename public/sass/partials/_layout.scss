@@ -12,7 +12,11 @@ main {
 section {
     position: relative;
     height: 80%;
-    margin-top: 8rem;
+    margin-top: 4rem;
+}
+
+section.bg-grey {
+    background-color: #f8f9fa;
 }
 
 section .inner {
@@ -75,6 +79,10 @@ section.hero {
     .container{width: 1170px}
 }
 
+.about__section--cards {
+    
+}
+
 .about__section--card {
     box-sizing: border-box;
     text-align: center;
@@ -86,6 +94,5 @@ section.hero {
     float: left;
 }
 
-section.bg-grey {
-    background-color: #f8f9fa;
-}
+
+

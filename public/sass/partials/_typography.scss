@@ -1,3 +1,16 @@
+@font-face {
+    font-family: 'Kaushan Script';
+    src: url('/fonts/KaushanScript-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
 html {
     font-size: 62.5%;
@@ -8,7 +21,7 @@ body {
     color: $primaryText;
 }
 
-h1, h2, h3, h4, h5, h6, {
+h1, h2, h3, h4, h5, h6 {
     color: $red;
     font-weight: 400;
     font-family: $headerFonts, $fontFallbacks;
