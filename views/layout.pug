@@ -19,7 +19,7 @@ html
                         li.nav__item: a.nav__link(href="/contact", class=(currentPath.startsWith('/contact') ? 'nav__link--active' : '')) Contact
                     .nav__section.nav__section--user
                         li.nav__item: a.nav__link.nav__link--login(href="/login", class=(currentPath.startsWith('/login') ? 'nav__link--active' : '')) Login
-                        li.nav__item: a.nav__link.nav__link--signup(href="/signup", class=(currentPath.startsWith('/signup') ? 'nav__link--active' : '')) Sign-Up
+                        li.nav__item: a.nav__link.nav__link--signup(href="/register", class=(currentPath.startsWith('/register') ? 'nav__link--active' : '')) Sign-Up
                         
         block messages
             if locals.flashes
