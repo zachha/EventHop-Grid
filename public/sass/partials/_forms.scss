@@ -1,0 +1,30 @@
+input, textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid black;
+    &.input {
+        &--error {
+            border-color: $red;
+        }
+    }
+}
+
+label {
+    padding: 1rem 0;
+    display: block;
+    font-size: 2rem;
+}
+
+.form {
+    background: white;
+    padding: 2rem;
+    //box-shadow: 
+}
+
+form .form__title {
+    text-align: center;
+}
+
+.submit__button {
+    margin-top: 3rem;
+}
