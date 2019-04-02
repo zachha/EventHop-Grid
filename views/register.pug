@@ -2,8 +2,8 @@ extends layout
 
 block content
     .inner
-        form.form(action="/register" method="POST")
-            h2 Register
+        form.form.container(action="/register" method="POST")
+            h2.form__title Register
             label(for="name") Username
             input(type="text" name="name" required)
             label(for="email") Email
@@ -12,4 +12,4 @@ block content
             input(type="password" name="password" required)
             label(for="password-confirm") Confirm Password
             input(type="password" name="password-confirm")
-            input(type="submit" value="Register")
+            input.button.submit__button(type="submit" value="Register")
