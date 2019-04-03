@@ -18,14 +18,26 @@ exports.validateRegister = (req, res, next) => {
         gmail_remove_subaddress: false
     });
     req.checkBody('password', 'Password Cannot be Blank!').notEmpty();
-    req.checkBody('password-confirm', 'Confirmed Password cannot be blank!').notEmpty();
-    req.checkBody('password-confirm', 'Whoops! Your Passwords do not Match').equals(req.body.password);
+    req.checkBody('password2', 'Confirmed Password cannot be blank!').notEmpty();
+    req.checkBody('password2', 'Whoops! Your Passwords do not Match').equals(req.body.password);
+
+    const form = {
+        name: req.body.name,
+        email: req.body.email,
+        password: req.body.password,
+        password2: req.body.password2
+    }
 
     const errors = req.validationErrors();
     if (errors) {
         req.flash('error', errors.map(err => err.msg ));
-        res.render('register', { title: 'Register', body: req.body, flashes: req.flash() });
+        res.render('register', { title: 'Register', form, flashes: req.flash() });
         return; // stops the function from running
     }
     next() // if no errors then continue!
 };
+
+exports.register = (req, res) => {
+    console.log(req.body);
+    res.render('register', { title: 'Register', form: req.body});
+}
