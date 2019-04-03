@@ -3,13 +3,13 @@ extends layout
 block content
     .inner
         form.form.container(action="/register" method="POST")
-            h2.form__title Register
+            h2.form__title Sign Up Today!
             label(for="name") Username
             input(type="text" name="name" required)
             label(for="email") Email
             input(type="email" name="email" required)
             label(for="password") Password
             input(type="password" name="password" required)
-            label(for="password-confirm") Confirm Password
-            input(type="password" name="password-confirm")
+            label(for="password2") Confirm Password
+            input(type="password" name="password2")
             input.button.submit__button(type="submit" value="Register")
