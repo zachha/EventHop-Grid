@@ -11,6 +11,8 @@
 }
 
 .flash {
+  font-family: $headerFonts, $fontFallbacks;
+  text-align: center;
   background: white;
   box-shadow: 0 3px 10px rgba(0,0,0,0.15);
   margin-bottom: 2rem;

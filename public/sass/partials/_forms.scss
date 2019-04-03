@@ -1,4 +1,5 @@
 input, textarea {
+    font-size: 1.6rem;
     width: 100%;
     padding: 1rem;
     border: 1px solid black;
@@ -16,6 +17,8 @@ label {
 }
 
 .form {
+    display: flex;
+    flex-direction: column;
     background: white;
     padding: 2rem;
     //box-shadow: 
@@ -27,4 +30,8 @@ form .form__title {
 
 .submit__button {
     margin-top: 3rem;
+    font-weight: 600;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
 }
