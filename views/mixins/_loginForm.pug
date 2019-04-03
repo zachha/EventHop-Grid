@@ -1,6 +1,8 @@
-mixin forgotForm()
-    form.form.container(action="/account/forgot" method="POST")
-        h3.form__title I forgot my password!
-        label(for="email") Email
+mixin loginForm()
+    form.form.container(action="/login" method="POST")
+        h3.form__title Login
+        label(for="email") Email Address
         input(type="email" name="email")
-        input.button.submit__button(type="submit" value="Send a Reset")
+        label(for="password") Password
+        input(type="password" name="password")
+        input.button.submit__button(type="submit" value="Log In") 
