@@ -24,4 +24,6 @@ userController.register); /*,
 authController.login);
 */
 
+// Contact page
+router.get('/contact', eventController.contactPage);
 module.exports = router;
