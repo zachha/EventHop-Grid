@@ -1,37 +1,49 @@
 input, textarea {
+    font-family: $headerFonts, $fontFallbacks;
     font-size: 1.6rem;
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid black;
+    color: rgb(139, 144, 148);
+    width: 30%;
+    padding: 1.6rem;
+    border: 1px solid $grey;
     &.input {
         &--error {
             border-color: $red;
         }
     }
 }
-
+input:focus {
+    border: 1px solid black;
+}
 label {
+    font-family: $headerFonts, $fontFallbacks;
+    color: black;
     padding: 1rem 0;
     display: block;
     font-size: 2rem;
-}
-
-.form {
-    display: flex;
-    flex-direction: column;
-    background: white;
-    padding: 2rem;
-    //box-shadow: 
 }
 
 form .form__title {
     text-align: center;
 }
 
-.submit__button {
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 2rem;
+    //box-shadow: 
+}
+
+.login__inner {
+    flex-direction: column;
+}
+
+.submit__label, .submit__button {
     margin-top: 3rem;
     font-weight: 600;
     width: 20%;
     margin-left: auto;
     margin-right: auto;
 }
+
