@@ -1,5 +1,8 @@
 extends layout
 
+include mixins/_featEvents
+include mixins/_popGroups
+
 block content
     section#hero__content.hero
         .inner
@@ -42,7 +45,7 @@ block content
 
     section#featEvents__content.featuredEvents.bg-grey
         .inner
-        block featEvents
+        +featEvents()
 
     section#mainCreate__content.mainCreate
         .inner
@@ -55,5 +58,5 @@ block content
 
     section#popGroups__content.popularGroups.bg-grey
         .inner
-        block popGroups
+        +popGroups()
     
