@@ -1,15 +1,16 @@
 extends layout
 
 block content
-    .inner
-        form.form.container(action="/register" method="POST")
-            h2.form__title Sign Up Today!
-            label(for="name") Username
-            input(type="text" name="name" value=`${form ? form.name : ''}` required)
-            label(for="email") Email
-            input(type="email" name="email" value=`${form ? form.name : ''}` required)
-            label(for="password") Password
-            input(type="password" name="password" value=`${form ? form.password : ''}` required)
-            label(for="password2") Confirm Password
-            input(type="password" name="password2" value=`${form ? form.password2 : ''}`)
-            input.button.submit__button(type="submit" value="Register")
+    section#register__content.register
+        .inner
+            form.form.container(action="/register" method="POST")
+                h2.form__title Sign Up Today!
+                label(for="name") Username
+                input(type="text" name="name" value=`${form ? form.name : ''}` placeholder="Username" required)
+                label(for="email") Email
+                input(type="email" name="email" value=`${form ? form.name : ''}` placeholder="Email Address" required)
+                label(for="password") Password
+                input(type="password" name="password" value=`${form ? form.password : ''}` placeholder="Password" required)
+                label(for="password2") Confirm Password
+                input(type="password" name="password2" value=`${form ? form.password2 : ''}` placeholder="Confirm Password" required)
+                input.button.submit__button(type="submit" value="Register")
