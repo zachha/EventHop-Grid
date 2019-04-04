@@ -1,4 +1,24 @@
 extends layout
 
 block content
-    
+    section#contact__content.contact
+        .inner
+            .contact__section.container.center__flex--column
+                .contact__section--title.center__flex--column
+                    h2.contact__title CONTACT US
+                    h4.contact__subtitle Let us plan your next event.
+                .contact__section--form
+                    form.form.contact__form
+                        .contact__form--inputs
+                            .contact__form--left
+                                label(name="name") Your Name
+                                input(type="name" name="name" placeholder="Your Name*" required)
+                                label(name="email") Your Email
+                                input(type="email" name="email" placeholder="Your Email*" required)
+                                label(name="telNo") Your Telephone Number
+                                input(type="tel" name="telNo" placeholder="123-456-7890*" minlength="9" maxlength="14" required)
+                            .contact__form--right
+                                label(name="message") Describe Your Event
+                                textarea(type="textarea" name="message" placeholder="Describe Your Event*" required)
+                        .contact__form--submit
+                            button.button.contact__button(name="submit") Send Message
