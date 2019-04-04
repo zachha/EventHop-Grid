@@ -4,6 +4,7 @@ include mixins/_loginForm
 include mixins/_forgotForm
 
 block content
-    .inner.bg-grey
-        +loginForm()
-        +forgotForm()
+    section#login__content.login
+        .inner.bg-grey.login__inner
+            +loginForm()
+            +forgotForm()
