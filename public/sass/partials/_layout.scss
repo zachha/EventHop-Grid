@@ -25,16 +25,13 @@ section .inner {
     align-items: center;
 }
 
-section.hero {
+section.hero,
+section.contact {
     margin-top: 0;
     & .inner {
     max-width: 100%;
     height: 100%;
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)
-    ), url("../img/photos/header-bg.jpg");
-    opacity: 0.9;
+    
     background-repeat: no-repeat;
     background-attachment: scroll;
     background-position: top center;
@@ -42,11 +39,23 @@ section.hero {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    } 
+}
+
+section.hero .inner {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+    ), url("../img/photos/header-bg.jpg");
+    opacity: 1.0;
     & .hero__section a.hero__click--anchor {
         font-size: 1.5rem;
         border: 1px solid white;
     }
-} 
+}
+
+section.about {
+    height: auto;
 }
 
 .center__flex--column {
