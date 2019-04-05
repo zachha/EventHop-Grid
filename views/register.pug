@@ -6,11 +6,11 @@ block content
             form.form.container(action="/register" method="POST")
                 h2.form__title Sign Up Today!
                 label(for="name") Username
-                input(type="text" name="name" value=`${form ? form.name : ''}` placeholder="Username" required)
+                input(type="text" name="name" value=`${form ? form.name : ''}` placeholder="Username" autofocus required)
                 label(for="email") Email
-                input(type="email" name="email" value=`${form ? form.name : ''}` placeholder="Email Address" required)
+                input(type="email" name="email" value=`${form ? form.name : ''}` placeholder="Email Address" autocomplete="username" required)
                 label(for="password") Password
-                input(type="password" name="password" value=`${form ? form.password : ''}` placeholder="Password" required)
+                input(type="password" name="password" value=`${form ? form.password : ''}` placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required)
                 label(for="password2") Confirm Password
-                input(type="password" name="password2" value=`${form ? form.password2 : ''}` placeholder="Confirm Password" required)
+                input(type="password" name="password2" value=`${form ? form.password2 : ''}` placeholder="Confirm Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required)
                 input.button.submit__button(type="submit" value="Register")
