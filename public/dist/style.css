@@ -555,6 +555,14 @@ section.about {
   height: auto;
 }
 
+h3.short-title {
+  margin-bottom: 2.875rem;
+}
+
+.section__titles {
+  padding-bottom: 3rem;
+}
+
 .center__flex--column {
   display: flex;
   flex-direction: column;
@@ -576,21 +584,6 @@ section.about {
   margin-left: auto;
 }
 
-@media (min-width: 768px) {
-  .container {
-    width: 750px;
-  }
-}
-@media (min-width: 992px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
 .about__section--card {
   box-sizing: border-box;
   text-align: center;
@@ -602,10 +595,33 @@ section.about {
   float: left;
 }
 
-h3.short-title {
-  margin-bottom: 2.875rem;
+@media (max-width: 767px) {
+  .contact__form {
+    align-items: center;
+  }
+  .contact__form .contact__form--inputs {
+    flex-direction: column;
+  }
 }
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 750px;
+  }
 
+  .contact__form--inputs {
+    flex-direction: column;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
 .nav {
   background-color: #212529;
   padding: 1.5rem 0;
@@ -700,14 +716,23 @@ form .form__title {
   margin-right: auto;
 }
 
+section.contact {
+  height: auto;
+}
 section.contact .inner {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/photos/map-image.jpg");
-  opacity: 0.9;
+  background-image: url("../img/photos/map-image.jpg");
+  background-position: center;
+  opacity: 1;
+}
+
+section.dev {
+  height: auto;
 }
 
 section .inner .dev__section {
   width: 45%;
   text-align: center;
+  margin-bottom: 8rem;
 }
 
 form.contact__form {
@@ -717,12 +742,12 @@ form.contact__form {
   align-items: stretch;
 }
 form.contact__form .contact__form--inputs {
+  justify-content: center;
   display: flex;
-  flex-wrap: wrap;
 }
 form.contact__form .contact__form--inputs .contact__form--left,
 form.contact__form .contact__form--inputs .contact__form--right {
-  width: 50%;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -739,12 +764,49 @@ form.contact__form .contact__form--submit .contact__button {
   color: black;
 }
 
+.dev__section--portfolios {
+  justify-content: center;
+}
+.dev__section--portfolios .dev__section--portfolio {
+  margin: 2rem;
+}
+.dev__section--portfolios .dev__section--portfolio img.portfolio__image {
+  width: 225px;
+  height: 225px;
+  border: 7px solid white;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--gh,
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--li {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  left: 0;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+}
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--gh:hover,
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--li:hover {
+  opacity: 0;
+}
+.dev__section--portfolios .dev__section--portfolio .portfolio__role {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
 .contact__section--title .contact__title,
 .contact__section--title .contact__subtitle {
   color: white;
 }
 
 .contact__section--form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
   width: 80%;
 }
 .contact__section--form label {
@@ -770,6 +832,13 @@ form.contact__form .contact__form--submit .contact__button {
 .contact__section--form textarea:focus,
 .contact__section--form button:focus {
   border: 2px solid black;
+}
+
+a.portfolio__anchor {
+  width: 40px;
+  height: 40px;
+  position: relative;
+  margin: 0 0.5rem;
 }
 
 .button {
