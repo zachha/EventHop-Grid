@@ -26,4 +26,9 @@ authController.login);
 
 // Contact page
 router.get('/contact', eventController.contactPage);
+
+// Create page
+router.get('/create', eventController.createPage);
+//router.post('/create', userController.createGroup);
+
 module.exports = router;
