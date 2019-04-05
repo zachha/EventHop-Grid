@@ -3,22 +3,42 @@ extends layout
 block content
     section#contact__content.contact
         .inner
-            .contact__section.container.center__flex--column
-                .contact__section--title.center__flex--column
-                    h2.contact__title CONTACT US
-                    h4.contact__subtitle Let us plan your next event.
-                .contact__section--form
+            .contact__section.section.container.center__flex--column
+                .contact__section--title.section__titles.center__flex--column
+                    h2.contact__title.section__title CONTACT US
+                    h4.contact__subtitle.section__subtitle Let us plan your next event!
+                .contact__section--form.section__content
                     form.form.contact__form
                         .contact__form--inputs
                             .contact__form--left
                                 label(name="name") Your Name
-                                input(type="name" name="name" placeholder="Your Name*" required)
+                                input(type="name" name="name" placeholder="Your Name*" autofocus required)
                                 label(name="email") Your Email
-                                input(type="email" name="email" placeholder="Your Email*" required)
+                                input(type="email" name="email" placeholder="Your Email*" autocomplete="username" required)
                                 label(name="telNo") Your Telephone Number
                                 input(type="tel" name="telNo" placeholder="123-456-7890*" minlength="9" maxlength="14" required)
                             .contact__form--right
                                 label(name="message") Describe Your Event
-                                textarea(type="textarea" name="message" placeholder="Describe Your Event*" required)
+                                textarea(type="textarea" name="message" placeholder="Describe Your Event*" maxlength="1000" required)
                         .contact__form--submit
                             button.button.contact__button(name="submit") Send Message
+    section#dev__content.dev
+        .inner
+            .dev__section.container.section.center__flex--column
+                .dev__section--title.section__titles.center__flex--column
+                    h2.dev__title.section__title THE EVENTHOP TEAM
+                    h4.dev__subtitle.section__subtitle Introducing the hard-working EventHop team members
+                .dev__section--portfolios.section__content
+                    .dev__section--portfolio.center__flex--column
+                        .portfolio__image
+                        .portfolio__name
+                        .portfolio__role
+                        .portfolio__links
+                    .dev__section--portfolio.center__flex--column
+                        .portfolio__image
+                        .portfolio__name
+                        .portfolio__role
+                        .portfolio__links
+                .dev__section--text.section__content
+                    p The EventHop team is a pair of developers based around Durham, North Carolina.  We have a passion for coding and decided to make EventHop as a free application for users to plan group events with.  Feel free to check out our github or send us a message using the form at the bottom with any suggestions/bugs or just to say Hello!
+
