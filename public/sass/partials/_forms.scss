@@ -5,6 +5,7 @@ input, textarea {
     width: 30%;
     padding: 1.6rem;
     border: 1px solid $grey;
+    border-radius: 0.4rem;
     &.input {
         &--error {
             border-color: $red;
@@ -12,7 +13,7 @@ input, textarea {
     }
 }
 input:focus {
-    border: 1px solid black;
+    border: 2px solid black;
 }
 label {
     font-family: $headerFonts, $fontFallbacks;

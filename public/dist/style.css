@@ -440,7 +440,7 @@ h1 {
 }
 
 h2 {
-  font-size: 4.5rem;
+  font-size: 4rem;
   letter-spacing: 0.4rem;
   margin-bottom: 0.5rem;
 }
@@ -602,6 +602,10 @@ section.about {
   float: left;
 }
 
+h3.short-title {
+  margin-bottom: 2.875rem;
+}
+
 .nav {
   background-color: #212529;
   padding: 1.5rem 0;
@@ -654,13 +658,14 @@ input, textarea {
   width: 30%;
   padding: 1.6rem;
   border: 1px solid #6c757d;
+  border-radius: 0.4rem;
 }
 input.input--error, textarea.input--error {
   border-color: #db0011;
 }
 
 input:focus {
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 label {
@@ -700,6 +705,11 @@ section.contact .inner {
   opacity: 0.9;
 }
 
+section .inner .dev__section {
+  width: 45%;
+  text-align: center;
+}
+
 form.contact__form {
   background: none;
   width: 100%;
@@ -721,8 +731,9 @@ form.contact__form .contact__form--submit {
   text-align: center;
 }
 form.contact__form .contact__form--submit .contact__button {
-  padding: 1rem;
-  width: 20%;
+  border-radius: 4px;
+  padding: 1.6rem;
+  width: 25%;
   font-weight: 600;
   background-color: #db0011;
   color: black;
@@ -741,6 +752,7 @@ form.contact__form .contact__form--submit .contact__button {
   font-weight: 600;
 }
 .contact__section--form input, .contact__section--form textarea {
+  border-radius: 0.4rem;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #8b9094;
   padding: 1.6rem;
@@ -752,6 +764,12 @@ form.contact__form .contact__form--submit .contact__button {
 .contact__section--form textarea {
   width: 90%;
   height: 80%;
+  resize: none;
+}
+.contact__section--form input:focus,
+.contact__section--form textarea:focus,
+.contact__section--form button:focus {
+  border: 2px solid black;
 }
 
 .button {

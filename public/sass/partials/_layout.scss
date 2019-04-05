@@ -88,10 +88,6 @@ section.about {
     .container{width: 1170px}
 }
 
-.about__section--cards {
-    
-}
-
 .about__section--card {
     box-sizing: border-box;
     text-align: center;
@@ -103,5 +99,7 @@ section.about {
     float: left;
 }
 
-
+h3.short-title {
+    margin-bottom: 2.875rem;
+}
 

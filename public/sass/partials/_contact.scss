@@ -6,6 +6,11 @@ section.contact .inner {
     opacity: 0.9;
 }
 
+section .inner .dev__section {
+    width: 45%;
+    text-align: center;
+}
+
 form.contact__form {
     background: none;
     width: 100%;
@@ -25,8 +30,9 @@ form.contact__form {
         margin-top: 5rem;
         text-align: center;
         & .contact__button {
-            padding: 1rem;
-            width: 20%;
+            border-radius: 4px;
+            padding: 1.6rem;
+            width: 25%;
             font-weight: 600;
             background-color: $red;
             color: black;
@@ -48,6 +54,7 @@ form.contact__form {
         font-weight: 600;
     }
     & input, textarea {
+        border-radius: 0.4rem;
         font-family: $headerFonts, $fontFallbacks;
         color: rgb(139, 144, 148);
         padding: 1.6rem;
@@ -59,6 +66,12 @@ form.contact__form {
     & textarea {
         width: 90%;
         height: 80%;
+        resize: none;
+    }
+    & input:focus,
+      textarea:focus,
+      button:focus {
+        border: 2px solid black;
     }
 }
 
