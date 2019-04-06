@@ -435,7 +435,7 @@ h1 {
   margin: 0;
   color: white;
   font-size: 8rem;
-  line-height: 0.4rem;
+  padding: 1.5rem;
   font-family: "Kaushan Script", cursive, "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -448,6 +448,7 @@ h2 {
 h2.hero__sub {
   color: white;
   font-size: 4.8rem;
+  margin-top: 0;
 }
 
 h3 {
@@ -547,8 +548,11 @@ section.hero .inner {
   opacity: 1;
 }
 section.hero .inner .hero__section a.hero__click--anchor {
-  font-size: 1.5rem;
-  border: 1px solid white;
+  border: 1px solid #212529;
+  padding: 1.5rem;
+}
+section.hero .inner .hero__section .hero__title--click {
+  margin-top: 8rem;
 }
 
 section.about {
@@ -667,6 +671,20 @@ h3.short-title {
   border-color: #db0011;
 }
 
+#map {
+  height: 500px;
+  width: 100%;
+}
+
+.create__section {
+  width: 100%;
+  padding: 0;
+}
+.create__section .create__section--map {
+  width: 100%;
+  height: 80%;
+}
+
 input, textarea {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
@@ -706,14 +724,6 @@ form .form__title {
 
 .login__inner {
   flex-direction: column;
-}
-
-.submit__label, .submit__button {
-  margin-top: 3rem;
-  font-weight: 600;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 section.contact {
@@ -846,8 +856,14 @@ a.portfolio__anchor {
   border: none;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   color: #db0011;
-  background-color: black;
+  background-color: #212529;
   font-size: 2rem;
+  margin-top: 3rem;
+  font-weight: 600;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
 }
 
 .svg__icon {
