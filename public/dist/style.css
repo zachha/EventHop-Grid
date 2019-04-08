@@ -700,6 +700,7 @@ h3.short-title {
 .create__section .create__section--choose {
   width: 80%;
   text-align: center;
+  align-items: stretch;
 }
 .create__section .create__section--choose .choose__section--buttons {
   display: flex;
@@ -710,9 +711,12 @@ h3.short-title {
 
 .choose__section--dropdown {
   padding-top: 2rem;
-  padding-bottom: 4rem;
+}
+.choose__section--dropdown label.choose__title {
+  margin-bottom: 2rem;
 }
 .choose__section--dropdown select {
+  text-align: center;
   width: 20%;
   padding: 1.3rem;
   font-size: 1.6rem;
@@ -728,6 +732,7 @@ button.map__button {
 }
 
 label.choose__title {
+  font-weight: 400;
   font-size: 2.5rem;
   color: #db0011;
 }
@@ -911,6 +916,15 @@ a.portfolio__anchor {
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
+}
+
+.breakline {
+  height: 5rem;
+  align-self: center;
+  margin: 1.5rem 4rem;
+  border-bottom: 3px solid #212529;
+  display: block;
+  width: 70%;
 }
 
 .svg__icon {

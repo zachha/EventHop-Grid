@@ -14,7 +14,9 @@
     & .create__section--choose {
         width: 80%;
         text-align: center;
+        align-items: stretch;
         & .choose__section--buttons {
+            
             display: flex;
             justify-content: center;
             align-items: center;
@@ -22,11 +24,15 @@
         }
     }
 }
+
 .choose__section--dropdown {
     padding-top: 2rem;
-    padding-bottom: 4rem;
-
+    
+    & label.choose__title {
+        margin-bottom: 2rem;
+    }
     & select {
+        text-align: center;
         width: 20%;
         padding: 1.3rem;
         font-size: 1.6rem;
@@ -42,6 +48,8 @@ button.map__button {
 }
 
 label.choose__title {
+    font-weight: 400;
     font-size: 2.5rem;
     color: $red;
 }
+
