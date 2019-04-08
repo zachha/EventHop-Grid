@@ -9,7 +9,7 @@ block content
             .create__section--map
                 h2.map__title Downtown Durham
                 #map
-            .create__section--choose.section__content
+            .create__section--choose.section__content.center__flex--column
                 .choose__section--title
                     h3.choose__title Choose a Type of Event
                 .choose__section--buttons
@@ -19,8 +19,7 @@ block content
                     button#art_gallery.button.map__button Art
                     button#movie_theater.button.map__button Movie
                     button#spa.button.map__button.spa__button Spa
-                .choose__section--title
-                    
+                .breakline
                 .choose__section--dropdown
                     .choose__dropdown
                         label.choose__title(for="map-select") Then Choose a Location!
@@ -28,3 +27,5 @@ block content
                             option(value="") Select a Location!
                     .choose__button
                         button#addLoc.button.map__button.location__button Add Location
+                .breakline
+                .choose__section--infocards
