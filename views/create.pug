@@ -4,6 +4,27 @@ block content
     section#create__content.create
         .create__section.section.container.center__flex--column
             .create__section--title.section__titles.center__flex--column
-                h2.create__title.section__title DOWNTOWN DURHAM
-            .create__section--map.section__content
+                h2.create__title CREATE YOUR OWN EVENT
+                h4.create__subtitle Choose up to Three Event Locations!
+            .create__section--map
+                h2.map__title Downtown Durham
                 #map
+            .create__section--choose.section__content
+                .choose__section--title
+                    h3.choose__title Choose a Type of Event
+                .choose__section--buttons
+                    button#cafe.button.map__button Cafe
+                    button#bar.button.map__button Bar
+                    button#restaurant.button.map__button Food
+                    button#art_gallery.button.map__button Art
+                    button#movie_theater.button.map__button Movie
+                    button#spa.button.map__button.spa__button Spa
+                .choose__section--title
+                    
+                .choose__section--dropdown
+                    .choose__dropdown
+                        label.choose__title(for="map-select") Then Choose a Location!
+                        select#map__select.map__select(name="map-select")
+                            option(value="") Select a Location!
+                    .choose__button
+                        button#addLoc.button.map__button.location__button Add Location
