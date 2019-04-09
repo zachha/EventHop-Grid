@@ -111,7 +111,8 @@ h3.short-title {
             flex-direction: column;
         }
     }
-    .choose__section--buttons {
+    .create__section--choose {
+        & .choose__section--buttons {
             padding-top: 3rem;
             padding-bottom: 3rem;
             flex-direction: column;
@@ -122,6 +123,16 @@ h3.short-title {
                 width: 50%;
             }
         }
+        & .choose__section--dropdown {
+            & select {
+                width: 50%;
+            }
+            & .choose__button button {
+                width: 50%;
+            }
+        }
+    }
+    
 }
 @media (min-width: 768px) and (max-width: 992px){
     .container{width: 750px}
