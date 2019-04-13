@@ -1,0 +1,82 @@
+@media (min-width: 1200px){
+    .container {
+        width: 1170px
+    }
+}
+
+@media (max-width: 1199px){
+    .container {
+        width: 970px
+    }
+}
+
+@media (max-width: 992px){
+    .container {
+        width: 750px
+    }
+    .contact__form {
+        align-items: center;
+        & .contact__form--inputs {
+            flex-direction: column;
+        }
+        & .contact__form--submit {
+            & button.contact__button {
+                width: 40%;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 767px) {
+    .about__section {
+        & .about__section--cards {
+            flex-direction: column;
+            align-items: center;
+            & .about__section--card {
+                max-width: 70%;
+                margin-bottom: 2rem;
+            }
+        }
+    }
+
+    .create__section--choose {
+        & .choose__section--buttons {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            & button.map__button {
+                margin: 0.5rem 0;
+                width: 50%;
+            }
+        }
+        & .choose__section--dropdown {
+            & select {
+                width: 50%;
+            }
+            & .choose__button button {
+                width: 50%;
+            }
+        }
+    }
+
+    section.login {
+        & input {
+            width: 50%;
+        }
+        & button {
+            width: 40%;
+        }
+    }
+
+    section.register {
+        & input {
+            width: 50%;
+        }
+        & button {
+            width: 40%;
+        }
+    }
+}
