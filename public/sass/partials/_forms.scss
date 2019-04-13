@@ -23,6 +23,10 @@ label {
     font-size: 2rem;
 }
 
+form.form__forgot,
+form.form__register {
+    margin-bottom: 6rem;
+}
 form .form__title {
     text-align: center;
 }
@@ -33,11 +37,18 @@ form .form__title {
     align-items: center;
     background: white;
     padding: 2rem;
-    //box-shadow: 
 }
 
 .login__inner {
     flex-direction: column;
 }
 
+.form__content {
+    width: 100%;
+}
+
+.login__section, 
+form.form__register {
+    width: 80%;
+}
 

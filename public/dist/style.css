@@ -559,10 +559,6 @@ section.about {
   height: auto;
 }
 
-h3.short-title {
-  margin-bottom: 2.875rem;
-}
-
 .section__titles {
   padding-bottom: 3rem;
 }
@@ -599,51 +595,6 @@ h3.short-title {
   float: left;
 }
 
-@media (max-width: 767px) {
-  .contact__form {
-    align-items: center;
-  }
-  .contact__form .contact__form--inputs {
-    flex-direction: column;
-  }
-
-  .create__section--choose .choose__section--buttons {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-  }
-  .create__section--choose .choose__section--buttons button.map__button {
-    margin: 0.5rem 0;
-    width: 50%;
-  }
-  .create__section--choose .choose__section--dropdown select {
-    width: 50%;
-  }
-  .create__section--choose .choose__section--dropdown .choose__button button {
-    width: 50%;
-  }
-}
-@media (min-width: 768px) and (max-width: 992px) {
-  .container {
-    width: 750px;
-  }
-
-  .contact__form--inputs {
-    flex-direction: column;
-  }
-}
-@media (max-width: 1199px) {
-  .container {
-    width: 970px;
-  }
-}
-@media (min-width: 1200px) {
-  .container {
-    width: 1170px;
-  }
-}
 .nav {
   background-color: #212529;
   padding: 1.5rem 0;
@@ -768,6 +719,11 @@ label {
   font-size: 2rem;
 }
 
+form.form__forgot,
+form.form__register {
+  margin-bottom: 6rem;
+}
+
 form .form__title {
   text-align: center;
 }
@@ -782,6 +738,15 @@ form .form__title {
 
 .login__inner {
   flex-direction: column;
+}
+
+.form__content {
+  width: 100%;
+}
+
+.login__section,
+form.form__register {
+  width: 80%;
 }
 
 section.contact {
@@ -937,6 +902,74 @@ a.portfolio__anchor {
   fill: #db0011;
   height: 5rem;
   width: 5rem;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+@media (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (max-width: 992px) {
+  .container {
+    width: 750px;
+  }
+
+  .contact__form {
+    align-items: center;
+  }
+  .contact__form .contact__form--inputs {
+    flex-direction: column;
+  }
+  .contact__form .contact__form--submit button.contact__button {
+    width: 40%;
+  }
+}
+@media (max-width: 767px) {
+  .about__section .about__section--cards {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about__section .about__section--cards .about__section--card {
+    max-width: 70%;
+    margin-bottom: 2rem;
+  }
+
+  .create__section--choose .choose__section--buttons {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .create__section--choose .choose__section--buttons button.map__button {
+    margin: 0.5rem 0;
+    width: 50%;
+  }
+  .create__section--choose .choose__section--dropdown select {
+    width: 50%;
+  }
+  .create__section--choose .choose__section--dropdown .choose__button button {
+    width: 50%;
+  }
+
+  section.login input {
+    width: 50%;
+  }
+  section.login button {
+    width: 40%;
+  }
+
+  section.register input {
+    width: 50%;
+  }
+  section.register button {
+    width: 40%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
