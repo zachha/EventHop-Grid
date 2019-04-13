@@ -1,5 +1,5 @@
-mixin forgotForm()
-    form.form.container.form__forgot(action="/account/forgot" method="POST")
+mixin forgotForm()  
+    form.form.form__forgot(action="/account/forgot" method="POST")
         h2.form__title I forgot my password!
         label(for="email") Email Address
         input(type="email" name="email" placeholder="Email Address" autocomplete="username" required)
