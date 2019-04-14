@@ -849,9 +849,10 @@ form.contact__form .contact__form--submit .contact__button {
 .contact__section--form input, .contact__section--form textarea {
   border-radius: 0.4rem;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #8b9094;
+  color: black;
   padding: 1.6rem;
   font-size: 1.8rem;
+  font-weight: 600;
 }
 .contact__section--form input {
   width: 90%;
