@@ -905,6 +905,11 @@ a.portfolio__anchor {
   width: 5rem;
 }
 
+@media (max-width: 1920px) {
+  .container {
+    width: 1890px;
+  }
+}
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
