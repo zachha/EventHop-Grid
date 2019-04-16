@@ -963,6 +963,10 @@ a.portfolio__anchor {
     width: 50%;
   }
 
+  .container {
+    width: 737px;
+  }
+
   section.login input {
     width: 50%;
   }
