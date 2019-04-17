@@ -16,6 +16,13 @@
     }
 }
 
+// resizes sign-up nav link before it shifts
+@media (max-width: 1082px) {
+    .nav__link--signup {
+        font-size: 1.7rem;
+    }
+}
+
 @media (max-width: 992px) {
     .container {
         width: 750px
