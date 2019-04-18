@@ -921,8 +921,8 @@ a.portfolio__anchor {
   }
 }
 @media (max-width: 1082px) {
-  .nav__link--signup {
-    font-size: 1.7rem;
+  .nav__item--signup {
+    width: 160px;
   }
 }
 @media (max-width: 992px) {
