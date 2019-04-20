@@ -894,7 +894,7 @@ a.portfolio__anchor {
   height: 5rem;
   align-self: center;
   margin: 1.5rem 4rem;
-  border-bottom: 3px solid #212529;
+  border-bottom: 1px solid #212529;
   display: block;
   width: 70%;
 }
