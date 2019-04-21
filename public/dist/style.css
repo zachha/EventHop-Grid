@@ -649,6 +649,9 @@ section.about {
   width: 100%;
   padding: 0;
 }
+.create__section .create__section--title {
+  width: 100%;
+}
 .create__section .create__section--map {
   text-align: center;
   width: 100%;
@@ -906,10 +909,20 @@ a.portfolio__anchor {
 }
 
 .cards {
+  width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
+}
+
+.locCard {
+  -webkit-box-shadow: 4px 4px 22px -5px #647595;
+  -moz-box-shadow: 4px 4px 22px -5px #647595;
+  box-shadow: 4px 4px 22px -5px #647595;
+  background-color: #FF949D;
+  width: 30%;
+  height: 300px;
 }
 
 @media (max-width: 1920px) {
