@@ -2,10 +2,15 @@ extends layout
 
 block content
     section#create__content.create
-        .create__section.section.container.center__flex--column
+        .create__section.section.center__flex--column
             .create__section--title.section__titles.center__flex--column
                 h2.create__title CREATE YOUR OWN EVENT
                 h4.create__subtitle Choose up to Three Event Locations!
+                .title__section.cards
+                    .createOne.locCard
+                    .createTwo.locCard
+                    .createThree.locCard    
+
             .create__section--map
                 h2.map__title Downtown Durham
                 #map
