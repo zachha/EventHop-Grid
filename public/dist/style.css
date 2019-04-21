@@ -905,6 +905,13 @@ a.portfolio__anchor {
   width: 5rem;
 }
 
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 1920px) {
   .container {
     width: 1890px;

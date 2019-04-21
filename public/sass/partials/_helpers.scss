@@ -1,3 +1,4 @@
+// styles default eventhop buttons
 .button { 
     cursor: pointer;
     border: none;
@@ -12,7 +13,7 @@
     margin-right: auto;
     border-radius: 4px;
 }
-
+ // styles breakliens between segments
 .breakline {
     height: 5rem;
     align-self: center;
@@ -22,8 +23,19 @@
     width: 70%;
 }
 
+// styles svg icons
 .svg__icon {
     fill: $red;
     height: 5rem;
     width: 5rem;
+}
+
+// styles divs containing group cards (group cards, event cards, create cards, etc)
+.cards {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+
+
 }
