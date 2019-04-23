@@ -12,9 +12,11 @@ input, textarea {
         }
     }
 }
+
 input:focus {
     border: 2px solid black;
 }
+
 label {
     font-family: $headerFonts, $fontFallbacks;
     color: black;
@@ -27,6 +29,7 @@ form.form__forgot,
 form.form__register {
     margin-bottom: 6rem;
 }
+
 form .form__title {
     text-align: center;
 }

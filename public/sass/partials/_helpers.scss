@@ -39,15 +39,27 @@
     flex-wrap: wrap;
 }
 
+// styles the 'choose location' cards at the top of create page
 .locCard {
     -webkit-box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
     -moz-box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
     box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
-    background-color: $grey;
     width: 100%;
     height: 300px;
-}
-
-.locCard.chosen {
-    background-color: $red;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    & p {
+        color: white;
+    }
+    &.chosen {
+        background-color: $red;
+    }
+    &.bull {
+        background-image: url("../img/icon/bull-city-red.png");
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
 }
