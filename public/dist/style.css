@@ -920,9 +920,13 @@ a.portfolio__anchor {
   -webkit-box-shadow: 4px 4px 22px -5px #647595;
   -moz-box-shadow: 4px 4px 22px -5px #647595;
   box-shadow: 4px 4px 22px -5px #647595;
-  background-color: #FF949D;
-  width: 30%;
+  background-color: #6c757d;
+  width: 27%;
   height: 300px;
+}
+
+.locCard.chosen {
+  background-color: #db0011;
 }
 
 @media (max-width: 1920px) {

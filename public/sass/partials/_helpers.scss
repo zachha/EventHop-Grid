@@ -43,7 +43,11 @@
     -webkit-box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
     -moz-box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
     box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
-    background-color: $peach;
-    width: 30%;
+    background-color: $grey;
+    width: 27%;
     height: 300px;
+}
+
+.locCard.chosen {
+    background-color: $red;
 }
