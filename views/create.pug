@@ -10,16 +10,15 @@ block content
                     .location__box.chosen
                         h3 Location #1
                         .locCard.chosen
+                            p Use the map to find your first event location!
                     .location__box
                         h3 Location #2
-                        .locCard
+                        .locCard.bull
+                            p
                     .location__box
                         h3 Location #3
-                        .locCard    
-
-            .create__section--map
-                h2.map__title Downtown Durham
-                #map
+                        .locCard.bull
+                            p   
             .create__section--choose.section__content.center__flex--column
                 .choose__section--title
                     h3.choose__title Choose a Type of Event
@@ -30,7 +29,9 @@ block content
                     button#art_gallery.button.map__button Art
                     button#movie_theater.button.map__button Movie
                     button#spa.button.map__button.spa__button Spa
-                .breakline
+                .choose__section--map
+                    h2.map__title Downtown Durham
+                    #map
                 .choose__section--dropdown
                     .choose__dropdown
                         label.choose__title(for="map-select") Then Choose a Location!
