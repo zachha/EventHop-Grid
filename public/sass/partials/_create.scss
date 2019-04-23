@@ -56,3 +56,15 @@ label.choose__title {
     color: $red;
 }
 
+.location__box {
+    width: 25%;
+    text-align: center;
+    & h3 {
+        color: $grey;
+        margin-bottom: 2rem;
+    }
+}
+
+.location__box.chosen h3 {
+    color: $red;
+}

@@ -697,6 +697,19 @@ label.choose__title {
   color: #db0011;
 }
 
+.location__box {
+  width: 25%;
+  text-align: center;
+}
+.location__box h3 {
+  color: #6c757d;
+  margin-bottom: 2rem;
+}
+
+.location__box.chosen h3 {
+  color: #db0011;
+}
+
 input, textarea {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
@@ -921,7 +934,7 @@ a.portfolio__anchor {
   -moz-box-shadow: 4px 4px 22px -5px #647595;
   box-shadow: 4px 4px 22px -5px #647595;
   background-color: #6c757d;
-  width: 27%;
+  width: 100%;
   height: 300px;
 }
 
