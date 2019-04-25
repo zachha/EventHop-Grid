@@ -10,11 +10,17 @@ block content
                     .location__box.chosen
                         h3 Location #1
                         .locCard.chosen
-                            p Use the map to find your first event location!
+                            form.loc__form.form
+                                label(for="nameOne") First Stop:
+                                input(type="name" name="name" id="nameOne" placeholder="First Location")
+                                label(for="addressOne") Address:
+                                input(type="text"  name="address" id="addressOne")
+                                label(for="telOne") Telephone Number:
+                                input(type="text" name="telephone" id="telOne")
                     .location__box
                         h3 Location #2
-                        .locCard.bull
-                            p
+                        .locCard.bullLocal
+                            
                     .location__box
                         h3 Location #3
                         .locCard.bull
