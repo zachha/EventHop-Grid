@@ -700,7 +700,7 @@ label.choose__title {
 }
 
 .location__box {
-  width: 25%;
+  width: 30%;
   text-align: center;
 }
 .location__box h3 {
@@ -710,6 +710,54 @@ label.choose__title {
 
 .location__box.chosen h3 {
   color: #db0011;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+form.loc__form {
+  width: 90%;
+  height: 90%;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+form.loc__form input {
+  width: 80%;
+}
+
+.cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.locCard {
+  -webkit-box-shadow: 4px 4px 22px -5px #647595;
+  -moz-box-shadow: 4px 4px 22px -5px #647595;
+  box-shadow: 4px 4px 22px -5px #647595;
+  width: 100%;
+  height: 450px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.locCard p {
+  color: white;
+}
+.locCard.chosen {
+  background-color: white;
+}
+.locCard.bull, .locCard.bullLocal {
+  background-image: url("../img/icon/bull-city-white.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.locCard.bullLocal {
+  background-image: url("../img/icon/bull-local.png");
 }
 
 input, textarea {
@@ -921,38 +969,6 @@ a.portfolio__anchor {
   fill: #db0011;
   height: 5rem;
   width: 5rem;
-}
-
-.cards {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.locCard {
-  -webkit-box-shadow: 4px 4px 22px -5px #647595;
-  -moz-box-shadow: 4px 4px 22px -5px #647595;
-  box-shadow: 4px 4px 22px -5px #647595;
-  width: 100%;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.locCard p {
-  color: white;
-}
-.locCard.chosen {
-  background-color: #db0011;
-}
-.locCard.bull {
-  background-image: url("../img/icon/bull-city-red.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
 }
 
 @media (max-width: 1920px) {
