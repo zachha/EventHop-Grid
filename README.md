@@ -17,7 +17,7 @@ EventHop is an application that allows users to choose from several different ac
 EventHop contains several prominent features:
 
 	• Google Maps Location Search by Category (Cafe, Restaurant, etc...)
-    	• Group Event Creation and Sharing
+    • Group Event Creation and Sharing
 	• User Authentication and Data Persistence
 	• Join Pre-Planned Events
 
