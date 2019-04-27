@@ -81,4 +81,3 @@ Stay Tuned! This section will contain information on things to come once the sit
 ## Dev Team 
 	
 * Zach Harmon [Github](https://www.github.com/zachha) - zachha@gmail.com
-* Harris Joseph [Github](https://www.github.com/HarryCaveMan) - harris.joseph.088@gmail.com
