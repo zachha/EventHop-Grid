@@ -706,22 +706,38 @@ label.choose__title {
 .location__box h3 {
   color: #6c757d;
   margin-bottom: 2rem;
+  opacity: 0.3;
 }
 
 .location__box.chosen h3 {
   color: #db0011;
   font-weight: 600;
   text-decoration: underline;
+  opacity: 1;
 }
 
 form.loc__form {
+  background-color: transparent;
   width: 90%;
   height: 90%;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 }
-form.loc__form input {
-  width: 80%;
+form.loc__form label {
+  background-color: transparent;
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+form.loc__form textarea {
+  background-color: transparent;
+  color: black;
+  font-size: 2rem;
+  width: 90%;
+  height: 10%;
+  padding: 0.5rem;
+  border: none;
+  resize: none;
 }
 
 .cards {
@@ -743,21 +759,40 @@ form.loc__form input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  opacity: 0.5;
+  position: relative;
 }
 .locCard p {
   color: white;
 }
 .locCard.chosen {
-  background-color: white;
+  opacity: 1;
 }
-.locCard.bull, .locCard.bullLocal {
-  background-image: url("../img/icon/bull-city-white.png");
+.locCard.shop, .locCard.bull, .locCard.bullLocal {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-city-white.png");
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
 }
 .locCard.bullLocal {
-  background-image: url("../img/icon/bull-local.png");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-local.png");
+}
+.locCard.shop {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/shop-durham.png");
+}
+.locCard .locCard__overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 10;
+  background: linear-gradient(rgba(219, 0, 17, 0.7), rgba(219, 0, 17, 0.7));
+}
+.locCard .locCard__overlay.hide {
+  opacity: 0;
 }
 
 input, textarea {

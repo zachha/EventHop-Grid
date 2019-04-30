@@ -63,6 +63,7 @@ label.choose__title {
     & h3 {
         color: $grey;
         margin-bottom: 2rem;
+        opacity: 0.3;
     }
 }
 
@@ -70,15 +71,29 @@ label.choose__title {
     color: $red;
     font-weight: 600;
     text-decoration: underline;
+    opacity: 1.0;
 }
 
 form.loc__form {
+    background-color: transparent;
     width: 90%;
     height: 90%;
     justify-content: flex-start;
-    align-items: flex-start;
-    & input {
-        width: 80%;
-        //border: none;
+    align-items: center;
+    & label {
+        background-color: transparent;
+        color: black;
+        font-size: 2.3rem;
+        font-weight: 600;
+    }
+    & textarea {
+        background-color: transparent;
+        color: black;
+        font-size: 2rem;
+        width: 90%;
+        height: 10%;
+        padding: 0.5rem;
+        border: none;
+        resize: none;
     }
 }
