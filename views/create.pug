@@ -17,16 +17,22 @@ block content
                                 textarea(name="address" id="addressOne")
                                 label(for="telOne") Telephone Number:
                                 textarea(name="telephone" id="telOne")
-                            .locCard__overlay
-                            
-                    .location__box
+                            .locCard__overlay.hide
+                                h2 Choose your first event type
+                                button#locStart.button Let's Go!
+                    .location__box.chosen
                         h3 Location #2
-                        .locCard.bullLocal
-                            .locCard__overlay.hide
-                    .location__box
+                        .locCard.bullLocal.chosen
+                            .locCard__overlay
+                                h2 Choose your second event type
+                                button#locStart.button Let's Go!
+                    .location__box.chosen
                         h3 Location #3
-                        .locCard.bull
-                            .locCard__overlay.hide
+                        .locCard.bull.chosen
+                            .locCard__overlay
+                                h2 Choose your last event type
+                                button#locStart.button Let's Go!
+                                
             .create__section--choose.section__content.center__flex--column
                 .choose__section--title
                     h3.choose__title Choose a Type of Event
