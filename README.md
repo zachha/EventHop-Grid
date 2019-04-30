@@ -16,11 +16,10 @@ EventHop is an application that allows users to choose from several different ac
 
 EventHop contains several prominent features:
 
-	• Event Scheduling and Tracking 
 	• Google Maps Location Search by Category (Cafe, Restaurant, etc...)
     • Group Event Creation and Sharing
 	• User Authentication and Data Persistence
-	• Pre-Planned Events
+	• Join Pre-Planned Events
 
 
 When the user loads the application they can login using the navbar at the top-right of the screen using their user name and password to get autheniticated for the site.  If they aren't registered they can also register using an email and password.  Logging in is not required to use EventHop, but it does allow the user to join and save the groups that they see in the application.  The user is then greeted by a splash page that gives the user three options:
@@ -68,30 +67,17 @@ We've provided a guest login for curious users to check out the application with
 	• Express.js
 	• Passport.js
 	• SASS
+	• CSS Grid
+	• CSS Flexbox
 	• MySQL
 	• Sequelize
 	• Pug
 	• SendGrid
 
+## Things To Come
 
-## Known Bugs Being Investigated
+Stay Tuned! This section will contain information on things to come once the site has been deployed.
 
-- Google Maps is *sometimes* loading the map with a zoomed out view of the U.S. instead of zoomed in
-- Google maps uncommonly creates location duplicates in the list 
-- If another bug is found, please open an issue on the Eventhop Github page!
-
-## Things to Come
-
-We are planning on adding/making changes! Check back soon to see:
-
-- A Google Maps view that shows the 5 most popular group routes on a single map together with marker grouping so the user can see how many people are signed up for each group on the map.
-
-- Yelp review integration into the information cards retrieved for each location found by the map searches.
-
-- Make the form at the bottom of the page usable
-
-- UI improvements
-## Our Dev Team 
+## Dev Team 
 	
 * Zach Harmon [Github](https://www.github.com/zachha) - zachha@gmail.com
-* Harris Joseph [Github](https://www.github.com/HarryCaveMan) - harris.joseph.088@gmail.com
