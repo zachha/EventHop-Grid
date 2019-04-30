@@ -30,19 +30,26 @@
     &.shop,
     &.bull,
     &.bullLocal {
-        background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("../img/icon/bull-city-white.png");
+        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/bull-city-white.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
     &.bullLocal {
-        background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("../img/icon/bull-local.png");
+        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/bull-local.png");
     }
     &.shop {
-        background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("../img/icon/shop-durham.png");
+        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/shop-durham.png");
     }
     & .locCard__overlay {
         position: absolute;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: " overlay-text "
+                             "overlay-button";
+        justify-items: center;
+        align-items: center;
         top: 0;
         bottom: 0;
         left: 0;
@@ -50,9 +57,21 @@
         height: 100%;
         width: 100%;
         z-index: 10;
-        background: linear-gradient(rgba(219,0,17,0.7), rgba(219,0,17,0.7));
+        background: linear-gradient(rgba(219,0,17,0.8), rgba(219,0,17,0.8));
         &.hide {
             opacity: 0.0;
+        }
+        & h2 {
+            grid-area: overlay-text;
+            color: white;
+            font-size: 3.5rem;
+            margin: 2rem;
+        }
+        & button {
+            grid-area: overlay-button;
+            align-self: start;
+            width: 60%;
+            padding: 1.3rem;
         }
     }
 }
