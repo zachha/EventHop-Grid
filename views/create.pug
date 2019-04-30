@@ -9,22 +9,24 @@ block content
                 .title__section.cards.container
                     .location__box.chosen
                         h3 Location #1
-                        .locCard.chosen
+                        .locCard.chosen.shop
                             form.loc__form.form
                                 label(for="nameOne") First Stop:
-                                input(type="name" name="name" id="nameOne" placeholder="First Location")
+                                textarea(name="name" id="nameOne" placeholder="First Location")
                                 label(for="addressOne") Address:
-                                input(type="text"  name="address" id="addressOne")
+                                textarea(name="address" id="addressOne")
                                 label(for="telOne") Telephone Number:
-                                input(type="text" name="telephone" id="telOne")
+                                textarea(name="telephone" id="telOne")
+                            .locCard__overlay
+                            
                     .location__box
                         h3 Location #2
                         .locCard.bullLocal
-                            
+                            .locCard__overlay.hide
                     .location__box
                         h3 Location #3
                         .locCard.bull
-                            p   
+                            .locCard__overlay.hide
             .create__section--choose.section__content.center__flex--column
                 .choose__section--title
                     h3.choose__title Choose a Type of Event
