@@ -19,21 +19,40 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    opacity: 0.5;
+    position: relative;
     & p {
         color: white;
     }
     &.chosen {
-        background-color: white;
+        opacity: 1.0;
     }
+    &.shop,
     &.bull,
     &.bullLocal {
-        background-image: url("../img/icon/bull-city-white.png");
+        background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("../img/icon/bull-city-white.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
     &.bullLocal {
-        background-image: url("../img/icon/bull-local.png");
+        background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("../img/icon/bull-local.png");
     }
-
+    &.shop {
+        background-image: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url("../img/icon/shop-durham.png");
+    }
+    & .locCard__overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 10;
+        background: linear-gradient(rgba(219,0,17,0.7), rgba(219,0,17,0.7));
+        &.hide {
+            opacity: 0.0;
+        }
+    }
 }

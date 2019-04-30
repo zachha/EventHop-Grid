@@ -13,8 +13,10 @@ input, textarea {
     }
 }
 
-input:focus {
-    border: 2px solid black;
+input {
+    &:focus {
+        border: 2px solid black;
+    }
 }
 
 label {
