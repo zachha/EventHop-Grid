@@ -35,11 +35,11 @@
         background-size: contain;
         background-repeat: no-repeat;
     }
-    &.bullLocal {
-        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/bull-local.png");
-    }
     &.shop {
         background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/shop-durham.png");
+    }
+    &.bullLocal {
+        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/bull-local.png");
     }
     & .locCard__overlay {
         position: absolute;
