@@ -10,7 +10,9 @@ $logoFont: 'Kaushan Script', cursive;
 $headerFonts: 'Montserrat', sans-serif;
 
 // These rgba and gradients are mostly used in the create location cards
-
+$rgbaBlackFive: rgba(33,37,41,0.5);
+$rgbaBlackNine: rgba(33,37,41,0.9);
+$rgbaRedEight: rgba(219,0,17,0.8);
 $rgbaWhiteSeven: rgba(255,255,255,0.7);
 $rgbaWhiteNine: rgba(255,255,255,0.9);
 $bull: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-city-white.png");
