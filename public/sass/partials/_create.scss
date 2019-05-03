@@ -65,15 +65,13 @@ label.choose__title {
         margin-bottom: 2rem;
         opacity: 0.3;
     }
-}
-
-.location__box.chosen h3 {
-    color: $red;
-    font-weight: 600;
-    text-decoration: underline;
-    opacity: 1.0;
-    border: 2px solid $red;
-    border-radius: 5px;
+    &.chosen h3 {
+        color: $red;
+        font-weight: 600;
+        text-decoration: underline;
+        opacity: 1.0;
+        width: 50%;
+    }
 }
 
 form.loc__form {

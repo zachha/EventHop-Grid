@@ -708,14 +708,11 @@ label.choose__title {
   margin-bottom: 2rem;
   opacity: 0.3;
 }
-
 .location__box.chosen h3 {
   color: #db0011;
   font-weight: 600;
   text-decoration: underline;
   opacity: 1;
-  border: 2px solid #db0011;
-  border-radius: 5px;
 }
 
 form.loc__form {
@@ -806,7 +803,7 @@ form.loc__form textarea {
   height: 100%;
   width: 100%;
   z-index: 10;
-  background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
+  background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
 }
 .locCard .locCard__overlay.hide {
   opacity: 0;
@@ -822,6 +819,9 @@ form.loc__form textarea {
   align-self: start;
   width: 60%;
   padding: 1.3rem;
+}
+.locCard .complete {
+  background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
 }
 
 input, textarea {
@@ -1033,6 +1033,10 @@ a.portfolio__anchor {
   fill: #db0011;
   height: 5rem;
   width: 5rem;
+}
+
+.disabled {
+  pointer-events: none;
 }
 
 @media (max-width: 1920px) {
