@@ -72,6 +72,8 @@ label.choose__title {
     font-weight: 600;
     text-decoration: underline;
     opacity: 1.0;
+    border: 2px solid $red;
+    border-radius: 5px;
 }
 
 form.loc__form {

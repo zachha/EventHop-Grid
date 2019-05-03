@@ -27,19 +27,26 @@
     &.chosen {
         opacity: 1.0;
     }
-    &.shop,
-    &.bull,
-    &.bullLocal {
-        background-image: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-city-white.png");
+    &.locCard__background {
+        background-image: $bull;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
+    &.bullFaint {
+        background-image: $bullFaint;
+    }
     &.shop {
-        background-image: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/shop-durham.png");
+        background-image: $shop;
+    }
+    &.shopFaint {
+        background-image: $shopFaint;
     }
     &.bullLocal {
-        background-image: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-local.png");
+        background-image: $bullLocal;
+    }
+    &.bullLocalFaint {
+        background-image: $bullLocalFaint;
     }
     & .locCard__overlay {
         position: absolute;
