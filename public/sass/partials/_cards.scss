@@ -30,16 +30,16 @@
     &.shop,
     &.bull,
     &.bullLocal {
-        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/bull-city-white.png");
+        background-image: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-city-white.png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
     }
     &.shop {
-        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/shop-durham.png");
+        background-image: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/shop-durham.png");
     }
     &.bullLocal {
-        background-image: linear-gradient($rgbaRedSeven, $rgbaRedSeven), url("../img/icon/bull-local.png");
+        background-image: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-local.png");
     }
     & .locCard__overlay {
         position: absolute;
