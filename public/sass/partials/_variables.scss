@@ -8,5 +8,14 @@ $bgBlack: #212529;
 $fontFallbacks: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 $logoFont: 'Kaushan Script', cursive;
 $headerFonts: 'Montserrat', sans-serif;
+
+// These rgba and gradients are mostly used in the create location cards
+
 $rgbaWhiteSeven: rgba(255,255,255,0.7);
 $rgbaWhiteNine: rgba(255,255,255,0.9);
+$bull: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-city-white.png");
+$bullFaint: linear-gradient($rgbaWhiteNine, $rgbaWhiteNine), url("../img/icon/bull-city-white.png");
+$bullLocal: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-local.png");
+$bullLocalFaint: linear-gradient($rgbaWhiteNine, $rgbaWhiteNine), url("../img/icon/bull-local.png");
+$shop: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/shop-durham.png");
+$shopFaint: linear-gradient($rgbaWhiteNine, $rgbaWhiteNine), url("../img/icon/shop-durham.png");
