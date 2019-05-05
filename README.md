@@ -1,6 +1,6 @@
 # EventHop-Grid
 
-** The EventHop-Grid rebuild is still in progress! **
+### The EventHop-Grid rebuild is still in progress! 
 
 This is a complete overhaul of my EventHop web application that was originally made as a single-page app.  This overhaul will create a multi-page application made with css grid, css flexbos, and pug. The new site will focus on drastically improving several things:
 <ul>
