@@ -3,11 +3,12 @@
 ** The EventHop-Grid rebuild is still in progress! **
 
 This is a complete overhaul of my EventHop web application that was originally made as a single-page app.  This overhaul will create a multi-page application made with css grid, css flexbos, and pug. The new site will focus on drastically improving several things:
+<ul>
 	• Usability will be simplified via a more intuitive design 
 	• Optimization (much faster loading speeds)
 	• Accessibility
 	• Responsiveness and Cross-Compatibility across mobile and the popular web browsers
-
+</ul>
 # EventHop
 
 ![EventHop Logo](public/img/icon/favicon-310.png "EventHop Logo")
