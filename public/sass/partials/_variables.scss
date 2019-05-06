@@ -1,24 +1,32 @@
-
+// colors
 $red: #db0011;
 $peach: #FF949D;
 $primaryText: #647595;
 $grey: #6c757d;
 $yellow: #FFC40E;
 $bgBlack: #212529;
-$fontFallbacks: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$logoFont: 'Kaushan Script', cursive;
-$headerFonts: 'Montserrat', sans-serif;
+$bgGrey: #f8f9fa;
+$placeholder: #8b9094;
 
-// These rgba and gradients are mostly used in the create location cards
-$cardShadow: 4px 4px 22px -5px rgba(100,117,149,1);
+// fonts
+$logoFont: 'Kaushan Script', cursive, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$headerFonts: 'Montserrat', sans-serif, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+// rgba vars
 $rgbaBlackFive: rgba(33,37,41,0.5);
 $rgbaBlackNine: rgba(33,37,41,0.9);
 $rgbaRedEight: rgba(219,0,17,0.8);
 $rgbaWhiteSeven: rgba(255,255,255,0.7);
 $rgbaWhiteNine: rgba(255,255,255,0.9);
+
+// linear-grades
 $bull: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-city-white.png");
 $bullFaint: linear-gradient($rgbaWhiteNine, $rgbaWhiteNine), url("../img/icon/bull-city-white.png");
 $bullLocal: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/bull-local.png");
 $bullLocalFaint: linear-gradient($rgbaWhiteNine, $rgbaWhiteNine), url("../img/icon/bull-local.png");
 $shop: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven), url("../img/icon/shop-durham.png");
 $shopFaint: linear-gradient($rgbaWhiteNine, $rgbaWhiteNine), url("../img/icon/shop-durham.png");
+
+// misc
+$cardShadow: 4px 4px 22px -5px rgba(100,117,149,1);
+$transition: opacity 0.4s ease-in-out;
