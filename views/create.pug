@@ -9,29 +9,28 @@ block content
                 .title__section.cards.container
                     .location__box.chosen
                         h3 Location #1
-                        .locCard.locCard__background.chosen.shopFaint
-                            form.loc__form.form
-                                label(for="nameOne") First Stop:
-                                textarea(name="name" id="nameOne" placeholder="First Location")
-                                label(for="addressOne") Address:
-                                textarea(name="address" id="addressOne")
-                                label(for="telOne") Telephone Number:
-                                textarea(name="telephone" id="telOne")
-                            .locCard__overlay.complete
-                                h2 Choose your first event type
-                                button#locStart.button Let's Go!
+                        .locCard.locCard__background.chosen.shop
+                            .locCard__overlay.overlayRed.locChosen
+                                h2.locTitle Ninth Street Bakery
+                                .locInfo
+                                    p.locAddress 112 S Duke St, Durham, NC 27701, USA
+                                    p.locStars Google Rating: 4.6
+                                button#locStart.button.hide Let's Go!
+                                button#locOneWeb.locWebsite.button Website
                     .location__box
                         h3 Location #2
                         .locCard.locCard__background.bullLocal
                             .locCard__overlay
-                                h2 Choose your next event type
+                                h2.locTitle Choose your next event type
                                 button#locStart.button.disabled Let's Go!
+                                button#locTwoWeb.locWebsite.button.hide Website
                     .location__box
                         h3 Location #3
                         .locCard.locCard__background
-                            .locCard__overlay
-                                h2 Choose your last event type
+                            .locCard__overlay.overlayWhite
+                                h2.locTitle Choose your last event type
                                 button#locStart.button.disabled Let's Go!
+                                button#locThreeWeb.locWebsite.button.hide Website
                                 
             .create__section--choose.section__content.center__flex--column
                 .choose__section--title
@@ -54,4 +53,7 @@ block content
                     .choose__button
                         button#addLoc.button.map__button.location__button Add Location
                 .breakline
-                .choose__section--infocards
+                .choose__section--infocards.container
+                    .infocard
+                        .infocard__pic
+                        .infocard__text
