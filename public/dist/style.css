@@ -1,3 +1,48 @@
+.button {
+  cursor: pointer;
+  border: none;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #db0011;
+  background-color: #212529;
+  font-size: 2rem;
+  margin-top: 3rem;
+  font-weight: 600;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+}
+
+.breakline {
+  height: 5rem;
+  align-self: center;
+  margin: 1.5rem 4rem;
+  border-bottom: 1px solid #212529;
+  display: block;
+  width: 70%;
+}
+
+.svg__icon {
+  fill: #db0011;
+  height: 5rem;
+  width: 5rem;
+}
+
+.disabled {
+  pointer-events: none;
+}
+
+.hide {
+  display: none;
+}
+
+.nav__section--pages, .nav__section--user {
+  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -352,7 +397,9 @@ template {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
   background: white;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 4px 4px 22px -5px #647595;
+  -moz-box-shadow: 4px 4px 22px -5px #647595;
+  box-shadow: 4px 4px 22px -5px #647595;
   margin-bottom: 2rem;
   padding: 2rem;
   position: relative;
@@ -604,18 +651,6 @@ section.about {
   justify-items: center;
   align-items: center;
 }
-.nav__section--pages {
-  justify-self: end;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-.nav__section--user {
-  justify-self: end;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
 .nav__item {
   padding: 1rem 2rem;
 }
@@ -713,6 +748,7 @@ label.choose__title {
   font-weight: 600;
   text-decoration: underline;
   opacity: 1;
+  width: 50%;
 }
 
 form.loc__form {
@@ -1048,44 +1084,6 @@ a.portfolio__anchor {
   height: 40px;
   position: relative;
   margin: 0 0.5rem;
-}
-
-.button {
-  cursor: pointer;
-  border: none;
-  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #db0011;
-  background-color: #212529;
-  font-size: 2rem;
-  margin-top: 3rem;
-  font-weight: 600;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
-}
-
-.breakline {
-  height: 5rem;
-  align-self: center;
-  margin: 1.5rem 4rem;
-  border-bottom: 1px solid #212529;
-  display: block;
-  width: 70%;
-}
-
-.svg__icon {
-  fill: #db0011;
-  height: 5rem;
-  width: 5rem;
-}
-
-.disabled {
-  pointer-events: none;
-}
-
-.hide {
-  display: none;
 }
 
 @media (max-width: 1920px) {

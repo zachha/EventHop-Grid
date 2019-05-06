@@ -1,5 +1,5 @@
 .nav {
-    background-color: #212529;
+    background-color: $bgBlack;
     padding: 1.5rem 0;
     display: grid;
     grid-template-columns: 2fr 4fr 2fr;
@@ -7,27 +7,19 @@
     justify-items: center;
     align-items: center;
     &__section {
-        &--pages {
-            justify-self: end;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
+        &--pages,
         &--user {
-            justify-self: end;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
+            @extend %nav__layout;
         }
     }
     &__item {
         padding: 1rem 2rem;
     }
     &__link {
-        font-family: $headerFonts, $fontFallbacks;
+        font-family: $headerFonts;
         &--logo {
             font-size: 3.0rem;
-            font-family: $logoFont, $fontFallbacks;
+            font-family: $logoFont;
         }
         &--signup {
             font-size: 1.9rem;

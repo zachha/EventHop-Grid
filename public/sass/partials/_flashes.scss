@@ -11,10 +11,10 @@
 }
 
 .flash {
-  font-family: $headerFonts, $fontFallbacks;
+  font-family: $headerFonts;
   text-align: center;
   background: white;
-  box-shadow: 0 3px 10px rgba(0,0,0,0.15);
+  @include box-shadow($cardShadow);
   margin-bottom: 2rem;
   padding: 2rem;
   position: relative;

@@ -1,3 +1,4 @@
+// downloads web fonts to the client's pc
 @font-face {
     font-family: 'Kaushan Script';
     src: url('/fonts/KaushanScript-Regular.ttf') format('truetype');
@@ -12,6 +13,7 @@
     font-style: normal;
 }
 
+// Generalized typography styling
 html {
     font-size: 62.5%;
     list-style: none;
@@ -24,7 +26,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     color: $red;
     font-weight: 400;
-    font-family: $headerFonts, $fontFallbacks;
+    font-family: $headerFonts;
 }
 
 h1 {
@@ -32,7 +34,7 @@ h1 {
     color: white;
     font-size: 8.0rem;
     padding: 1.5rem;
-    font-family: $logoFont, $fontFallbacks;
+    font-family: $logoFont;
 }
 
 h2 {

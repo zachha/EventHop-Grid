@@ -2,7 +2,7 @@
 .button { 
     cursor: pointer;
     border: none;
-    font-family: $headerFonts, $fontFallbacks;
+    font-family: $headerFonts;
     color: $red;
     background-color: $bgBlack;
     font-size: 2rem;
@@ -38,4 +38,14 @@
 // hides element and doesn't preserve the space it was/is in
 .hide {
     display: none
+}
+
+%nav__layout {
+    justify-self: end;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+%basic__card {
+
 }

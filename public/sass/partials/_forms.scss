@@ -1,7 +1,7 @@
 input, textarea {
-    font-family: $headerFonts, $fontFallbacks;
+    font-family: $headerFonts;
     font-size: 1.6rem;
-    color: rgb(139, 144, 148);
+    color: $placeholder;
     width: 30%;
     padding: 1.6rem;
     border: 1px solid $grey;
@@ -20,7 +20,7 @@ input {
 }
 
 label {
-    font-family: $headerFonts, $fontFallbacks;
+    font-family: $headerFonts;
     color: black;
     padding: 1rem 0;
     display: block;
