@@ -1,6 +1,10 @@
+// variable/helper/normalization files
 @import 'partials/variables';
 @import 'partials/mixins';
+@import 'partials/helpers';
 @import 'partials/normalize';
+
+// specific style sheets
 @import 'partials/flashes';
 @import 'partials/typography';
 @import 'partials/layout';
@@ -9,5 +13,6 @@
 @import 'partials/cards';
 @import 'partials/forms';
 @import 'partials/contact';
-@import 'partials/helpers';
+
+// media queries 
 @import 'partials/mediaqueries';
