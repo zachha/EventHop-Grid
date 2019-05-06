@@ -9,9 +9,7 @@
 
 // styles the 'choose location' cards at the top of create page
 .locCard {
-    -webkit-box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
-    -moz-box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
-    box-shadow: 4px 4px 22px -5px rgba(100,117,149,1);
+    @include box-shadow($cardShadow);
     width: 100%;
     height: 450px;
     border-radius: 4px;
@@ -49,6 +47,7 @@
         background-image: $bullLocalFaint;
     }
     & .locCard__overlay {
+        border-radius: 4px;
         position: absolute;
         display: grid;
         grid-template-columns: 1fr;
@@ -68,7 +67,7 @@
         &.hide {
             opacity: 0.0;
         }
-        & h2 {
+        & h2.locTitle {
             grid-area: overlay-text;
             color: white;
             font-size: 3.5rem;
@@ -79,9 +78,60 @@
             align-self: start;
             width: 60%;
             padding: 1.3rem;
+            color: white;
+            background-color: $red;
+        }
+        &.locChosen {
+            grid-template-rows: 1fr 1fr 25%;
+            grid-template-areas: " overlay-text "
+                                 "overlay-info"
+                                 "overlay-button";
+            & p {
+                color: white;
+                font-family: $headerFonts, $fontFallbacks;
+                font-size: 2rem;
+                margin: 0 2rem;
+            }
+            & .locInfo {
+                grid-area: overlay-info;
+                align-self: start;
+            }
+            & p.locStars {
+                margin-top: 1rem;
+            }
+            & button.locWebsite {
+                grid-area: overlay-button;
+            }
         }
     }
-    & .complete {
-        background: linear-gradient( $rgbaRedEight, $rgbaRedEight );
+    & .overlayRed {
+        background: linear-gradient($rgbaRedEight, $rgbaRedEight);
+        & button {
+            color: $bgBlack;
+            background-color: white;
+        }
+    }
+    & .overlayWhite {
+        background: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven);
+        & h2.locTitle {
+            color: $bgBlack;
+        }
+        & button {
+            color: $red;
+            background-color: $bgBlack;
+        }
+    }
+}
+
+.infocard {
+    @include box-shadow($cardShadow);
+    border-radius: 4px;
+    width: 100%;
+    display: flex;
+    & .infocard__pic {
+
+    }
+    & .infocard__text {
+
     }
 }

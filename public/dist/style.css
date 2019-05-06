@@ -789,6 +789,7 @@ form.loc__form textarea {
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-local.png");
 }
 .locCard .locCard__overlay {
+  border-radius: 4px;
   position: absolute;
   display: grid;
   grid-template-columns: 1fr;
@@ -808,7 +809,7 @@ form.loc__form textarea {
 .locCard .locCard__overlay.hide {
   opacity: 0;
 }
-.locCard .locCard__overlay h2 {
+.locCard .locCard__overlay h2.locTitle {
   grid-area: overlay-text;
   color: white;
   font-size: 3.5rem;
@@ -819,11 +820,55 @@ form.loc__form textarea {
   align-self: start;
   width: 60%;
   padding: 1.3rem;
+  color: white;
+  background-color: #db0011;
 }
-.locCard .complete {
+.locCard .locCard__overlay.locChosen {
+  grid-template-rows: 1fr 1fr 25%;
+  grid-template-areas: " overlay-text " "overlay-info" "overlay-button";
+}
+.locCard .locCard__overlay.locChosen p {
+  color: white;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  margin: 0 2rem;
+}
+.locCard .locCard__overlay.locChosen .locInfo {
+  grid-area: overlay-info;
+  align-self: start;
+}
+.locCard .locCard__overlay.locChosen p.locStars {
+  margin-top: 1rem;
+}
+.locCard .locCard__overlay.locChosen button.locWebsite {
+  grid-area: overlay-button;
+}
+.locCard .overlayRed {
   background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
 }
+.locCard .overlayRed button {
+  color: #212529;
+  background-color: white;
+}
+.locCard .overlayWhite {
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
+}
+.locCard .overlayWhite h2.locTitle {
+  color: #212529;
+}
+.locCard .overlayWhite button {
+  color: #db0011;
+  background-color: #212529;
+}
 
+.infocard {
+  -webkit-box-shadow: 4px 4px 22px -5px #647595;
+  -moz-box-shadow: 4px 4px 22px -5px #647595;
+  box-shadow: 4px 4px 22px -5px #647595;
+  border-radius: 4px;
+  width: 100%;
+  display: flex;
+}
 input, textarea {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;
@@ -1037,6 +1082,10 @@ a.portfolio__anchor {
 
 .disabled {
   pointer-events: none;
+}
+
+.hide {
+  display: none;
 }
 
 @media (max-width: 1920px) {
