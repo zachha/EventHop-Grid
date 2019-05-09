@@ -10,13 +10,9 @@
 // styles the 'choose location' cards at the top of create page
 .locCard {
     @include box-shadow($cardShadow);
-    width: 100%;
+    @extend %flex__center;
     height: 450px;
-    border-radius: 4px;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     opacity: 0.5;
     position: relative;
     & p {
@@ -49,13 +45,11 @@
     & .locCard__overlay {
         border-radius: 4px;
         position: absolute;
-        display: grid;
+        @extend %grid__center;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
         grid-template-areas: " overlay-text "
                              "overlay-button";
-        justify-items: center;
-        align-items: center;
         top: 0;
         bottom: 0;
         left: 0;

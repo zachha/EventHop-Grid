@@ -36,10 +36,35 @@
   display: none;
 }
 
+.grow {
+  transition: all 0.2s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+
+.grow:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
 .nav__section--pages, .nav__section--user {
   justify-self: end;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+}
+
+.locCard .locCard__overlay {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.locCard {
+  display: flex;
+  justify-content: center;
   align-items: center;
 }
 
@@ -748,7 +773,6 @@ label.choose__title {
   font-weight: 600;
   text-decoration: underline;
   opacity: 1;
-  width: 50%;
 }
 
 form.loc__form {
@@ -787,13 +811,8 @@ form.loc__form textarea {
   -webkit-box-shadow: 4px 4px 22px -5px #647595;
   -moz-box-shadow: 4px 4px 22px -5px #647595;
   box-shadow: 4px 4px 22px -5px #647595;
-  width: 100%;
   height: 450px;
-  border-radius: 4px;
-  display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   opacity: 0.5;
   position: relative;
 }
@@ -827,12 +846,9 @@ form.loc__form textarea {
 .locCard .locCard__overlay {
   border-radius: 4px;
   position: absolute;
-  display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: " overlay-text " "overlay-button";
-  justify-items: center;
-  align-items: center;
   top: 0;
   bottom: 0;
   left: 0;
