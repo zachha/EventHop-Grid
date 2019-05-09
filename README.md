@@ -1,12 +1,16 @@
 # EventHop-Grid
 
-** The EventHop-Grid rebuild is still in progress! **
-
-This is a complete overhaul of my EventHop web application that was originally made as a single-page app.  This overhaul will create a multi-page application made with css grid, pug, and better passport implementation.
-
-# EventHop
-
 ![EventHop Logo](public/img/icon/favicon-310.png "EventHop Logo")
+
+### The EventHop-Grid rebuild is still in progress! 
+
+This is a complete overhaul of my EventHop web application that was originally made as a single-page app.  This overhaul will create a multi-page application made with css grid, css flexbos, and pug. The new site will focus on drastically improving several things:
+<ul>
+	<li>Usability will be simplified via a more intuitive design</li>
+	<li>Optimization (much faster loading speeds)</li>
+	<li>Accessibility</li>
+	<li>Responsiveness and Cross-Compatibility across mobile and the popular web browsers</li>
+</ul>
 
 ## Application Description
 
