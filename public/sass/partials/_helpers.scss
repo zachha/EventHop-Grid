@@ -40,12 +40,42 @@
     display: none
 }
 
+.grow {
+    transition: all .2s ease-in-out;
+    -webkit-font-smoothing: antialiased;
+    backface-visibility: hidden;
+}
+
+.grow:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+// sass extensions
 %nav__layout {
     justify-self: end;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 }
-%basic__card {
 
+%basic__card {
+    @include box-shadow($cardShadow);
+    width: 100%;
+    border-radius: 4px;
+
+}
+
+%grid__center {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+%flex__center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
