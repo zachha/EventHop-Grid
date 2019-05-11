@@ -65,9 +65,13 @@
     @include box-shadow($cardShadow);
     width: 100%;
     border-radius: 4px;
-
 }
 
+%locCard__headers {
+    color: $red;
+    opacity: 1.0;
+    font-weight: 600;
+}
 %grid__center {
     display: grid;
     justify-items: center;
