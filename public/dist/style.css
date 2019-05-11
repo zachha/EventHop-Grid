@@ -56,6 +56,20 @@
   align-items: center;
 }
 
+.info__container .infocard {
+  -webkit-box-shadow: 4px 4px 22px -5px #647595;
+  -moz-box-shadow: 4px 4px 22px -5px #647595;
+  box-shadow: 4px 4px 22px -5px #647595;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.location__box.complete h3, .location__box.chosen h3 {
+  color: #db0011;
+  opacity: 1;
+  font-weight: 600;
+}
+
 .locCard .locCard__overlay {
   display: grid;
   justify-items: center;
@@ -700,105 +714,6 @@ section.about {
   border-color: #db0011;
 }
 
-#map {
-  height: 400px;
-  width: 100%;
-}
-
-.create__section {
-  width: 100%;
-  padding: 0;
-}
-.create__section .create__section--title {
-  width: 100%;
-}
-.create__section .create__section--choose {
-  width: 100%;
-  text-align: center;
-  align-items: stretch;
-}
-.create__section .create__section--choose .choose__section--buttons {
-  width: 80%;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.create__section .create__section--choose .choose__section--map {
-  text-align: center;
-  width: 100%;
-  height: 80%;
-}
-
-.choose__section--dropdown {
-  padding-top: 2rem;
-}
-.choose__section--dropdown label.choose__title {
-  margin-bottom: 2rem;
-}
-.choose__section--dropdown select {
-  text-align: center;
-  width: 20%;
-  padding: 1.3rem;
-  font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.choose__section--dropdown button.location__button {
-  width: 15%;
-}
-
-button.map__button {
-  width: 15%;
-  padding: 1.3rem;
-}
-
-label.choose__title {
-  font-weight: 400;
-  font-size: 2.5rem;
-  color: #db0011;
-}
-
-.location__box {
-  width: 30%;
-  text-align: center;
-}
-.location__box h3 {
-  color: #6c757d;
-  margin-bottom: 2rem;
-  opacity: 0.3;
-}
-.location__box.chosen h3 {
-  color: #db0011;
-  font-weight: 600;
-  text-decoration: underline;
-  opacity: 1;
-}
-
-form.loc__form {
-  background-color: transparent;
-  width: 90%;
-  height: 90%;
-  justify-content: flex-start;
-  align-items: center;
-}
-form.loc__form label {
-  background-color: transparent;
-  color: black;
-  font-size: 2.3rem;
-  font-weight: 600;
-}
-form.loc__form textarea {
-  background-color: transparent;
-  color: black;
-  font-size: 2rem;
-  width: 90%;
-  height: 10%;
-  padding: 0.5rem;
-  border: none;
-  resize: none;
-}
-
 .cards {
   width: 100%;
   display: flex;
@@ -856,14 +771,12 @@ form.loc__form textarea {
   height: 100%;
   width: 100%;
   z-index: 10;
-  background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
 }
 .locCard .locCard__overlay.hide {
   opacity: 0;
 }
 .locCard .locCard__overlay h2.locTitle {
   grid-area: overlay-text;
-  color: white;
   font-size: 3.5rem;
   margin: 2rem;
 }
@@ -872,8 +785,6 @@ form.loc__form textarea {
   align-self: start;
   width: 60%;
   padding: 1.3rem;
-  color: white;
-  background-color: #db0011;
 }
 .locCard .locCard__overlay.locChosen {
   grid-template-rows: 1fr 1fr 25%;
@@ -895,32 +806,138 @@ form.loc__form textarea {
 .locCard .locCard__overlay.locChosen button.locWebsite {
   grid-area: overlay-button;
 }
-.locCard .overlayRed {
+
+.info__container .infocard {
+  display: flex;
+  height: 250px;
+  margin: 4rem 0;
+}
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.create__section {
+  width: 100%;
+  padding: 0;
+}
+.create__section .create__section--title {
+  width: 100%;
+}
+.create__section .create__section--choose {
+  width: 100%;
+  text-align: center;
+  align-items: stretch;
+}
+.create__section .create__section--choose .choose__section--buttons {
+  width: 80%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.create__section .create__section--choose .choose__section--map {
+  text-align: center;
+  width: 100%;
+  height: 80%;
+}
+.create__section .overlayRed {
   background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
 }
-.locCard .overlayRed button {
+.create__section .overlayRed h2, .create__section .overlayRed p {
+  color: white;
+}
+.create__section .overlayRed button {
   color: #212529;
   background-color: white;
 }
-.locCard .overlayWhite {
+.create__section .overlayWhite {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-.locCard .overlayWhite h2.locTitle {
+.create__section .overlayWhite h2, .create__section .overlayWhite p {
   color: #212529;
 }
-.locCard .overlayWhite button {
+.create__section .overlayWhite button {
   color: #db0011;
   background-color: #212529;
 }
-
-.infocard {
-  -webkit-box-shadow: 4px 4px 22px -5px #647595;
-  -moz-box-shadow: 4px 4px 22px -5px #647595;
-  box-shadow: 4px 4px 22px -5px #647595;
-  border-radius: 4px;
-  width: 100%;
-  display: flex;
+.create__section .overlayBlack {
+  background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
 }
+.create__section h2, .create__section p {
+  color: white;
+}
+.create__section button {
+  color: white;
+  background-color: #db0011;
+}
+
+.choose__section--dropdown {
+  padding-top: 2rem;
+}
+.choose__section--dropdown .choose__title {
+  margin-bottom: 2rem;
+}
+.choose__section--dropdown select {
+  text-align: center;
+  width: 20%;
+  padding: 1.3rem;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.choose__section--dropdown .location__button {
+  width: 15%;
+}
+
+.map__button {
+  width: 15%;
+  padding: 1.3rem;
+}
+
+.choose__title {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #db0011;
+}
+
+.location__box {
+  width: 30%;
+  text-align: center;
+}
+.location__box h3 {
+  color: #6c757d;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  opacity: 0.3;
+}
+.location__box.chosen h3 {
+  text-decoration: underline;
+}
+form.loc__form {
+  background-color: transparent;
+  width: 90%;
+  height: 90%;
+  justify-content: flex-start;
+  align-items: center;
+}
+form.loc__form label {
+  background-color: transparent;
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+form.loc__form textarea {
+  background-color: transparent;
+  color: black;
+  font-size: 2rem;
+  width: 90%;
+  height: 10%;
+  padding: 0.5rem;
+  border: none;
+  resize: none;
+}
+
 input, textarea {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.6rem;

@@ -57,13 +57,11 @@
         height: 100%;
         width: 100%;
         z-index: 10;
-        background: linear-gradient( $rgbaBlackNine, $rgbaBlackNine );
         &.hide {
             opacity: 0.0;
         }
         & h2.locTitle {
             grid-area: overlay-text;
-            color: white;
             font-size: 3.5rem;
             margin: 2rem;
         }
@@ -72,8 +70,6 @@
             align-self: start;
             width: 60%;
             padding: 1.3rem;
-            color: white;
-            background-color: $red;
         }
         &.locChosen {
             grid-template-rows: 1fr 1fr 25%;
@@ -98,34 +94,19 @@
             }
         }
     }
-    & .overlayRed {
-        background: linear-gradient($rgbaRedEight, $rgbaRedEight);
-        & button {
-            color: $bgBlack;
-            background-color: white;
-        }
-    }
-    & .overlayWhite {
-        background: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven);
-        & h2.locTitle {
-            color: $bgBlack;
-        }
-        & button {
-            color: $red;
-            background-color: $bgBlack;
-        }
-    }
 }
 
-.infocard {
-    @include box-shadow($cardShadow);
-    border-radius: 4px;
-    width: 100%;
-    display: flex;
+.info__container {
     & .infocard__pic {
-
+        
     }
-    & .infocard__text {
-
+    & .infocard {
+        @extend %basic__card;
+        display: flex;
+        height: 250px;
+        margin: 4rem 0;
+        & .infocard__text {
+        
+        }
     }
 }

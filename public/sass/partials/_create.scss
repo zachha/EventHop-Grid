@@ -27,12 +27,45 @@
             height: 80%;
         }
     }
+    & .overlayRed {
+        background: linear-gradient($rgbaRedEight, $rgbaRedEight);
+        & h2,
+        & p {
+            color: white;
+        }
+        & button {
+            color: $bgBlack;
+            background-color: white;
+        }
+    }
+    & .overlayWhite {
+        background: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven);
+        & h2,
+        & p {
+            color: $bgBlack;
+        }
+        & button {
+            color: $red;
+            background-color: $bgBlack;
+        }
+    }
+    & .overlayBlack {
+        background: linear-gradient( $rgbaBlackNine, $rgbaBlackNine );
+    }
+    & h2,
+    & p {
+        color: white
+    }
+    & button {
+        color: white;
+        background-color: $red;
+    }
 }
 
 .choose__section--dropdown {
     padding-top: 2rem;
     
-    & label.choose__title {
+    & .choose__title {
         margin-bottom: 2rem;
     }
     & select {
@@ -42,16 +75,16 @@
         font-size: 1.6rem;
         font-family: $headerFonts;
     }
-    & button.location__button {
+    & .location__button {
         width: 15%;
     }
 }
-button.map__button {
+.map__button {
     width: 15%;
     padding: 1.3rem;
 }
 
-label.choose__title {
+.choose__title {
     font-weight: 400;
     font-size: 2.5rem;
     color: $red;
@@ -63,13 +96,15 @@ label.choose__title {
     & h3 {
         color: $grey;
         margin-bottom: 2rem;
+        font-size: 3rem;
         opacity: 0.3;
     }
     &.chosen h3 {
-        color: $red;
-        font-weight: 600;
+        @extend %locCard__headers;
         text-decoration: underline;
-        opacity: 1.0;
+    }
+    &.complete h3 {
+        @extend %locCard__headers;
     }
 }
 
