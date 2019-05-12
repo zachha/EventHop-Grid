@@ -7,7 +7,7 @@ block content
                 h2.create__title CREATE YOUR OWN EVENT
                 h4.create__subtitle Choose up to Three Event Locations!
                 .title__section.cards.container
-                    .location__box.chosen
+                    .location__box.complete
                         h3 Location #1
                         .locCard.locCard__background.chosen.shop
                             .locCard__overlay.overlayRed.locChosen
@@ -20,7 +20,7 @@ block content
                     .location__box.chosen
                         h3 Location #2
                         .locCard.locCard__background.bullLocal.chosen
-                            .locCard__overlay
+                            .locCard__overlay.overlayBlack
                                 h2.locTitle Choose your next event type
                                 button#locStart.button.grow Let's Go!
                                 button#locTwoWeb.locWebsite.button.hide Website
@@ -54,6 +54,15 @@ block content
                         button#addLoc.button.map__button.location__button Add Location
                 .breakline
                 .choose__section--infocards.container
-                    .infocard
+                    .info__container
+                        .infocard__pictures
+                            .infocard__pic
+                                img(src="/img/photos/durham.jpeg").infocard__pic--image
+                        .infocard.overlayRed
+                            .infocard__text
+                    .infocard.overlayBlack
+                        .infocard__pic
+                        .infocard__text
+                    .infocard.overlayWhite
                         .infocard__pic
                         .infocard__text
