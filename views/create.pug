@@ -8,29 +8,29 @@ block content
                 h4.create__subtitle Choose up to Three Event Locations!
                 .title__section.cards.container
                     .location__box.complete
-                        h3 Location #1
+                        h3 First Location Chosen
                         .locCard.locCard__background.chosen.shop
                             .locCard__overlay.overlayRed.locChosen
-                                h2.locTitle Ninth Street Bakery
+                                h2.card__title Ninth Street Bakery
                                 .locInfo
-                                    p.locAddress 112 S Duke St, Durham, NC 27701, USA
-                                    p.locStars Google Rating: 4.6
-                                button#locStart.button.hide Let's Go!
-                                button#locOneWeb.locWebsite.button.grow Website
+                                    p.card__text.locAddress 112 S Duke St, Durham, NC 27701, USA
+                                    p.card__text.locStars Google Rating: 4.6
+                                button#locStart.card__button.button.hide Let's Go!
+                                button#locOneWeb.card__button.locWebsite.button.grow Website
                     .location__box.chosen
                         h3 Location #2
                         .locCard.locCard__background.bullLocal.chosen
                             .locCard__overlay.overlayBlack
-                                h2.locTitle Choose your next event type
-                                button#locStart.button.grow Let's Go!
-                                button#locTwoWeb.locWebsite.button.hide Website
+                                h2.card__title Choose your next event type
+                                button#locStart.card__button.button.grow Let's Go!
+                                button#locTwoWeb.card__button.locWebsite.button.hide Website
                     .location__box
                         h3 Location #3
                         .locCard.locCard__background
                             .locCard__overlay.overlayWhite
-                                h2.locTitle Choose your last event type
-                                button#locStart.button.disabled Let's Go!
-                                button#locThreeWeb.locWebsite.button.hide Website
+                                h2.card__title Choose your last event type
+                                button#locStart.card__button.button.disabled Let's Go!
+                                button#locThreeWeb.card__button.locWebsite.button.hide Website
                                 
             .create__section--choose.section__content.center__flex--column
                 .choose__section--title
@@ -54,15 +54,27 @@ block content
                         button#addLoc.button.map__button.location__button Add Location
                 .breakline
                 .choose__section--infocards.container
-                    .info__container
-                        .infocard__pictures
-                            .infocard__pic
+                    .infocard.overlayRed
+                        .infocard__text
+                            h2.card__title Bull City Burger and Brewery<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
+                            p.card__text.infocard__text--rating Google Rating: 4.3 
+                            p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
+                            p.card__text.infocard__text--phone Phone Number: (919) 680-2333
+                        .infocard__pic
                                 img(src="/img/photos/durham.jpeg").infocard__pic--image
-                        .infocard.overlayRed
-                            .infocard__text
                     .infocard.overlayBlack
-                        .infocard__pic
                         .infocard__text
+                            h2.card__title Bull City Burger and Brewery<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
+                            p.card__text.infocard__text--rating Google Rating: 4.3 
+                            p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
+                            p.card__text.infocard__text--phone Phone Number: (919) 680-2333
+                        .infocard__pic
+                                img(src="/img/photos/durham.jpeg").infocard__pic--image
                     .infocard.overlayWhite
-                        .infocard__pic
                         .infocard__text
+                            h2.card__title Bull City Burger and Brewery<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
+                            p.card__text.infocard__text--rating Google Rating: 4.3 
+                            p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
+                            p.card__text.infocard__text--phone Phone Number: (919) 680-2333
+                        .infocard__pic
+                                img(src="/img/photos/durham.jpeg").infocard__pic--image
