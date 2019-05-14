@@ -15,12 +15,13 @@
     flex-direction: column;
     opacity: 0.5;
     position: relative;
-    & p {
+    & .card__text {
         color: white;
     }
     &.chosen {
         opacity: 1.0;
     }
+    // background image styling for 'choose location' cards
     &.locCard__background {
         background-image: $bull;
         background-position: center;
@@ -60,12 +61,12 @@
         &.hide {
             opacity: 0.0;
         }
-        & h2.locTitle {
+        & h2.card__title {
             grid-area: overlay-text;
             font-size: 3.5rem;
             margin: 2rem;
         }
-        & button {
+        & .card__button {
             grid-area: overlay-button;
             align-self: start;
             width: 60%;
@@ -76,7 +77,7 @@
             grid-template-areas: " overlay-text "
                                  "overlay-info"
                                  "overlay-button";
-            & p {
+            & .card__text {
                 color: white;
                 font-family: $headerFonts;
                 font-size: 2rem;
@@ -96,17 +97,29 @@
     }
 }
 
-.info__container {
+// styles the infocards for each location, which are dynamically generated using info from Google Maps API
+.infocard {
+    margin: 2rem 0;
+    display: flex;
+    align-items: center;
+    @extend %basic__card;
+    width: 85%;
+    height: auto;
     & .infocard__pic {
-        
+        & .infocard__pic--image {
+            border-radius: 4px;
+            margin: 0 3rem;
+        }
     }
-    & .infocard {
-        @extend %basic__card;
-        display: flex;
-        height: 250px;
-        margin: 4rem 0;
-        & .infocard__text {
-        
+    & .infocard__text {
+        font-family: $headerFonts;
+        font-size: 2rem;
+        margin: 0;
+        & .infocard__text--phone {
+            margin-bottom: 4rem;
+        }
+        & .infocard__text--rating {
+            font-style: italic;
         }
     }
 }
