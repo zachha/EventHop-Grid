@@ -56,7 +56,7 @@
   align-items: center;
 }
 
-.info__container .infocard {
+.infocard {
   -webkit-box-shadow: 4px 4px 22px -5px #647595;
   -moz-box-shadow: 4px 4px 22px -5px #647595;
   box-shadow: 4px 4px 22px -5px #647595;
@@ -731,7 +731,7 @@ section.about {
   opacity: 0.5;
   position: relative;
 }
-.locCard p {
+.locCard .card__text {
   color: white;
 }
 .locCard.chosen {
@@ -775,12 +775,12 @@ section.about {
 .locCard .locCard__overlay.hide {
   opacity: 0;
 }
-.locCard .locCard__overlay h2.locTitle {
+.locCard .locCard__overlay h2.card__title {
   grid-area: overlay-text;
   font-size: 3.5rem;
   margin: 2rem;
 }
-.locCard .locCard__overlay button {
+.locCard .locCard__overlay .card__button {
   grid-area: overlay-button;
   align-self: start;
   width: 60%;
@@ -790,7 +790,7 @@ section.about {
   grid-template-rows: 1fr 1fr 25%;
   grid-template-areas: " overlay-text " "overlay-info" "overlay-button";
 }
-.locCard .locCard__overlay.locChosen p {
+.locCard .locCard__overlay.locChosen .card__text {
   color: white;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
@@ -807,11 +807,29 @@ section.about {
   grid-area: overlay-button;
 }
 
-.info__container .infocard {
+.infocard {
+  margin: 2rem 0;
   display: flex;
-  height: 250px;
-  margin: 4rem 0;
+  align-items: center;
+  width: 85%;
+  height: auto;
 }
+.infocard .infocard__pic .infocard__pic--image {
+  border-radius: 4px;
+  margin: 0 3rem;
+}
+.infocard .infocard__text {
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
+  margin: 0;
+}
+.infocard .infocard__text .infocard__text--phone {
+  margin-bottom: 4rem;
+}
+.infocard .infocard__text .infocard__text--rating {
+  font-style: italic;
+}
+
 #map {
   height: 400px;
   width: 100%;
@@ -845,30 +863,30 @@ section.about {
 .create__section .overlayRed {
   background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
 }
-.create__section .overlayRed h2, .create__section .overlayRed p {
+.create__section .overlayRed .card__title, .create__section .overlayRed .card__text {
   color: white;
 }
-.create__section .overlayRed button {
+.create__section .overlayRed .card__button, .create__section .overlayRed .card__anchor {
   color: #212529;
   background-color: white;
 }
 .create__section .overlayWhite {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-.create__section .overlayWhite h2, .create__section .overlayWhite p {
+.create__section .overlayWhite .card__title, .create__section .overlayWhite .card__text {
   color: #212529;
 }
-.create__section .overlayWhite button {
+.create__section .overlayWhite .card__button, .create__section .overlayWhite .card__anchor {
   color: #db0011;
   background-color: #212529;
 }
 .create__section .overlayBlack {
   background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
 }
-.create__section h2, .create__section p {
+.create__section .overlayBlack .card__title, .create__section .overlayBlack .card__text {
   color: white;
 }
-.create__section button {
+.create__section .overlayBlack .card__button, .create__section .overlayBlack .card__anchor {
   color: white;
   background-color: #db0011;
 }
@@ -888,6 +906,13 @@ section.about {
 }
 .choose__section--dropdown .location__button {
   width: 15%;
+}
+
+.choose__section--infocards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .map__button {
