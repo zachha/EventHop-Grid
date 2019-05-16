@@ -8,7 +8,7 @@ block content
                 h4.create__subtitle Choose up to Three Event Locations!
                 .title__section.cards.container
                     .location__box.complete
-                        h3 First Location Chosen
+                        h3.locCard__header First Location Chosen
                         .locCard.locCard__background.chosen.shop
                             .locCard__overlay.overlayRed.locChosen
                                 h2.card__title Ninth Street Bakery
@@ -18,14 +18,14 @@ block content
                                 button#locStart.card__button.button.hide Let's Go!
                                 button#locOneWeb.card__button.locWebsite.button.grow Website
                     .location__box.chosen
-                        h3 Location #2
+                        h3.locCard__header Location #2
                         .locCard.locCard__background.bullLocal.chosen
                             .locCard__overlay.overlayBlack
                                 h2.card__title Choose your next event type
                                 button#locStart.card__button.button.grow Let's Go!
                                 button#locTwoWeb.card__button.locWebsite.button.hide Website
                     .location__box
-                        h3 Location #3
+                        h3.locCard__header Location #3
                         .locCard.locCard__background
                             .locCard__overlay.overlayWhite
                                 h2.card__title Choose your last event type
@@ -56,25 +56,26 @@ block content
                 .choose__section--infocards.container
                     .infocard.overlayRed
                         .infocard__text
-                            h2.card__title Bull City Burger and Brewery<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
+                            h2.card__title Bull City Burger and Brewery
                             p.card__text.infocard__text--rating Google Rating: 4.3 
                             p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
                             p.card__text.infocard__text--phone Phone Number: (919) 680-2333
+                            a.card__anchor.infocard__website(href="www.google.com" target="_blank") Website
                         .infocard__pic
                                 img(src="/img/photos/durham.jpeg").infocard__pic--image
                     .infocard.overlayBlack
                         .infocard__text
-                            h2.card__title Bull City Burger and Brewery<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
-                            p.card__text.infocard__text--rating Google Rating: 4.3 
-                            p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
-                            p.card__text.infocard__text--phone Phone Number: (919) 680-2333
+                            h2.card__title Fullsteam Brewery<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
+                            p.card__text.infocard__text--rating Google Rating: 4.6
+                            p.card__text.infocard__text--address 726 Rigsbee Ave, Durham, NC 27701, USA
+                            p.card__text.infocard__text--phone Phone Number: (919) 682-2337
                         .infocard__pic
                                 img(src="/img/photos/durham.jpeg").infocard__pic--image
                     .infocard.overlayWhite
                         .infocard__text
-                            h2.card__title Bull City Burger and Brewery<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
-                            p.card__text.infocard__text--rating Google Rating: 4.3 
-                            p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
-                            p.card__text.infocard__text--phone Phone Number: (919) 680-2333
+                            h2.card__title Tobacco Road Sports Cafe<span><a href="www.google.com" target="_blank" class="card__anchor infocard__website">Website</a></span>
+                            p.card__text.infocard__text--rating Google Rating: 4.2
+                            p.card__text.infocard__text--address 280 S Mangum St #100, Durham, NC 27701, USA
+                            p.card__text.infocard__text--phone Phone Number: (919) 937-9909
                         .infocard__pic
                                 img(src="/img/photos/durham.jpeg").infocard__pic--image
