@@ -72,7 +72,7 @@
     & .choose__title {
         margin-bottom: 2rem;
     }
-    & select {
+    & .map__select {
         text-align: center;
         width: 20%;
         padding: 1.3rem;
@@ -105,17 +105,17 @@
 .location__box {
     width: 30%;
     text-align: center;
-    & h3 {
+    & .locCard__header {
         color: $grey;
         margin-bottom: 2rem;
         font-size: 3rem;
         opacity: 0.3;
     }
-    &.chosen h3 {
+    &.chosen .locCard__header {
         @extend %locCard__headers;
         text-decoration: underline;
     }
-    &.complete h3 {
+    &.complete .locCard__header {
         @extend %locCard__headers;
     }
 }
