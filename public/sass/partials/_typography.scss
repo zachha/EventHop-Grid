@@ -4,6 +4,7 @@
     src: url('/fonts/KaushanScript-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display: optional;
 }
 
 @font-face {
@@ -11,6 +12,8 @@
     src: url('/fonts/Montserrat-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    // if the user can't load the font in a reasonable amount of time, the fallback font will stay displayed with no flashes or blanking
+    font-display: optional;
 }
 
 // Generalized typography styling

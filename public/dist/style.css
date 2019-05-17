@@ -495,12 +495,14 @@ template {
   src: url("/fonts/KaushanScript-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: optional;
 }
 @font-face {
   font-family: "Montserrat";
   src: url("/fonts/Montserrat-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+  font-display: optional;
 }
 html {
   font-size: 62.5%;
