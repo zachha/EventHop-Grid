@@ -816,26 +816,38 @@ section.about {
   width: 85%;
   height: auto;
 }
+.infocard .infocard__pic {
+  width: 330px;
+}
 .infocard .infocard__pic .infocard__pic--image {
   border-radius: 4px;
   margin: 0 3rem;
 }
 .infocard .infocard__text {
+  width: 664.5px;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   margin: 0;
 }
-.infocard .infocard__text .infocard__text--phone {
-  margin-bottom: 4rem;
+.infocard .infocard__text .card__text {
+  margin: 2rem;
 }
 .infocard .infocard__text .infocard__text--rating {
   font-style: italic;
 }
+.infocard .infocard__text .infocard__text--address {
+  margin-bottom: 0;
+}
+.infocard .infocard__text .infocard__text--phone {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
 .infocard .infocard__text .card__title {
   margin: 2.5rem;
 }
-.infocard .infocard__text .card__text {
-  margin: 2rem;
+.infocard .infocard__text .card__footer {
+  height: 6rem;
+  text-align: center;
 }
 .infocard .infocard__text .card__anchor {
   font-weight: 600;

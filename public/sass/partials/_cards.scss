@@ -106,26 +106,36 @@
     width: 85%;
     height: auto;
     & .infocard__pic {
+        width: 330px;
         & .infocard__pic--image {
             border-radius: 4px;
             margin: 0 3rem;
         }
     }
     & .infocard__text {
+        width: 664.5px;
         font-family: $headerFonts;
         font-size: 2rem;
         margin: 0;
-        & .infocard__text--phone {
-            margin-bottom: 4rem;
+        & .card__text {
+            margin: 2rem;
         }
         & .infocard__text--rating {
             font-style: italic;
         }
+        & .infocard__text--address {
+            margin-bottom: 0;
+        }
+        & .infocard__text--phone {
+            margin-top: 0;
+            margin-bottom: 2rem;
+        }
         & .card__title {
             margin: 2.5rem;
         }
-        & .card__text {
-            margin: 2rem;
+        & .card__footer {
+            height: 6rem;
+            text-align: center;
         }
         & .card__anchor {
             font-weight: 600;
