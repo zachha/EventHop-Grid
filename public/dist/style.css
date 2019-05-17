@@ -64,7 +64,7 @@
   border-radius: 4px;
 }
 
-.location__box.complete h3, .location__box.chosen h3 {
+.location__box.complete .locCard__header, .location__box.chosen .locCard__header {
   color: #db0011;
   opacity: 1;
   font-weight: 600;
@@ -829,6 +829,19 @@ section.about {
 .infocard .infocard__text .infocard__text--rating {
   font-style: italic;
 }
+.infocard .infocard__text .card__title {
+  margin: 2.5rem;
+}
+.infocard .infocard__text .card__text {
+  margin: 2rem;
+}
+.infocard .infocard__text .card__anchor {
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 0.8rem;
+  margin: 0 1.5rem 3rem 1.5rem;
+  border-radius: 4px;
+}
 
 #map {
   height: 400px;
@@ -897,7 +910,7 @@ section.about {
 .choose__section--dropdown .choose__title {
   margin-bottom: 2rem;
 }
-.choose__section--dropdown select {
+.choose__section--dropdown .map__select {
   text-align: center;
   width: 20%;
   padding: 1.3rem;
@@ -930,13 +943,13 @@ section.about {
   width: 30%;
   text-align: center;
 }
-.location__box h3 {
+.location__box .locCard__header {
   color: #6c757d;
   margin-bottom: 2rem;
   font-size: 3rem;
   opacity: 0.3;
 }
-.location__box.chosen h3 {
+.location__box.chosen .locCard__header {
   text-decoration: underline;
 }
 form.loc__form {
