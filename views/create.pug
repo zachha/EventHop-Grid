@@ -57,7 +57,24 @@ block content
                     .infocard.overlayRed
                         .infocard__text
                             h2.card__title Bull City Burger and Brewery
-                            p.card__text.infocard__text--rating Google Rating: 4.3 
+                            p.card__text.infocard__text--rating Google Rating: <br>
+                                - let review = {rating:4.5}
+                                - let ratingMod = review.rating % 1;
+                                - let ratingRounded = review.rating - ratingMod
+                                span.stars(title= `Rated ${review.rating} out of 5 stars`)
+                                    if ratingMod < 0.25
+                                        - let rate = ratingRounded
+                                        = `★`.repeat(rate)
+                                        = `☆`.repeat(5 - rate)
+                                    else if ratingMod > 0.75
+                                        - let rate = ratingRounded + 1
+                                        = `★`.repeat(rate)
+                                        = `☆`.repeat(5 - rate)
+                                    else
+                                        - let rate = ratingRounded
+                                        = `★`.repeat(rate)
+                                        span.star-icon.half
+                                        = `☆`.repeat(5 - (rate + 1))
                             p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
                             p.card__text.infocard__text--phone Phone Number: (919) 680-2333
                             .card__footer
