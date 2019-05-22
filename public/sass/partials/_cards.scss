@@ -126,10 +126,10 @@
                 color: #FFDF00;
                 font-size: 3rem;
                 font-style: normal;
+                //text-shadow: 0 0 2px rgba(0,0,0,0.7);
             }
             & .star-icon {
                 position: relative;
-                content: '\2606'; 
                 font-size: 3rem;
                 font-style: normal;
             }
@@ -139,7 +139,7 @@
                 left: 0;
                 width :50%;
                 overflow: hidden;
-                text-shadow: 0 0 2px rgba(0,0,0,0.7);
+                
             }
         }
         & .infocard__text--address {

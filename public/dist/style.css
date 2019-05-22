@@ -843,7 +843,6 @@ section.about {
 }
 .infocard .infocard__text .infocard__text--rating .star-icon {
   position: relative;
-  content: "☆";
   font-size: 3rem;
   font-style: normal;
 }
@@ -853,7 +852,6 @@ section.about {
   left: 0;
   width: 50%;
   overflow: hidden;
-  text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
 }
 .infocard .infocard__text .infocard__text--address {
   margin-bottom: 0;
