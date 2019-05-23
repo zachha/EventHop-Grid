@@ -57,8 +57,8 @@ block content
                     .infocard.overlayRed
                         .infocard__text
                             h2.card__title Bull City Burger and Brewery
-                            p.card__text.infocard__text--rating Google Rating: <br>
-                                - let review = {rating:4.5}
+                            p.card__text.infocard__text--rating Google Ratings: <br>
+                                - let review = {rating:3.3}
                                 - let ratingMod = review.rating % 1;
                                 - let ratingRounded = review.rating - ratingMod
                                 span.stars(title= `Rated ${review.rating} out of 5 stars`)
@@ -74,6 +74,7 @@ block content
                                         - let rate = ratingRounded
                                         = `★`.repeat(rate)
                                         span.star-icon.half
+                                            = `☆`
                                         = `☆`.repeat(5 - (rate + 1))
                             p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
                             p.card__text.infocard__text--phone Phone Number: (919) 680-2333
@@ -84,7 +85,25 @@ block content
                     .infocard.overlayBlack
                         .infocard__text
                             h2.card__title Fullsteam Brewery
-                            p.card__text.infocard__text--rating Google Rating: 4.6
+                            p.card__text.infocard__text--rating Google Ratings: <br>
+                                - review = {rating:4.6}
+                                - ratingMod = review.rating % 1;
+                                - ratingRounded = review.rating - ratingMod
+                                span.stars(title= `Rated ${review.rating} out of 5 stars`)
+                                    if ratingMod < 0.25
+                                        - let rate = ratingRounded
+                                        = `★`.repeat(rate)
+                                        = `☆`.repeat(5 - rate)
+                                    else if ratingMod > 0.75
+                                        - let rate = ratingRounded + 1
+                                        = `★`.repeat(rate)
+                                        = `☆`.repeat(5 - rate)
+                                    else
+                                        - let rate = ratingRounded
+                                        = `★`.repeat(rate)
+                                        span.star-icon.half
+                                            = `☆`
+                                        = `☆`.repeat(5 - (rate + 1))
                             p.card__text.infocard__text--address 726 Rigsbee Ave, Durham, NC 27701, USA
                             p.card__text.infocard__text--phone Phone Number: (919) 682-2337
                             .card__footer
@@ -94,7 +113,25 @@ block content
                     .infocard.overlayWhite
                         .infocard__text
                             h2.card__title Tobacco Road Sports Cafe
-                            p.card__text.infocard__text--rating Google Rating: 4.2
+                            p.card__text.infocard__text--rating Google Ratings: <br>
+                                - review = {rating:4.2}
+                                - ratingMod = review.rating % 1;
+                                - ratingRounded = review.rating - ratingMod
+                                span.stars(title= `Rated ${review.rating} out of 5 stars`)
+                                    if ratingMod < 0.25
+                                        - let rate = ratingRounded
+                                        = `★`.repeat(rate)
+                                        = `☆`.repeat(5 - rate)
+                                    else if ratingMod > 0.75
+                                        - let rate = ratingRounded + 1
+                                        = `★`.repeat(rate)
+                                        = `☆`.repeat(5 - rate)
+                                    else
+                                        - let rate = ratingRounded
+                                        = `★`.repeat(rate)
+                                        span.star-icon.half
+                                            = `☆`
+                                        = `☆`.repeat(5 - (rate + 1))
                             p.card__text.infocard__text--address 280 S Mangum St #100, Durham, NC 27701, USA
                             p.card__text.infocard__text--phone Phone Number: (919) 937-9909
                             .card__footer
