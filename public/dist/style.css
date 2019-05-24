@@ -50,6 +50,11 @@
   transform: scale(1.1);
 }
 
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
 .nav__section--pages, .nav__section--user {
   justify-self: end;
   display: flex;
@@ -661,27 +666,18 @@ section.about {
 
 .space__flex--row {
   display: flex;
-  flex: 0 0 33.3333%;
+  flex: 0 0 33.333333%;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
 .container {
-  padding-right: 15px;
-  padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
 }
 
-.about__section--card {
-  box-sizing: border-box;
-  text-align: center;
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  max-width: 33.3333%;
-  float: left;
+.featEvents__section--events {
+  width: 100%;
 }
 
 .nav {
@@ -837,6 +833,7 @@ section.about {
   font-style: italic;
 }
 .infocard .infocard__text .infocard__text--rating .stars {
+  margin-left: 1.5rem;
   color: #FFDF00;
   font-size: 3rem;
   font-style: normal;
@@ -873,6 +870,41 @@ section.about {
   padding: 0.8rem;
   margin: 0 1.5rem 3rem 1.5rem;
   border-radius: 4px;
+}
+
+.about__section--card {
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  min-height: 1px;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 33.333333%;
+  float: left;
+}
+
+.event__cards {
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0 -1.5rem;
+}
+.event__cards .event__card {
+  box-sizing: border-box;
+  max-width: 33.333333%;
+  flex: 0 0 33.333333%;
+  margin: 0 0 3rem;
+  padding: 0 1.5rem;
+}
+.event__cards .event__card .event__text {
+  background-color: white;
+  text-align: center;
+}
+.event__cards .event__card .event__text .event__text--title {
+  margin-top: 0;
+  padding-top: 1.5rem;
+}
+.event__cards .event__card .event__text .event__text--subtitle {
+  padding-bottom: 1.5rem;
 }
 
 #map {

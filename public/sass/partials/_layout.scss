@@ -58,8 +58,6 @@ section.hero .inner {
     }
 }
 
-
-
 section.about {
     height: auto;
 }
@@ -77,28 +75,22 @@ section.about {
 
 .space__flex--row {
     display: flex;
-    flex: 0 0 33.3333%;
+    flex: 0 0 33.333333%;
     flex-wrap: wrap;
     align-items: stretch;
 }
 
 .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    //padding-right: 15px;
+    //padding-left: 15px;
     margin-right: auto;
     margin-left: auto
 }
 
-.about__section--card {
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    max-width: 33.3333%;
-    float: left;
+.featEvents__section--events {
+    width: 100%;
 }
+
 
 
 
