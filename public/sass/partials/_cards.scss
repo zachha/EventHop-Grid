@@ -123,6 +123,7 @@
         & .infocard__text--rating {
             font-style: italic;
             & .stars {
+                margin-left: 1.5rem;
                 color: #FFDF00;
                 font-size: 3rem;
                 font-style: normal;
@@ -162,6 +163,43 @@
             padding: 0.8rem;
             margin: 0 1.5rem 3rem 1.5rem;
             border-radius: 4px;
+        }
+    }
+}
+
+// about section cards on main page
+.about__section--card {
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 33.333333%;
+    float: left;
+}
+
+// event section sponsored cards on main page
+.event__cards {
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 0 -1.5rem;
+    & .event__card {
+        box-sizing: border-box;
+        max-width: 33.333333%;
+        flex: 0 0 33.333333%;
+        margin: 0 0 3rem;
+        padding: 0 1.5rem;
+        & .event__text {
+            background-color: white;
+            text-align: center;
+            & .event__text--title {
+                margin-top: 0;
+                padding-top: 1.5rem;
+            }
+            & .event__text--subtitle {
+                padding-bottom: 1.5rem;
+            }
         }
     }
 }
