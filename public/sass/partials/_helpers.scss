@@ -13,6 +13,7 @@
     margin-right: auto;
     border-radius: 4px;
 }
+
  // styles breakliens between segments
 .breakline {
     height: 5rem;
@@ -40,6 +41,7 @@
     display: none
 }
 
+// button animations
 .grow {
     transition: all .2s ease-in-out;
     -webkit-font-smoothing: antialiased;
@@ -51,6 +53,12 @@
     -moz-transform: scale(1.1);
     -o-transform: scale(1.1);
     transform: scale(1.1);
+}
+
+// resizes image when appropriate, keeping the correct aspect ratio
+.img-fluid {
+    width: 100%;
+    height: auto;
 }
 
 // sass extensions
