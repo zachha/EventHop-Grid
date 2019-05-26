@@ -676,6 +676,11 @@ section.about {
   margin-left: auto;
 }
 
+.featuredEvents,
+.popularGroups {
+  height: auto;
+}
+
 .featEvents__section--events {
   width: 100%;
 }
