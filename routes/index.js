@@ -7,6 +7,7 @@ const { catchErrors } = require('../handlers/errorHandlers');
 // Home page for EventHop
 router.get('/', catchErrors(eventController.homePage));
 
+// allows flash messages to be carried to the next page with the user
 router.get('/flash', function (req, res) {
     // Set a flash message by passing the key, followed by the value, to req.flash().
     req.flash('info', 'Flash is back!')
@@ -23,6 +24,10 @@ userController.validateRegister,
 userController.register); /*,
 authController.login);
 */
+
+// Events page
+router.get('/events', eventController.eventsPage);
+router.get('/event/:slug', catchErrors(eventController.getEventBySlug));
 
 // Contact page
 router.get('/contact', eventController.contactPage);
