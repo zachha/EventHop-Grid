@@ -27,7 +27,7 @@ authController.login);
 
 // Events page
 router.get('/events', eventController.eventsPage);
-router.get('/event/:slug', catchErrors(eventController.getEventBySlug));
+router.get('/events/:slug', catchErrors(eventController.getEventBySlug));
 
 // Contact page
 router.get('/contact', eventController.contactPage);
