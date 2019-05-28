@@ -1,0 +1,10 @@
+extends layout
+
+include mixins/_sponsored
+include mixins/_group
+
+block content
+    if event.is_event
+        +sponsored()
+    else 
+        +group()
