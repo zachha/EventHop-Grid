@@ -1,4 +1,10 @@
 extends layout
 
+include mixins/_featEvents
+include mixins/_popGroups
+
 block content
-    
+    section#events__sponsored.featuredEvents.bg-grey
+        +featEvents()
+    section#events__groups.featuredEvents.bg-grey
+        +popGroups()
