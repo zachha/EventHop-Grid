@@ -2,7 +2,9 @@ mixin sponsored()
     section#sponsored__hero.sponsored__hero
         .sponsored__section--hero.section.center__flex--column
             .sponsored__title
-                h2= event.name
-                h4= event.byline
+                h2.center__text= event.name
+                h4.center__text= event.byline
             .sponsored__image
-                img.event__image(src=`/img/photos/${event.event_image}`)
+                img.event__image.img__fluid(src=`/img/photos/${event.event_image}`)
+            .sponsored__description.container
+                p.sponsored__text.center__text= event.event_description
