@@ -1,5 +1,5 @@
-.sponsored__section {
-    & .sponsored__title {
-        text-align: center;
-    }
+.sponsored__text {
+    font-family: $headerFonts;
+    color: $bgBlack;
+    font-size: 2rem;
 }

@@ -50,12 +50,12 @@
   transform: scale(1.1);
 }
 
-.img__fluid {
+.img-fluid {
   width: 100%;
   height: auto;
 }
 
-.center__text {
+.center-text {
   text-align: center;
 }
 
@@ -685,7 +685,7 @@ section.about {
   height: auto;
 }
 
-.featEvents__section--events {
+.feat-events__section--events {
   width: 100%;
 }
 
@@ -892,27 +892,27 @@ section.about {
   float: left;
 }
 
-.event__cards {
+.event-cards {
   box-sizing: border-box;
   justify-content: center;
   margin: 0 -1.5rem;
 }
-.event__cards .event__card {
+.event-cards .event-card {
   box-sizing: border-box;
   max-width: 33.333333%;
   flex: 0 0 33.333333%;
   margin: 0 0 3rem;
   padding: 0 1.5rem;
 }
-.event__cards .event__card .event__text {
+.event-cards .event-card .event__text {
   background-color: white;
   text-align: center;
 }
-.event__cards .event__card .event__text .event__text--title {
+.event-cards .event-card .event__text .event__text--title {
   margin-top: 0;
   padding-top: 1.5rem;
 }
-.event__cards .event__card .event__text .event__text--subtitle {
+.event-cards .event-card .event__text .event__text--subtitle {
   padding-bottom: 1.5rem;
 }
 
@@ -949,30 +949,36 @@ section.about {
 .create__section .overlayRed {
   background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
 }
-.create__section .overlayRed .card__title, .create__section .overlayRed .card__text {
+.create__section .overlayRed .card__title,
+.create__section .overlayRed .card__text {
   color: white;
 }
-.create__section .overlayRed .card__button, .create__section .overlayRed .card__anchor {
+.create__section .overlayRed .card__button,
+.create__section .overlayRed .card__anchor {
   color: #212529;
   background-color: white;
 }
 .create__section .overlayWhite {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-.create__section .overlayWhite .card__title, .create__section .overlayWhite .card__text {
+.create__section .overlayWhite .card__title,
+.create__section .overlayWhite .card__text {
   color: #212529;
 }
-.create__section .overlayWhite .card__button, .create__section .overlayWhite .card__anchor {
+.create__section .overlayWhite .card__button,
+.create__section .overlayWhite .card__anchor {
   color: #db0011;
   background-color: #212529;
 }
 .create__section .overlayBlack {
   background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
 }
-.create__section .overlayBlack .card__title, .create__section .overlayBlack .card__text {
+.create__section .overlayBlack .card__title,
+.create__section .overlayBlack .card__text {
   color: white;
 }
-.create__section .overlayBlack .card__button, .create__section .overlayBlack .card__anchor {
+.create__section .overlayBlack .card__button,
+.create__section .overlayBlack .card__anchor {
   color: white;
   background-color: #db0011;
 }
@@ -1165,8 +1171,8 @@ form.contact__form .contact__form--submit .contact__button {
   border-radius: 50%;
   margin: 0 auto;
 }
-.dev__section--portfolios .dev__section--portfolio img.portfolio__links--gh,
-.dev__section--portfolios .dev__section--portfolio img.portfolio__links--li {
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--github,
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--linkedin {
   width: 40px;
   height: 40px;
   position: absolute;
@@ -1176,8 +1182,8 @@ form.contact__form .contact__form--submit .contact__button {
   -o-transition: opacity 0.4s ease-in-out;
   transition: opacity 0.4s ease-in-out;
 }
-.dev__section--portfolios .dev__section--portfolio img.portfolio__links--gh:hover,
-.dev__section--portfolios .dev__section--portfolio img.portfolio__links--li:hover {
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--github:hover,
+.dev__section--portfolios .dev__section--portfolio img.portfolio__links--linkedin:hover {
   opacity: 0;
 }
 .dev__section--portfolios .dev__section--portfolio .portfolio__role {
@@ -1232,6 +1238,7 @@ a.portfolio__anchor {
 
 .sponsored__text {
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #212529;
   font-size: 2rem;
 }
 

@@ -1,6 +1,6 @@
 section.contact {
     height: auto;
-    & .inner {
+    .inner {
         background-image: url("../img/photos/map-image.jpg");
         background-position: center;
         opacity: 1.0;
@@ -21,21 +21,21 @@ form.contact__form {
     width: 100%;
     justify-content: center;
     align-items: stretch;
-    & .contact__form--inputs {
+    .contact__form--inputs {
         justify-content: center;
         display: flex;
         
-        & .contact__form--left,
-          .contact__form--right {
+        .contact__form--left,
+        .contact__form--right {
             width: 100%;
             display:flex;
             flex-direction: column;
         }
     }
-    & .contact__form--submit {
+    .contact__form--submit {
         margin-top: 5rem;
         text-align: center;
-        & .contact__button {
+        .contact__button {
             border-radius: 4px;
             padding: 1.6rem;
             width: 25%;
@@ -48,28 +48,28 @@ form.contact__form {
 
 .dev__section--portfolios {
     justify-content: center;
-    & .dev__section--portfolio {
+    .dev__section--portfolio {
         margin: 2rem;
-        & img.portfolio__image {
+        img.portfolio__image {
             width: 225px;
             height: 225px;
             border: 7px solid white;
             border-radius: 50%;
             margin: 0 auto;
         }
-        & img.portfolio__links--gh,
-          img.portfolio__links--li {
+        img.portfolio__links--github,
+        img.portfolio__links--linkedin {
             width: 40px;
             height: 40px;
             position: absolute;
             left: 0;
             @include transition($transition);
         }
-        & img.portfolio__links--gh:hover,
-          img.portfolio__links--li:hover {
+        img.portfolio__links--github:hover,
+        img.portfolio__links--linkedin:hover {
             opacity: 0;
           }
-        & .portfolio__role {
+        .portfolio__role {
             margin-top: 0;
             margin-bottom: 0.5rem;
         }
@@ -79,8 +79,8 @@ form.contact__form {
 
 
 .contact__section--title {
-    & .contact__title,
-      .contact__subtitle {
+    .contact__title,
+    .contact__subtitle {
         color: white;
       }
 }
@@ -91,11 +91,11 @@ form.contact__form {
     align-items: center;
     align-self: center;
     width: 80%;
-    & label {
+    label {
         color: white;
         font-weight: 600;
     }
-    & input, textarea {
+    input, textarea {
         border-radius: 0.4rem;
         font-family: $headerFonts;
         color: black;
@@ -103,17 +103,17 @@ form.contact__form {
         font-size: 1.8rem;
         font-weight: 600;
     }
-    & input {
+    input {
         width: 90%;
     }
-    & textarea {
+    textarea {
         width: 90%;
         height: 80%;
         resize: none;
     }
-    & input:focus,
-      textarea:focus,
-      button:focus {
+    input:focus,
+    textarea:focus,
+    button:focus {
         border: 2px solid black;
     }
 }

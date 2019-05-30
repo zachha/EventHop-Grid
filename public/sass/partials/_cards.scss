@@ -15,7 +15,7 @@
     flex-direction: column;
     opacity: 0.5;
     position: relative;
-    & .card__text {
+    .card__text {
         color: white;
     }
     &.chosen {
@@ -43,7 +43,7 @@
     &.bullLocalFaint {
         background-image: $bullLocalFaint;
     }
-    & .locCard__overlay {
+    .locCard__overlay {
         border-radius: 4px;
         position: absolute;
         @extend %grid__center;
@@ -61,12 +61,12 @@
         &.hide {
             opacity: 0.0;
         }
-        & h2.card__title {
+        h2.card__title {
             grid-area: overlay-text;
             font-size: 3.5rem;
             margin: 2rem;
         }
-        & .card__button {
+        .card__button {
             grid-area: overlay-button;
             align-self: start;
             width: 60%;
@@ -77,20 +77,20 @@
             grid-template-areas: " overlay-text "
                                  "overlay-info"
                                  "overlay-button";
-            & .card__text {
+            .card__text {
                 color: white;
                 font-family: $headerFonts;
                 font-size: 2rem;
                 margin: 0 2rem;
             }
-            & .locInfo {
+            .locInfo {
                 grid-area: overlay-info;
                 align-self: start;
             }
-            & p.locStars {
+            p.locStars {
                 margin-top: 1rem;
             }
-            & button.locWebsite {
+            button.locWebsite {
                 grid-area: overlay-button;
             }
         }
@@ -105,36 +105,36 @@
     @extend %basic__card;
     width: 85%;
     height: auto;
-    & .infocard__pic {
+    .infocard__pic {
         width: 330px;
-        & .infocard__pic--image {
+        .infocard__pic--image {
             border-radius: 4px;
             margin: 0 3rem;
         }
     }
-    & .infocard__text {
+    .infocard__text {
         width: 664.5px;
         font-family: $headerFonts;
         font-size: 2rem;
         margin: 0;
-        & .card__text {
+        .card__text {
             margin: 2rem;
         }
-        & .infocard__text--rating {
+        .infocard__text--rating {
             font-style: italic;
-            & .stars {
+            .stars {
                 margin-left: 1.5rem;
                 color: #FFDF00;
                 font-size: 3rem;
                 font-style: normal;
                 //text-shadow: 0 0 2px rgba(0,0,0,0.7);
             }
-            & .star-icon {
+            .star-icon {
                 position: relative;
                 font-size: 3rem;
                 font-style: normal;
             }
-            & .half:before {
+            .half:before {
                 content: '\2605';
                 position: absolute;
                 left: 0;
@@ -143,21 +143,21 @@
                 
             }
         }
-        & .infocard__text--address {
+        .infocard__text--address {
             margin-bottom: 0;
         }
-        & .infocard__text--phone {
+        .infocard__text--phone {
             margin-top: 0;
             margin-bottom: 2rem;
         }
-        & .card__title {
+        .card__title {
             margin: 2.5rem;
         }
-        & .card__footer {
+        .card__footer {
             height: 6rem;
             text-align: center;
         }
-        & .card__anchor {
+        .card__anchor {
             font-weight: 600;
             font-size: 2.5rem;
             padding: 0.8rem;
@@ -180,24 +180,24 @@
 }
 
 // event section sponsored cards on main page
-.event__cards {
+.event-cards {
     box-sizing: border-box;
     justify-content: center;
     margin: 0 -1.5rem;
-    & .event__card {
+    .event-card {
         box-sizing: border-box;
         max-width: 33.333333%;
         flex: 0 0 33.333333%;
         margin: 0 0 3rem;
         padding: 0 1.5rem;
-        & .event__text {
+        .event__text {
             background-color: white;
             text-align: center;
-            & .event__text--title {
+            .event__text--title {
                 margin-top: 0;
                 padding-top: 1.5rem;
             }
-            & .event__text--subtitle {
+            .event__text--subtitle {
                 padding-bottom: 1.5rem;
             }
         }

@@ -28,16 +28,16 @@ section .inner {
 section.hero,
 section.contact {
     margin-top: 0;
-    & .inner {
-    max-width: 100%;
-    height: 100%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: top center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
+    .inner {
+        max-width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: top center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
     } 
 }
 
@@ -47,12 +47,12 @@ section.hero .inner {
         rgba(0, 0, 0, 0.3)
     ), url("../img/photos/header-bg.jpg");
     opacity: 1.0;
-    & .hero__section {
-        & a.hero__click--anchor {
+    .hero__section {
+        a.hero__click--anchor {
             border: 1px solid $bgBlack;
             padding: 1.5rem;
         }
-        & .hero__title--click {
+        .hero__title--click {
             margin-top: 8rem;
         }
     }
@@ -90,7 +90,7 @@ section.about {
     height: auto;
 }
 
-.featEvents__section--events {
+.feat-events__section--events {
     width: 100%;
 }
 
