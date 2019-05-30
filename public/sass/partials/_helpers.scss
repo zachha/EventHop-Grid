@@ -56,9 +56,14 @@
 }
 
 // resizes image when appropriate, keeping the correct aspect ratio
-.img-fluid {
+.img__fluid {
     width: 100%;
     height: auto;
+}
+
+// aligns text to center
+.center__text {
+    text-align: center;
 }
 
 // sass extensions

@@ -50,9 +50,13 @@
   transform: scale(1.1);
 }
 
-.img-fluid {
+.img__fluid {
   width: 100%;
   height: auto;
+}
+
+.center__text {
+  text-align: center;
 }
 
 .nav__section--pages, .nav__section--user {
@@ -1226,8 +1230,9 @@ a.portfolio__anchor {
   margin: 0 0.5rem;
 }
 
-.sponsored__section .sponsored__title {
-  text-align: center;
+.sponsored__text {
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 2rem;
 }
 
 @media (max-width: 1920px) {
