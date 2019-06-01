@@ -190,14 +190,14 @@
         flex: 0 0 33.333333%;
         margin: 0 0 3rem;
         padding: 0 1.5rem;
-        .event__text {
+        .event-card__text {
             background-color: white;
             text-align: center;
-            .event__text--title {
+            .event-card__text--title {
                 margin-top: 0;
                 padding-top: 1.5rem;
             }
-            .event__text--subtitle {
+            .event-card__text--subtitle {
                 padding-bottom: 1.5rem;
             }
         }
