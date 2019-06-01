@@ -1,10 +1,10 @@
 mixin sponsored()
-    section#sponsored__hero.sponsored__hero
-        .sponsored__section--hero.section.center__flex--column
+    section#sponsored.sponsored
+        .section.flex-center-all-column
             .sponsored__title
                 h2.center-text= (event.name).toUpperCase()
                 h4.center-text= event.byline
             .sponsored__image
-                img.event__image.img-fluid(src=`/img/photos/${event.event_image}`)
+                img.event-card__image.img-fluid(src=`/img/photos/${event.event_image}`)
             .sponsored__description.container
                 p.sponsored__text.center-text= event.event_description
