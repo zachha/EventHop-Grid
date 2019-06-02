@@ -57,6 +57,12 @@ main {
     padding-bottom: 3rem;
 }
 
+.section__text {
+    font-family: $headerFonts;
+    color: $bgBlack;
+    font-size: 2rem;
+}
+
 .button--hero {
     border: 1px solid $bgBlack;
     padding: 1.5rem;
