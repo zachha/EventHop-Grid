@@ -1,17 +1,17 @@
 @media (max-width: 1920px) {
-    .container {
+    .l-container {
         width: 1890px;
     }
 }
 
 @media (min-width: 1200px) {
-    .container {
+    .l-container {
         width: 1170px
     }
 }
 
 @media (max-width: 1199px) {
-    .container {
+    .l-container {
         width: 970px
     }
 }
@@ -24,7 +24,7 @@
 }
 
 @media (max-width: 992px) {
-    .container {
+    .l-container {
         width: 750px
     }
     .contact__form {
@@ -45,10 +45,10 @@
 
 @media (max-width: 767px) {
     .section--about {
-        .about__section--cards {
+        .section__cards {
             flex-direction: column;
             align-items: center;
-            .about__section--card {
+            .card--about {
                 max-width: 70%;
                 margin-bottom: 2rem;
             }
@@ -77,19 +77,11 @@
         }
     }
 
-    .container {
+    .l-container {
         width: 737px;
     }
 
-    section.login {
-        input {
-            width: 50%;
-        }
-        button {
-            width: 40%;
-        }
-    }
-
+    section.login,
     section.register {
         input {
             width: 50%;

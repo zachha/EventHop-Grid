@@ -1,5 +1,6 @@
 @charset "UTF-8";
 .button {
+  padding: 1.5rem;
   cursor: pointer;
   border: none;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -12,6 +13,11 @@
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.button--main-create {
+  width: 100%;
 }
 
 .breakline {
@@ -29,34 +35,38 @@
   width: 5rem;
 }
 
-.disabled {
+.h-disabled {
   pointer-events: none;
 }
 
-.hide {
+.h-hide {
   display: none;
 }
 
-.grow {
+.h-grow {
   transition: all 0.2s ease-in-out;
   -webkit-font-smoothing: antialiased;
   backface-visibility: hidden;
 }
 
-.grow:hover {
+.h-grow:hover {
   -webkit-transform: scale(1.1);
   -moz-transform: scale(1.1);
   -o-transform: scale(1.1);
   transform: scale(1.1);
 }
 
-.img-fluid {
+.h-img-fluid {
   width: 100%;
   height: auto;
 }
 
-.center-text {
+.h-center-text {
   text-align: center;
+}
+
+.h-bg-grey {
+  background-color: #f8f9fa;
 }
 
 .nav__section--pages, .nav__section--user {
@@ -64,14 +74,6 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-}
-
-.infocard {
-  -webkit-box-shadow: 4px 4px 22px -5px #647595;
-  -moz-box-shadow: 4px 4px 22px -5px #647595;
-  box-shadow: 4px 4px 22px -5px #647595;
-  width: 100%;
-  border-radius: 4px;
 }
 
 .location__box.complete .locCard__header, .location__box.chosen .locCard__header {
@@ -609,18 +611,21 @@ main {
   perspective: 2px;
 }
 
-section {
+.hero__anchor {
+  margin-top: 8rem;
+}
+
+.section {
   position: relative;
-  height: 80%;
+  height: auto;
   margin-top: 4rem;
 }
 
-section.bg-grey {
-  background-color: #f8f9fa;
+.section--hero {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/photos/header-bg.jpg");
 }
 
-section.hero,
-section.contact {
+.section--bg-img-cover {
   margin-top: 0;
   max-width: 100%;
   background-repeat: no-repeat;
@@ -630,14 +635,23 @@ section.contact {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-}
-
-section.hero {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/photos/header-bg.jpg");
   opacity: 1;
 }
-section.hero .hero__titles .hero__anchor {
-  margin-top: 8rem;
+
+.section--height-80 {
+  height: 80%;
+}
+
+.section__cards {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section__titles {
+  padding-bottom: 3rem;
 }
 
 .button--hero {
@@ -645,39 +659,29 @@ section.hero .hero__titles .hero__anchor {
   padding: 1.5rem;
 }
 
-.section__titles {
-  padding-bottom: 3rem;
-}
-
-.flex-center-all-column {
+.l-flex-col {
   display: flex;
   flex-direction: column;
-  justify-items: center;
+  justify-content: center;
   align-items: center;
 }
 
-.flex-center-all {
+.l-flex-row {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.flex-stretch-row {
+.l-flex-stretch {
   display: flex;
   flex: 0 0 33.333333%;
   flex-wrap: wrap;
   align-items: stretch;
 }
 
-.container {
+.l-container {
   margin-right: auto;
   margin-left: auto;
-}
-
-.about,
-.featuredEvents,
-.popularGroups {
-  height: auto;
 }
 
 .nav {
@@ -713,12 +717,20 @@ section.hero .hero__titles .hero__anchor {
   border-color: #db0011;
 }
 
-.cards {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
+.card {
+  max-width: 33.333333%;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.card--about {
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 15px;
+  max-width: 33.333333%;
+  float: left;
 }
 
 .locCard {
@@ -730,7 +742,7 @@ section.hero .hero__titles .hero__anchor {
   opacity: 0.5;
   position: relative;
 }
-.locCard .card__text {
+.locCard .infocard__text {
   color: white;
 }
 .locCard.chosen {
@@ -771,15 +783,15 @@ section.hero .hero__titles .hero__anchor {
   width: 100%;
   z-index: 10;
 }
-.locCard .locCard__overlay.hide {
+.locCard .locCard__overlay.h-hide {
   opacity: 0;
 }
-.locCard .locCard__overlay h2.card__title {
+.locCard .locCard__overlay h2.infocard__title {
   grid-area: overlay-text;
   font-size: 3.5rem;
   margin: 2rem;
 }
-.locCard .locCard__overlay .card__button {
+.locCard .locCard__overlay .button--infocard {
   grid-area: overlay-button;
   align-self: start;
   width: 60%;
@@ -789,7 +801,7 @@ section.hero .hero__titles .hero__anchor {
   grid-template-rows: 1fr 1fr 25%;
   grid-template-areas: " overlay-text " "overlay-info" "overlay-button";
 }
-.locCard .locCard__overlay.locChosen .card__text {
+.locCard .locCard__overlay.locChosen .infocard__text {
   color: white;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
@@ -810,6 +822,10 @@ section.hero .hero__titles .hero__anchor {
   margin: 2rem 0;
   display: flex;
   align-items: center;
+  -webkit-box-shadow: 4px 4px 22px -5px #647595;
+  -moz-box-shadow: 4px 4px 22px -5px #647595;
+  box-shadow: 4px 4px 22px -5px #647595;
+  border-radius: 4px;
   width: 85%;
   height: auto;
 }
@@ -820,67 +836,56 @@ section.hero .hero__titles .hero__anchor {
   border-radius: 4px;
   margin: 0 3rem;
 }
-.infocard .infocard__text {
+.infocard .infocard__body {
   width: 664.5px;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   margin: 0;
 }
-.infocard .infocard__text .card__text {
+.infocard .infocard__body .infocard__text {
   margin: 2rem;
 }
-.infocard .infocard__text .infocard__text--rating {
+.infocard .infocard__body .infocard__text--rating {
   font-style: italic;
 }
-.infocard .infocard__text .infocard__text--rating .stars {
+.infocard .infocard__body .infocard__text--rating .stars {
   margin-left: 1.5rem;
   color: #FFDF00;
   font-size: 3rem;
   font-style: normal;
 }
-.infocard .infocard__text .infocard__text--rating .star-icon {
+.infocard .infocard__body .infocard__text--rating .star-icon {
   position: relative;
   font-size: 3rem;
   font-style: normal;
 }
-.infocard .infocard__text .infocard__text--rating .half:before {
+.infocard .infocard__body .infocard__text--rating .half:before {
   content: "★";
   position: absolute;
   left: 0;
   width: 50%;
   overflow: hidden;
 }
-.infocard .infocard__text .infocard__text--address {
+.infocard .infocard__body .infocard__text--address {
   margin-bottom: 0;
 }
-.infocard .infocard__text .infocard__text--phone {
+.infocard .infocard__body .infocard__text--phone {
   margin-top: 0;
   margin-bottom: 2rem;
 }
-.infocard .infocard__text .card__title {
+.infocard .infocard__body .infocard__title {
   margin: 2.5rem;
 }
-.infocard .infocard__text .card__footer {
+.infocard .infocard__body .infocard__footer {
   height: 6rem;
   text-align: center;
 }
-.infocard .infocard__text .card__anchor {
+.infocard .infocard__body .infocard__anchor {
   font-weight: 600;
   font-size: 2.5rem;
   padding: 0.8rem;
   margin: 0 1.5rem 3rem 1.5rem;
   border-radius: 4px;
-}
-
-.about__section--card {
-  box-sizing: border-box;
-  text-align: center;
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  max-width: 33.333333%;
-  float: left;
 }
 
 .event-cards {
@@ -940,36 +945,36 @@ section.hero .hero__titles .hero__anchor {
 .create__section .overlayRed {
   background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
 }
-.create__section .overlayRed .card__title,
-.create__section .overlayRed .card__text {
+.create__section .overlayRed .infocard__title,
+.create__section .overlayRed .infocard__text {
   color: white;
 }
-.create__section .overlayRed .card__button,
-.create__section .overlayRed .card__anchor {
+.create__section .overlayRed .button--infocard,
+.create__section .overlayRed .infocard__anchor {
   color: #212529;
   background-color: white;
 }
 .create__section .overlayWhite {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-.create__section .overlayWhite .card__title,
-.create__section .overlayWhite .card__text {
+.create__section .overlayWhite .infocard__title,
+.create__section .overlayWhite .infocard__text {
   color: #212529;
 }
-.create__section .overlayWhite .card__button,
-.create__section .overlayWhite .card__anchor {
+.create__section .overlayWhite .button--infocard,
+.create__section .overlayWhite .infocard__anchor {
   color: #db0011;
   background-color: #212529;
 }
 .create__section .overlayBlack {
   background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
 }
-.create__section .overlayBlack .card__title,
-.create__section .overlayBlack .card__text {
+.create__section .overlayBlack .infocard__title,
+.create__section .overlayBlack .infocard__text {
   color: white;
 }
-.create__section .overlayBlack .card__button,
-.create__section .overlayBlack .card__anchor {
+.create__section .overlayBlack .button--infocard,
+.create__section .overlayBlack .infocard__anchor {
   color: white;
   background-color: #db0011;
 }
@@ -1103,18 +1108,17 @@ form.form__register {
   width: 80%;
 }
 
-section.contact {
+.section--contact {
   height: auto;
   background-image: url("../img/photos/map-image.jpg");
   background-position: center;
-  opacity: 1;
 }
 
 section.dev {
   height: auto;
 }
 
-section .flex-center-all .dev__section {
+section .l-flex-row .dev__section {
   width: 45%;
   text-align: center;
   margin-bottom: 8rem;
@@ -1234,17 +1238,17 @@ a.portfolio__anchor {
 }
 
 @media (max-width: 1920px) {
-  .container {
+  .l-container {
     width: 1890px;
   }
 }
 @media (min-width: 1200px) {
-  .container {
+  .l-container {
     width: 1170px;
   }
 }
 @media (max-width: 1199px) {
-  .container {
+  .l-container {
     width: 970px;
   }
 }
@@ -1254,7 +1258,7 @@ a.portfolio__anchor {
   }
 }
 @media (max-width: 992px) {
-  .container {
+  .l-container {
     width: 750px;
   }
 
@@ -1269,11 +1273,11 @@ a.portfolio__anchor {
   }
 }
 @media (max-width: 767px) {
-  .section--about .about__section--cards {
+  .section--about .section__cards {
     flex-direction: column;
     align-items: center;
   }
-  .section--about .about__section--cards .about__section--card {
+  .section--about .section__cards .card--about {
     max-width: 70%;
     margin-bottom: 2rem;
   }
@@ -1296,21 +1300,16 @@ a.portfolio__anchor {
     width: 50%;
   }
 
-  .container {
+  .l-container {
     width: 737px;
   }
 
-  section.login input {
+  section.login input,
+section.register input {
     width: 50%;
   }
-  section.login button {
-    width: 40%;
-  }
-
-  section.register input {
-    width: 50%;
-  }
-  section.register button {
+  section.login button,
+section.register button {
     width: 40%;
   }
 }
