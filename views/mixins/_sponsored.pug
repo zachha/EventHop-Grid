@@ -1,10 +1,10 @@
 mixin sponsored()
-    section#sponsored.sponsored
-        .section.flex-center-all-column
-            .sponsored__title
-                h2.center-text= (event.name).toUpperCase()
-                h4.center-text= event.byline
-            .sponsored__image
-                img.event-card__image.img-fluid(src=`/img/photos/${event.event_image}`)
-            .sponsored__description.container
-                p.sponsored__text.center-text= event.event_description
+    section#sponsored-content.section
+        .l-flex-col
+            .section__titles
+                h2.h-center-text= (event.name).toUpperCase()
+                h4.h-center-text= event.byline
+            .section__image
+                img.image.h-img-fluid(src=`/img/photos/${event.event_image}`)
+            .l-container
+                p.section__text.h-center-text= event.event_description
