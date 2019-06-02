@@ -4,54 +4,50 @@ include mixins/_featEvents
 include mixins/_popGroups
 
 block content
-    section#hero-content.hero.flex-center-all
-            .hero__titles.flex-center-all-column
-                .hero__title
-                    h1 Welcome To <span class="red">Event</span><span class="hop bounce-bottom">Hop</span>
-                .hero__subtitle
-                    h2.hero__sub "Let's <span class="red">Do </span>Something!"
-                .hero__anchor
-                    a.button.button--hero(href="#popGroups") Durham Style . . .
+    section#hero-content.section.section--hero.section--bg-img-cover.section--height-80.l-flex-col
+        .hero__title
+            h1 Welcome To <span class="red">Event</span><span class="hop bounce-bottom">Hop</span>
+        .hero__subtitle
+            h2.hero__sub "Let's <span class="red">Do </span>Something!"
+        .hero__anchor
+            a.button.button--hero(href="#popGroups") Durham Style . . .       
     
-    section#about-content.about.flex-center-all
-            .section--about.flex-center-all-column.section
-                .about__section--title.section__titles.flex-center-all-column
-                    h2.about__title.section__title ABOUT
-                    h4.about__subtitle.section__subtitle Do It Like Durham!
-                .about__section--cards.section__content.flex-stretch-row
-                    .about__section--card.flex-center-all-column
-                        .about__section--card-icon
-                            img(src="/img/icon/eventhop-circle.png" alt="Sponsored Event Icon" height="115" width="115")
-                        .about__section--card-title
-                            h3.short-title Join a Sponsored Event
-                        .about__section--card-text
-                            p Let us do the planning for you! At EventHop, we specialize in planning events. Our Event Planners make all of the arrangements so you can relax. EventHop also partners with Meetup.com Organizers to schedule social events.
-                    .about__section--card.flex-center-all-column
-                        .about__section--card-icon
-                            img(src="/img/icon/coffee-whitecup.png" alt="Make Group Icon" height="115" width="115")
-                        .about__section--card-title
-                            h3 Create Your Own Group Event
-                        .about__section--card-text
-                            p Using EventHop you are able to create and customize an event. Whether you're planning some much needed "me" time for yourself or you're arranging an evening out with friends, you'll have an itinerary ready in no time.
-                    .about__section--card.flex-center-all-column
-                        .about__section--card-icon
-                            img(src="/img/icon/group-redfg.png" alt="Group Icon" height="115" width="115")
-                        .about__section--card-title
-                            h3.short-title Join a Friend's Event
-                        .about__section--card-text
-                            p View Event Meetups created by other users and join the ones that look interesting to you.  Take the stress out of meeting new people while in a relaxed setting. Talk about similar interests, work, or whatever is on your mind. However you choose, let us help and have fun!
+    section#about-content.section.section--about.l-flex-col
+        .section__titles.l-flex-col
+            h2.section__title ABOUT
+            h4.section__subtitle Do It Like Durham!
+        .section__cards.l-flex-stretch
+            .card.card--about.l-flex-col
+                .card__icon
+                    img(src="/img/icon/eventhop-circle.png" alt="Sponsored Event Icon" height="115" width="115")
+                .card__title
+                    h3 Join a Sponsored Event
+                .card__text
+                    p Let us do the planning for you! At EventHop, we specialize in planning events. Our Event Planners make all of the arrangements so you can relax. EventHop also partners with Meetup.com Organizers to schedule social events.
+            .card.card--about.l-flex-col
+                .card__icon
+                    img(src="/img/icon/coffee-whitecup.png" alt="Make Group Icon" height="115" width="115")
+                .card__title
+                    h3 Create Your Own Group Event
+                .card__text
+                    p Using EventHop you are able to create and customize an event. Whether you're planning some much needed "me" time for yourself or you're arranging an evening out with friends, you'll have an itinerary ready in no time.
+            .card.card--about.l-flex-col
+                .card__icon
+                    img(src="/img/icon/group-redfg.png" alt="Group Icon" height="115" width="115")
+                .card__title
+                    h3 Join a Friend's Event
+                .card__text
+                    p View Event Meetups created by other users and join the ones that look interesting to you.  Take the stress out of meeting new people while in a relaxed setting. Talk about similar interests, work, or whatever is on your mind. However you choose, let us help and have fun!
 
-    section#featured-events-content.featuredEvents.flex-center-all.bg-grey
+    section#featured-events-content.section.featuredEvents.l-flex-row.h-bg-grey
         +featEvents()
 
-    section#main-create-content.mainCreate.flex-center-all
-            .section.flex-center-all-column
-                .section__titles.flex-center-all-column
-                    h2.section__title OR...
-                    a.mainCreate__anchor Create Your Own Group
-                    h4.section__subtitle You can invite others to join!
+    section#main-create-content.section.section--height-80.mainCreate.l-flex-col
+        .section__titles.l-flex-col.h-center-text
+            h2.section__title OR...
+            a.button.button--main-create(href="/create") Create Your Own Group
+            h4.section__subtitle You can invite others to join!
                     
-
-    section#popGroups.popularGroups.flex-center-all.bg-grey
+    section#popular-groups.section.popularGroups.l-flex-row.h-bg-grey
         +popGroups()
     
