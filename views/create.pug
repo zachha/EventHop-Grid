@@ -2,37 +2,37 @@ extends layout
 
 block content
     section#create__content.create
-        .create__section.section.flex-center-all-column
-            .create__section--title.section__titles.flex-center-all-column
+        .create__section.section.l-flex-col
+            .create__section--title.section__titles.l-flex-col
                 h2.create__title CREATE YOUR OWN EVENT
                 h4.create__subtitle Choose up to Three Event Locations!
-                .title__section.cards.container
+                .title__section.section__cards.l-container
                     .location__box.complete
                         h3.locCard__header Location Complete
                         .locCard.locCard__background.chosen.shop
                             .locCard__overlay.overlayRed.locChosen
-                                h2.card__title Ninth Street Bakery
+                                h2.infocard__title Ninth Street Bakery
                                 .locInfo
-                                    p.card__text.locAddress 112 S Duke St, Durham, NC 27701, USA
-                                    p.card__text.locStars Google Rating: 4.6
-                                button#locStart.card__button.button.hide Let's Go!
-                                button#locOneWeb.card__button.locWebsite.button.grow Website
+                                    p.infocard__text.locAddress 112 S Duke St, Durham, NC 27701, USA
+                                    p.infocard__text.locStars Google Rating: 4.6
+                                button#locStart.button--infocard.button.h-hide Let's Go!
+                                button#locOneWeb.button--infocard.locWebsite.button.h-grow Website
                     .location__box.chosen
                         h3.locCard__header Location #2
                         .locCard.locCard__background.bullLocal.chosen
                             .locCard__overlay.overlayBlack
-                                h2.card__title Choose your next event type
-                                button#locStart.card__button.button.grow Let's Go!
-                                button#locTwoWeb.card__button.locWebsite.button.hide Website
+                                h2.infocard__title Choose your next event type
+                                button#locStart.button--infocard.button.h-grow Let's Go!
+                                button#locTwoWeb.button--infocard.locWebsite.button.h-hide Website
                     .location__box
                         h3.locCard__header Location #3
                         .locCard.locCard__background
                             .locCard__overlay.overlayWhite
-                                h2.card__title Choose your last event type
-                                button#locStart.card__button.button.disabled Let's Go!
-                                button#locThreeWeb.card__button.locWebsite.button.hide Website
+                                h2.infocard__title Choose your last event type
+                                button#locStart.button--infocard.button.h-disabled Let's Go!
+                                button#locThreeWeb.button--infocard.locWebsite.button.h-hide Website
                                 
-            .create__section--choose.section__content.flex-center-all-column
+            .create__section--choose.l-flex-col
                 .choose__section--title
                     h3.choose__title Choose a Type of Event
                 .choose__section--buttons
@@ -53,11 +53,11 @@ block content
                     .choose__button
                         button#addLoc.button.map__button.location__button Add Location
                 .breakline
-                .choose__section--infocards.container
+                .choose__section--infocards.l-container
                     .infocard.overlayRed
-                        .infocard__text
-                            h2.card__title Bull City Burger and Brewery
-                            p.card__text.infocard__text--rating Google Ratings: <br>
+                        .infocard__body
+                            h2.infocard__title Bull City Burger and Brewery
+                            p.infocard__text.infocard__text--rating Google Ratings: <br>
                                 - let review = {rating:3.3}
                                 - let ratingMod = review.rating % 1;
                                 - let ratingRounded = review.rating - ratingMod
@@ -76,16 +76,16 @@ block content
                                         span.star-icon.half
                                             = `☆`
                                         = `☆`.repeat(5 - (rate + 1))
-                            p.card__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
-                            p.card__text.infocard__text--phone Phone Number: (919) 680-2333
-                            .card__footer
-                                a.card__anchor.infocard__website(href="www.google.com" target="_blank") Website
+                            p.infocard__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
+                            p.infocard__text.infocard__text--phone Phone Number: (919) 680-2333
+                            .infocard__footer
+                                a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
                         .infocard__pic
                                 img(src="/img/photos/durham.jpeg").infocard__pic--image
                     .infocard.overlayBlack
-                        .infocard__text
-                            h2.card__title Fullsteam Brewery
-                            p.card__text.infocard__text--rating Google Ratings: <br>
+                        .infocard__body
+                            h2.infocard__title Fullsteam Brewery
+                            p.infocard__text.infocard__text--rating Google Ratings: <br>
                                 - review = {rating:4.6}
                                 - ratingMod = review.rating % 1;
                                 - ratingRounded = review.rating - ratingMod
@@ -104,16 +104,16 @@ block content
                                         span.star-icon.half
                                             = `☆`
                                         = `☆`.repeat(5 - (rate + 1))
-                            p.card__text.infocard__text--address 726 Rigsbee Ave, Durham, NC 27701, USA
-                            p.card__text.infocard__text--phone Phone Number: (919) 682-2337
-                            .card__footer
-                                a.card__anchor.infocard__website(href="www.google.com" target="_blank") Website
+                            p.infocard__text.infocard__text--address 726 Rigsbee Ave, Durham, NC 27701, USA
+                            p.infocard__text.infocard__text--phone Phone Number: (919) 682-2337
+                            .infocard__footer
+                                a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
                         .infocard__pic
                                 img(src="/img/photos/durham.jpeg").infocard__pic--image
                     .infocard.overlayWhite
-                        .infocard__text
-                            h2.card__title Tobacco Road Sports Cafe
-                            p.card__text.infocard__text--rating Google Ratings: <br>
+                        .infocard__body
+                            h2.infocard__title Tobacco Road Sports Cafe
+                            p.infocard__text.infocard__text--rating Google Ratings: <br>
                                 - review = {rating:4.2}
                                 - ratingMod = review.rating % 1;
                                 - ratingRounded = review.rating - ratingMod
@@ -132,9 +132,9 @@ block content
                                         span.star-icon.half
                                             = `☆`
                                         = `☆`.repeat(5 - (rate + 1))
-                            p.card__text.infocard__text--address 280 S Mangum St #100, Durham, NC 27701, USA
-                            p.card__text.infocard__text--phone Phone Number: (919) 937-9909
-                            .card__footer
-                                a.card__anchor.infocard__website(href="www.google.com" target="_blank") Website
+                            p.infocard__text.infocard__text--address 280 S Mangum St #100, Durham, NC 27701, USA
+                            p.infocard__text.infocard__text--phone Phone Number: (919) 937-9909
+                            .infocard__footer
+                                a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
                         .infocard__pic
                                 img(src="/img/photos/durham.jpeg").infocard__pic--image
