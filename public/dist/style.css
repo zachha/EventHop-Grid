@@ -1269,11 +1269,11 @@ a.portfolio__anchor {
   }
 }
 @media (max-width: 767px) {
-  .about__section .about__section--cards {
+  .section--about .about__section--cards {
     flex-direction: column;
     align-items: center;
   }
-  .about__section .about__section--cards .about__section--card {
+  .section--about .about__section--cards .about__section--card {
     max-width: 70%;
     margin-bottom: 2rem;
   }
