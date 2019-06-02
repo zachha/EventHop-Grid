@@ -29,36 +29,36 @@
     }
     .overlayRed {
         background: linear-gradient($rgbaRedEight, $rgbaRedEight);
-        .card__title,
-        .card__text {
+        .infocard__title,
+        .infocard__text {
             color: white;
         }
-        .card__button,
-        .card__anchor {
+        .button--infocard,
+        .infocard__anchor {
             color: $bgBlack;
             background-color: white;
         }
     }
     .overlayWhite {
         background: linear-gradient($rgbaWhiteSeven, $rgbaWhiteSeven);
-        .card__title,
-        .card__text {
+        .infocard__title,
+        .infocard__text {
             color: $bgBlack;
         }
-        .card__button,
-        .card__anchor {
+        .button--infocard,
+        .infocard__anchor {
             color: $red;
             background-color: $bgBlack;
         }
     }
     .overlayBlack {
         background: linear-gradient( $rgbaBlackNine, $rgbaBlackNine );
-        .card__title,
-        .card__text {
+        .infocard__title,
+        .infocard__text {
             color: white
         }
-        .card__button,
-        .card__anchor {
+        .button--infocard,
+        .infocard__anchor {
             color: white;
             background-color: $red;
         }

@@ -1,10 +1,19 @@
-// styles divs containing group cards (group cards, event cards, create cards, etc)
-.cards {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+// The .card block encapsulates event cards and cards used in the 'about' section
+.card {
+    max-width: 33.333333%;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+// 'about' section cards on main page
+.card--about {
+    box-sizing: border-box;
+    text-align: center;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    max-width: 33.333333%;
+    float: left;
 }
 
 // styles the 'choose location' cards at the top of create page
@@ -15,7 +24,7 @@
     flex-direction: column;
     opacity: 0.5;
     position: relative;
-    .card__text {
+    .infocard__text {
         color: white;
     }
     &.chosen {
@@ -58,15 +67,15 @@
         height: 100%;
         width: 100%;
         z-index: 10;
-        &.hide {
+        &.h-hide {
             opacity: 0.0;
         }
-        h2.card__title {
+        h2.infocard__title {
             grid-area: overlay-text;
             font-size: 3.5rem;
             margin: 2rem;
         }
-        .card__button {
+        .button--infocard {
             grid-area: overlay-button;
             align-self: start;
             width: 60%;
@@ -77,7 +86,7 @@
             grid-template-areas: " overlay-text "
                                  "overlay-info"
                                  "overlay-button";
-            .card__text {
+            .infocard__text {
                 color: white;
                 font-family: $headerFonts;
                 font-size: 2rem;
@@ -102,7 +111,8 @@
     margin: 2rem 0;
     display: flex;
     align-items: center;
-    @extend %basic__card;
+    @include box-shadow($cardShadow);
+    border-radius: 4px;
     width: 85%;
     height: auto;
     .infocard__pic {
@@ -112,12 +122,12 @@
             margin: 0 3rem;
         }
     }
-    .infocard__text {
+    .infocard__body {
         width: 664.5px;
         font-family: $headerFonts;
         font-size: 2rem;
         margin: 0;
-        .card__text {
+        .infocard__text {
             margin: 2rem;
         }
         .infocard__text--rating {
@@ -150,14 +160,14 @@
             margin-top: 0;
             margin-bottom: 2rem;
         }
-        .card__title {
+        .infocard__title {
             margin: 2.5rem;
         }
-        .card__footer {
+        .infocard__footer {
             height: 6rem;
             text-align: center;
         }
-        .card__anchor {
+        .infocard__anchor {
             font-weight: 600;
             font-size: 2.5rem;
             padding: 0.8rem;
@@ -165,18 +175,6 @@
             border-radius: 4px;
         }
     }
-}
-
-// about section cards on main page
-.about__section--card {
-    box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    min-height: 1px;
-    padding-right: 15px;
-    padding-left: 15px;
-    max-width: 33.333333%;
-    float: left;
 }
 
 // event section sponsored cards on main page
