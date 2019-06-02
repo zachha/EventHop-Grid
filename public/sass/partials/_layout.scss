@@ -9,18 +9,25 @@ main {
     perspective: 2px;
 }
 
-section {
+.hero__anchor {
+    margin-top: 8rem;
+}
+
+.section {
     position: relative;
-    height: 80%;
+    height: auto;
     margin-top: 4rem;
 }
 
-section.bg-grey {
-    background-color: $bgGrey;
+.section--hero {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.3),
+        rgba(0, 0, 0, 0.3)
+    ), url("../img/photos/header-bg.jpg");
 }
 
-section.hero,
-section.contact {
+// styles div for bg image to fully cover from top center
+.section--bg-img-cover {
     margin-top: 0;
     max-width: 100%;
     background-repeat: no-repeat;
@@ -30,19 +37,24 @@ section.contact {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    opacity: 1.0;
 }
 
-section.hero {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)
-    ), url("../img/photos/header-bg.jpg");
-    opacity: 1.0;
-    .hero__titles {
-        .hero__anchor {
-            margin-top: 8rem;
-        }
-    }
+.section--height-80 {
+    height: 80%;
+}
+
+// styles divs containing group cards (group cards, event cards, create cards, etc)
+.section__cards {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section__titles {
+    padding-bottom: 3rem;
 }
 
 .button--hero {
@@ -50,39 +62,31 @@ section.hero {
     padding: 1.5rem;
 }
 
-.section__titles {
-    padding-bottom: 3rem;
-}
+// The following selectors are layout selectors, each starting with an 'l' for recognizability
 
-.flex-center-all-column {
+.l-flex-col {
     display: flex;
     flex-direction: column;
-    justify-items: center;
+    justify-content: center;
     align-items: center;
 }
 
-.flex-center-all {
+.l-flex-row {
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.flex-stretch-row {
+.l-flex-stretch {
     display: flex;
     flex: 0 0 33.333333%;
     flex-wrap: wrap;
     align-items: stretch;
 }
 
-.container {
+.l-container {
     margin-right: auto;
     margin-left: auto
-}
-
-.about,
-.featuredEvents,
-.popularGroups {
-    height: auto;
 }
 
 
