@@ -660,6 +660,12 @@ main {
   font-size: 2rem;
 }
 
+.section__cards--events {
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0 -1.5rem;
+}
+
 .button--hero {
   border: 1px solid #212529;
   padding: 1.5rem;
@@ -728,7 +734,6 @@ main {
   box-sizing: border-box;
   border-radius: 4px;
 }
-
 .card--about {
   box-sizing: border-box;
   text-align: center;
@@ -737,6 +742,26 @@ main {
   padding-left: 15px;
   max-width: 33.333333%;
   float: left;
+}
+
+.event-card {
+  box-sizing: border-box;
+  flex: 0 0 33.333333%;
+  margin: 0 0 3rem;
+  padding: 0 1.5rem;
+}
+.event-card__body {
+  background-color: white;
+  text-align: center;
+}
+
+.event-card__title {
+  margin-top: 0;
+  padding-top: 1.5rem;
+}
+
+.event-card__subtitle {
+  padding-bottom: 1.5rem;
 }
 
 .locCard {
@@ -892,30 +917,6 @@ main {
   padding: 0.8rem;
   margin: 0 1.5rem 3rem 1.5rem;
   border-radius: 4px;
-}
-
-.event-cards {
-  box-sizing: border-box;
-  justify-content: center;
-  margin: 0 -1.5rem;
-}
-.event-cards .event-card {
-  box-sizing: border-box;
-  max-width: 33.333333%;
-  flex: 0 0 33.333333%;
-  margin: 0 0 3rem;
-  padding: 0 1.5rem;
-}
-.event-cards .event-card .event-card__text {
-  background-color: white;
-  text-align: center;
-}
-.event-cards .event-card .event-card__text .event-card__text--title {
-  margin-top: 0;
-  padding-top: 1.5rem;
-}
-.event-cards .event-card .event-card__text .event-card__text--subtitle {
-  padding-bottom: 1.5rem;
 }
 
 #map {

@@ -3,18 +3,42 @@
     max-width: 33.333333%;
     box-sizing: border-box;
     border-radius: 4px;
+
+    //.card modifiers 
+    @at-root #{&}--about {
+        box-sizing: border-box;
+        text-align: center;
+        position: relative;
+        padding-right: 15px;
+        padding-left: 15px;
+        max-width: 33.333333%;
+        float: left;
+    }
 }
 
-// 'about' section cards on main page
-.card--about {
+// @at-root #{&} lets me use nesting with BEM
+
+// Styles the event/group cards used on the main page and events page
+.event-card {
     box-sizing: border-box;
-    text-align: center;
-    position: relative;
-    padding-right: 15px;
-    padding-left: 15px;
-    max-width: 33.333333%;
-    float: left;
+    flex: 0 0 33.333333%;
+    margin: 0 0 3rem;
+    padding: 0 1.5rem;
+
+    // .event-card elements
+    @at-root #{&}__body {
+        background-color: white;
+        text-align: center;
+    }
+    @at-root #{&}__title {
+            margin-top: 0;
+            padding-top: 1.5rem;
+    }
+    @at-root #{&}__subtitle {
+        padding-bottom: 1.5rem;
+    }
 }
+
 
 // styles the 'choose location' cards at the top of create page
 .locCard {
@@ -173,31 +197,6 @@
             padding: 0.8rem;
             margin: 0 1.5rem 3rem 1.5rem;
             border-radius: 4px;
-        }
-    }
-}
-
-// event section sponsored cards on main page
-.event-cards {
-    box-sizing: border-box;
-    justify-content: center;
-    margin: 0 -1.5rem;
-    .event-card {
-        box-sizing: border-box;
-        max-width: 33.333333%;
-        flex: 0 0 33.333333%;
-        margin: 0 0 3rem;
-        padding: 0 1.5rem;
-        .event-card__text {
-            background-color: white;
-            text-align: center;
-            .event-card__text--title {
-                margin-top: 0;
-                padding-top: 1.5rem;
-            }
-            .event-card__text--subtitle {
-                padding-bottom: 1.5rem;
-            }
         }
     }
 }
