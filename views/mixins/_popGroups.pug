@@ -1,37 +1,36 @@
 mixin popGroups() 
-    .section.l-flex-col
-        .section__titles.l-flex-col
-            h2.section__title POPULAR GROUPS
-            h4.section__subtitle Popular User Created Groups coming up!
-        .l-container
-            .section__cards.event-cards
-                .event-card
-                    a.event-card__link(href="/events")
-                        img.image.h-img-fluid(src="/img/photos/event-04-03.jpg")
-                    .event-card__text
-                        h3.event-card__text--title Brunch Crew
-                        h4.event-card__text--subtitle 11 members
-                .event-card
-                    a.event-card__link(href="/events")
-                        img.image.h-img-fluid(src="/img/photos/event-02-03.jpg")
-                    .event-card__text
-                        h3.event-card__text--title BarHop
-                        h4.event-card__text--subtitle 10 members
-                .event-card
-                    a.event-card__link(href="/events")
-                        img.image.group-image.h-img-fluid(src="/img/photos/event-02-06.jpg")
-                    .event-card__text
-                        h3.event-card__text--title Art and Coffee!
-                        h4.event-card__text--subtitle 8 members
-                .event-card
-                    a.event-card__link(href="/events")
-                        img.image.group-image.h-img-fluid(src="/img/photos/para1.jpeg")
-                    .event-card__text
-                        h3.event-card__text--title Spa Day
-                        h4.event-card__text--subtitle 7 members
-                .event-card
-                    a.event-card__link(href="/events")
-                        img.image.group-image.h-img-fluid(src="/img/photos/sparkler.jpeg")
-                    .event-card__text
-                        h3.event-card__text--title Movie Date Night
-                        h4.event-card__text--subtitle 6 members
+    .section__titles.l-flex-col
+        h2.section__title POPULAR GROUPS
+        h4.section__subtitle Popular User Created Groups coming up!
+    .l-container
+        .section__cards.section__cards--events
+            .event-card
+                a.event-card__link(href="/events")
+                    img.image.h-img-fluid(src="/img/photos/event-04-03.jpg")
+                .event-card__body
+                    h3.event-card__title Brunch Crew
+                    h4.event-card__subtitle 11 members
+            .event-card
+                a.event-card__link(href="/events")
+                    img.image.h-img-fluid(src="/img/photos/event-02-03.jpg")
+                .event-card__body
+                    h3.event-card__title BarHop
+                    h4.event-card__subtitle 10 members
+            .event-card
+                a.event-card__link(href="/events")
+                    img.image.group-image.h-img-fluid(src="/img/photos/event-02-06.jpg")
+                .event-card__body
+                    h3.event-card__title Art and Coffee!
+                    h4.event-card__subtitle 8 members
+            .event-card
+                a.event-card__link(href="/events")
+                    img.image.group-image.h-img-fluid(src="/img/photos/para1.jpeg")
+                .event-card__body
+                    h3.event-card__title Spa Day
+                    h4.event-card__subtitle 7 members
+            .event-card
+                a.event-card__link(href="/events")
+                    img.image.group-image.h-img-fluid(src="/img/photos/sparkler.jpeg")
+                .event-card__body
+                    h3.event-card__title Movie Date Night
+                    h4.event-card__subtitle 6 members

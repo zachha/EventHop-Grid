@@ -4,7 +4,7 @@ include mixins/_featEvents
 include mixins/_popGroups
 
 block content
-    section#hero-content.section.section--hero.section--bg-img-cover.section--height-80.l-flex-col
+    section#hero.section.section--hero.section--bg-img-cover.section--height-80.l-flex-col
         .hero__title
             h1 Welcome To <span class="red">Event</span><span class="hop bounce-bottom">Hop</span>
         .hero__subtitle
@@ -12,7 +12,7 @@ block content
         .hero__anchor
             a.button.button--hero(href="#popGroups") Durham Style . . .       
     
-    section#about-content.section.section--about.l-flex-col
+    section#about.section.section--about.l-flex-col
         .section__titles.l-flex-col
             h2.section__title ABOUT
             h4.section__subtitle Do It Like Durham!
@@ -39,7 +39,7 @@ block content
                 .card__text
                     p View Event Meetups created by other users and join the ones that look interesting to you.  Take the stress out of meeting new people while in a relaxed setting. Talk about similar interests, work, or whatever is on your mind. However you choose, let us help and have fun!
 
-    section#featured-events-content.section.l-flex-row.h-bg-grey
+    section#featured-events.section.l-flex-col.h-bg-grey
         +featEvents()
 
     section#main-create-content.section.section--height-80.mainCreate.l-flex-col
@@ -48,6 +48,6 @@ block content
             a.button.button--main-create(href="/create") Create Your Own Group
             h4.section__subtitle You can invite others to join!
                     
-    section#popular-groups.section.l-flex-row.h-bg-grey
+    section#popular-groups.section.l-flex-col.h-bg-grey
         +popGroups()
     
