@@ -1,10 +1,11 @@
-// The .card block encapsulates event cards and cards used in the 'about' section
+// The Card block styles basic cards such as the about cards on the main page
 .card {
     max-width: 33.333333%;
     box-sizing: border-box;
     border-radius: 4px;
 
-    //.card modifiers 
+    // CARD MODIFIERS
+    // (.card--modifier)
     @at-root #{&}--about {
         box-sizing: border-box;
         text-align: center;
@@ -16,23 +17,22 @@
     }
 }
 
-// @at-root #{&} lets me use nesting with BEM
-
-// Styles the event/group cards used on the main page and events page
+// the Event Card block styles the event/group cards used on the main page and events page
 .event-card {
     box-sizing: border-box;
     flex: 0 0 33.333333%;
     margin: 0 0 3rem;
     padding: 0 1.5rem;
 
-    // .event-card elements
+    // EVENT CARD ELEMENTS
+    // (.event-card__element)
     @at-root #{&}__body {
         background-color: white;
         text-align: center;
     }
     @at-root #{&}__title {
-            margin-top: 0;
-            padding-top: 1.5rem;
+        margin-top: 0;
+        padding-top: 1.5rem;
     }
     @at-root #{&}__subtitle {
         padding-bottom: 1.5rem;
@@ -40,43 +40,36 @@
 }
 
 
-// styles the 'choose location' cards at the top of create page
-.locCard {
+// the Create Card block styles the 'choose location'/'chosen summary' cards at the top of create page
+.create-card {
     @include box-shadow($cardShadow);
     @extend %flex__center;
     height: 450px;
     flex-direction: column;
-    opacity: 0.5;
+    opacity: 1.0;
     position: relative;
-    .infocard__text {
+
+    // CREATE CARD ELEMENTS 
+    // (.create-card__element)
+    @at-root #{&}__title {
+        grid-area: overlay-text;
+        font-size: 3.5rem;
+        margin: 2rem;
+    }
+    @at-root #{&}__text {
         color: white;
+        font-family: $headerFonts;
+        margin: 2rem;
+        font-size: 2rem;
     }
-    &.chosen {
-        opacity: 1.0;
+    @at-root #{&}__info {
+        grid-area: overlay-info;
+        align-self: start;
     }
-    // background image styling for 'choose location' cards
-    &.locCard__background {
-        background-image: $bull;
-        background-position: center;
-        background-size: contain;
-        background-repeat: no-repeat;
+    @at-root #{&}__stars {
+        margin-top: 1rem;
     }
-    &.bullFaint {
-        background-image: $bullFaint;
-    }
-    &.shop {
-        background-image: $shop;
-    }
-    &.shopFaint {
-        background-image: $shopFaint;
-    }
-    &.bullLocal {
-        background-image: $bullLocal;
-    }
-    &.bullLocalFaint {
-        background-image: $bullLocalFaint;
-    }
-    .locCard__overlay {
+    @at-root #{&}__overlay {
         border-radius: 4px;
         position: absolute;
         @extend %grid__center;
@@ -91,46 +84,41 @@
         height: 100%;
         width: 100%;
         z-index: 10;
-        &.h-hide {
-            opacity: 0.0;
+    }
+    // background image stylings for 'choose location' event-cards
+    @at-root #{&}__background {
+        background-image: $bull;
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+
+        // CREATE-CARD__BACKGROUND MODIFIERS 
+        // (.create-card__background--modifier)
+        @at-root #{&}--bullFaint {
+            background-image: $bullFaint;
         }
-        h2.infocard__title {
-            grid-area: overlay-text;
-            font-size: 3.5rem;
-            margin: 2rem;
+        @at-root #{&}--shop {
+            background-image: $shop;
         }
-        .button--infocard {
-            grid-area: overlay-button;
-            align-self: start;
-            width: 60%;
-            padding: 1.3rem;
+        @at-root #{&}--shopFaint {
+            background-image: $shopFaint;
         }
-        &.locChosen {
-            grid-template-rows: 1fr 1fr 25%;
-            grid-template-areas: " overlay-text "
-                                 "overlay-info"
-                                 "overlay-button";
-            .infocard__text {
-                color: white;
-                font-family: $headerFonts;
-                font-size: 2rem;
-                margin: 0 2rem;
-            }
-            .locInfo {
-                grid-area: overlay-info;
-                align-self: start;
-            }
-            p.locStars {
-                margin-top: 1rem;
-            }
-            button.locWebsite {
-                grid-area: overlay-button;
-            }
+        @at-root #{&}--bullLocal {
+            background-image: $bullLocal;
         }
+        @at-root #{&}--bullLocalFaint {
+            background-image: $bullLocalFaint;
+        }
+    }
+
+    // CREATE-CARD MODIFIERS
+    // (.create-card--modifier)
+    @at-root #{&}--inactive {
+        opacity: 0.5;
     }
 }
 
-// styles the infocards for each location, which are dynamically generated using info from Google Maps API
+// The Infocard block styles the infocards for each location, which are dynamically generated using info from Google Maps API
 .infocard {
     margin: 2rem 0;
     display: flex;
@@ -139,64 +127,81 @@
     border-radius: 4px;
     width: 85%;
     height: auto;
-    .infocard__pic {
+    background: linear-gradient( $rgbaBlack, $rgbaBlack );
+
+    // INFOCARD ELEMENTS
+    // (.infocard__element)
+    @at-root #{&}__img-div {
         width: 330px;
-        .infocard__pic--image {
-            border-radius: 4px;
-            margin: 0 3rem;
-        }
     }
-    .infocard__body {
+    //
+    //ABSTRACT INTO IMAGE BLOCK/MODIFIER        !!!
+    //
+    @at-root #{&}__img {
+        border-radius: 4px;
+        margin: 0 3rem;
+    }
+    //
+    //ABSTRACT INTO IMAGE BLOCK/MODIFIER        !!!
+    //
+    @at-root #{&}__body {
         width: 664.5px;
         font-family: $headerFonts;
         font-size: 2rem;
         margin: 0;
-        .infocard__text {
-            margin: 2rem;
-        }
-        .infocard__text--rating {
+    }
+    @at-root #{&}__title {
+        margin: 2.5rem;
+        color: white;
+    }
+    @at-root #{&}__footer {
+        height: 6rem;
+        text-align: center;
+    }
+    @at-root #{&}__anchor {
+        font-weight: 600;
+        font-size: 2.5rem;
+        padding: 0.8rem;
+        margin: 0 1.5rem 3rem 1.5rem;
+        border-radius: 4px;
+        color: white;
+        background-color: $red;
+    }
+    @at-root #{&}__text {
+        margin: 2rem;
+        color: white;
+
+        // INFOCARD__TEXT MODIFIERS
+        // (.infocard__text--modifier)
+        @at-root #{&}--rating {
             font-style: italic;
-            .stars {
-                margin-left: 1.5rem;
-                color: #FFDF00;
-                font-size: 3rem;
-                font-style: normal;
-                //text-shadow: 0 0 2px rgba(0,0,0,0.7);
-            }
-            .star-icon {
-                position: relative;
-                font-size: 3rem;
-                font-style: normal;
-            }
-            .half:before {
-                content: '\2605';
-                position: absolute;
-                left: 0;
-                width :50%;
-                overflow: hidden;
-                
-            }
         }
-        .infocard__text--address {
+        @at-root #{&}--address {
             margin-bottom: 0;
         }
-        .infocard__text--phone {
+        @at-root #{&}--phone {
             margin-top: 0;
             margin-bottom: 2rem;
         }
-        .infocard__title {
-            margin: 2.5rem;
-        }
-        .infocard__footer {
-            height: 6rem;
-            text-align: center;
-        }
-        .infocard__anchor {
-            font-weight: 600;
-            font-size: 2.5rem;
-            padding: 0.8rem;
-            margin: 0 1.5rem 3rem 1.5rem;
-            border-radius: 4px;
-        }
     }
+}
+
+// Styles the review stars on the infocards
+.stars {
+    margin-left: 1.5rem;
+    color: #FFDF00;
+    font-size: 3rem;
+    font-style: normal;
+}
+.star-icon {
+    position: relative;
+    font-size: 3rem;
+    font-style: normal;
+}
+.half:before {
+    content: '\2605';
+    position: absolute;
+    left: 0;
+    width :50%;
+    overflow: hidden;
 }
