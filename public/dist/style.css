@@ -1,99 +1,4 @@
 @charset "UTF-8";
-.button {
-  padding: 1.5rem;
-  cursor: pointer;
-  border: none;
-  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #db0011;
-  background-color: #212529;
-  font-size: 2rem;
-  margin-top: 3rem;
-  font-weight: 600;
-  width: 20%;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.button--main-create {
-  width: 100%;
-}
-
-.breakline {
-  height: 5rem;
-  align-self: center;
-  margin: 1.5rem 4rem;
-  border-bottom: 1px solid #212529;
-  display: block;
-  width: 70%;
-}
-
-.svg__icon {
-  fill: #db0011;
-  height: 5rem;
-  width: 5rem;
-}
-
-.h-disabled {
-  pointer-events: none;
-}
-
-.h-hide {
-  display: none;
-}
-
-.h-grow {
-  transition: all 0.2s ease-in-out;
-  -webkit-font-smoothing: antialiased;
-  backface-visibility: hidden;
-}
-
-.h-grow:hover {
-  -webkit-transform: scale(1.1);
-  -moz-transform: scale(1.1);
-  -o-transform: scale(1.1);
-  transform: scale(1.1);
-}
-
-.h-img-fluid {
-  width: 100%;
-  height: auto;
-}
-
-.h-center-text {
-  text-align: center;
-}
-
-.h-bg-grey {
-  background-color: #f8f9fa;
-}
-
-.nav__section--pages, .nav__section--user {
-  justify-self: end;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
-.location__box.complete .locCard__header, .location__box.chosen .locCard__header {
-  color: #db0011;
-  opacity: 1;
-  font-weight: 600;
-}
-
-.locCard .locCard__overlay {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-}
-
-.locCard {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -433,6 +338,42 @@ template {
   display: none;
 }
 
+.btn {
+  padding: 1.5rem;
+  cursor: pointer;
+  border: none;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #db0011;
+  background-color: #212529;
+  font-size: 2rem;
+  margin-top: 3rem;
+  font-weight: 600;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.btn--hero {
+  border: 1px solid #212529;
+}
+
+.btn--infocard {
+  grid-area: overlay-button;
+  align-self: start;
+  width: 60%;
+  padding: 1.3rem;
+}
+
+.btn--chosen {
+  grid-area: overlay-button;
+}
+
+.btn--map {
+  width: 15%;
+  padding: 1.3rem;
+}
+
 @keyframes slideIn {
   0% {
     transform: translateX(-10px);
@@ -545,12 +486,6 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-h2.hero__sub {
-  color: white;
-  font-size: 4.8rem;
-  margin-top: 0;
-}
-
 h3 {
   font-size: 2.5rem;
   margin-bottom: 0;
@@ -577,27 +512,10 @@ p {
   font-weight: 500;
 }
 
-/*
-section h2.section-heading {
-    font-size: 4rem;
-    margin-top: 0;
-    margin-bottom: 15px;
-    letter-spacing: 4px;
-}
-
-section h3.section-subheading {
-    font-style: italic;
-    text-transform: none;
-}
-*/
 nav {
   color: white;
   font-size: 1.6rem;
   letter-spacing: 4px;
-}
-
-span.red {
-  color: #db0011;
 }
 
 html {
@@ -615,14 +533,99 @@ main {
   margin-top: 8rem;
 }
 
+.hero__sub {
+  color: white;
+  font-size: 4.8rem;
+  margin-top: 0;
+}
+
 .section {
   position: relative;
   height: auto;
   margin-top: 4rem;
 }
+.section__titles {
+  padding-bottom: 3rem;
+}
+
+.section__text {
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #212529;
+  font-size: 2rem;
+}
+
+.section__map {
+  text-align: center;
+  width: 100%;
+  height: 80%;
+}
+
+.section__map-choose {
+  width: 100%;
+  text-align: center;
+  align-items: stretch;
+}
+
+.section__map-btns {
+  width: 80%;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.section__dropdown {
+  padding-top: 2rem;
+  width: 100%;
+}
+
+.section__location {
+  width: 30%;
+  text-align: center;
+}
+
+.section__header {
+  color: #db0011;
+  opacity: 1;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-decoration: underline;
+}
+.section__header--inactive {
+  color: #6c757d;
+  font-weight: 400;
+  opacity: 0.3;
+  text-decoration: none;
+}
+
+.section__header--complete {
+  text-decoration: none;
+}
+
+.section__cards {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.section__cards--events {
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0 -1.5rem;
+}
 
 .section--hero {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../img/photos/header-bg.jpg");
+}
+
+.section--contact {
+  height: auto;
+  background-image: url("../img/photos/map-image.jpg");
+  background-position: center;
 }
 
 .section--bg-img-cover {
@@ -640,35 +643,6 @@ main {
 
 .section--height-80 {
   height: 80%;
-}
-
-.section__cards {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-.section__titles {
-  padding-bottom: 3rem;
-}
-
-.section__text {
-  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: #212529;
-  font-size: 2rem;
-}
-
-.section__cards--events {
-  box-sizing: border-box;
-  justify-content: center;
-  margin: 0 -1.5rem;
-}
-
-.button--hero {
-  border: 1px solid #212529;
-  padding: 1.5rem;
 }
 
 .l-flex-col {
@@ -764,43 +738,38 @@ main {
   padding-bottom: 1.5rem;
 }
 
-.locCard {
+.create-card {
   -webkit-box-shadow: 4px 4px 22px -5px #647595;
   -moz-box-shadow: 4px 4px 22px -5px #647595;
   box-shadow: 4px 4px 22px -5px #647595;
   height: 450px;
   flex-direction: column;
-  opacity: 0.5;
+  opacity: 1;
   position: relative;
 }
-.locCard .infocard__text {
+.create-card__title {
+  grid-area: overlay-text;
+  font-size: 3.5rem;
+  margin: 2rem;
+}
+
+.create-card__text {
   color: white;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  margin: 2rem;
+  font-size: 2rem;
 }
-.locCard.chosen {
-  opacity: 1;
+
+.create-card__info {
+  grid-area: overlay-info;
+  align-self: start;
 }
-.locCard.locCard__background {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/icon/bull-city-white.png");
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
+
+.create-card__stars {
+  margin-top: 1rem;
 }
-.locCard.bullFaint {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-city-white.png");
-}
-.locCard.shop {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/icon/shop-durham.png");
-}
-.locCard.shopFaint {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/shop-durham.png");
-}
-.locCard.bullLocal {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/icon/bull-local.png");
-}
-.locCard.bullLocalFaint {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-local.png");
-}
-.locCard .locCard__overlay {
+
+.create-card__overlay {
   border-radius: 4px;
   position: absolute;
   grid-template-columns: 1fr;
@@ -814,39 +783,35 @@ main {
   width: 100%;
   z-index: 10;
 }
-.locCard .locCard__overlay.h-hide {
-  opacity: 0;
+
+.create-card__background {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/icon/bull-city-white.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
 }
-.locCard .locCard__overlay h2.infocard__title {
-  grid-area: overlay-text;
-  font-size: 3.5rem;
-  margin: 2rem;
+.create-card__background--bullFaint {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-city-white.png");
 }
-.locCard .locCard__overlay .button--infocard {
-  grid-area: overlay-button;
-  align-self: start;
-  width: 60%;
-  padding: 1.3rem;
+
+.create-card__background--shop {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/icon/shop-durham.png");
 }
-.locCard .locCard__overlay.locChosen {
-  grid-template-rows: 1fr 1fr 25%;
-  grid-template-areas: " overlay-text " "overlay-info" "overlay-button";
+
+.create-card__background--shopFaint {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/shop-durham.png");
 }
-.locCard .locCard__overlay.locChosen .infocard__text {
-  color: white;
-  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 2rem;
-  margin: 0 2rem;
+
+.create-card__background--bullLocal {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../img/icon/bull-local.png");
 }
-.locCard .locCard__overlay.locChosen .locInfo {
-  grid-area: overlay-info;
-  align-self: start;
+
+.create-card__background--bullLocalFaint {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-local.png");
 }
-.locCard .locCard__overlay.locChosen p.locStars {
-  margin-top: 1rem;
-}
-.locCard .locCard__overlay.locChosen button.locWebsite {
-  grid-area: overlay-button;
+
+.create-card--inactive {
+  opacity: 0.5;
 }
 
 .infocard {
@@ -859,203 +824,116 @@ main {
   border-radius: 4px;
   width: 85%;
   height: auto;
+  background: linear-gradient(#212529, #212529);
 }
-.infocard .infocard__pic {
+.infocard__img-div {
   width: 330px;
 }
-.infocard .infocard__pic .infocard__pic--image {
+
+.infocard__img {
   border-radius: 4px;
   margin: 0 3rem;
 }
-.infocard .infocard__body {
+
+.infocard__body {
   width: 664.5px;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 2rem;
   margin: 0;
 }
-.infocard .infocard__body .infocard__text {
-  margin: 2rem;
+
+.infocard__title {
+  margin: 2.5rem;
+  color: white;
 }
-.infocard .infocard__body .infocard__text--rating {
+
+.infocard__footer {
+  height: 6rem;
+  text-align: center;
+}
+
+.infocard__anchor {
+  font-weight: 600;
+  font-size: 2.5rem;
+  padding: 0.8rem;
+  margin: 0 1.5rem 3rem 1.5rem;
+  border-radius: 4px;
+  color: white;
+  background-color: #db0011;
+}
+
+.infocard__text {
+  margin: 2rem;
+  color: white;
+}
+.infocard__text--rating {
   font-style: italic;
 }
-.infocard .infocard__body .infocard__text--rating .stars {
+
+.infocard__text--address {
+  margin-bottom: 0;
+}
+
+.infocard__text--phone {
+  margin-top: 0;
+  margin-bottom: 2rem;
+}
+
+.stars {
   margin-left: 1.5rem;
   color: #FFDF00;
   font-size: 3rem;
   font-style: normal;
 }
-.infocard .infocard__body .infocard__text--rating .star-icon {
+
+.star-icon {
   position: relative;
   font-size: 3rem;
   font-style: normal;
 }
-.infocard .infocard__body .infocard__text--rating .half:before {
+
+.half:before {
   content: "★";
   position: absolute;
   left: 0;
   width: 50%;
   overflow: hidden;
 }
-.infocard .infocard__body .infocard__text--address {
-  margin-bottom: 0;
-}
-.infocard .infocard__body .infocard__text--phone {
-  margin-top: 0;
-  margin-bottom: 2rem;
-}
-.infocard .infocard__body .infocard__title {
-  margin: 2.5rem;
-}
-.infocard .infocard__body .infocard__footer {
-  height: 6rem;
-  text-align: center;
-}
-.infocard .infocard__body .infocard__anchor {
-  font-weight: 600;
-  font-size: 2.5rem;
-  padding: 0.8rem;
-  margin: 0 1.5rem 3rem 1.5rem;
-  border-radius: 4px;
-}
 
-#map {
-  height: 400px;
-  width: 100%;
-}
-
-.create__section {
-  width: 100%;
-  padding: 0;
-}
-.create__section .create__section--title {
-  width: 100%;
-}
-.create__section .create__section--choose {
-  width: 100%;
-  text-align: center;
-  align-items: stretch;
-}
-.create__section .create__section--choose .choose__section--buttons {
-  width: 80%;
-  align-self: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.create__section .create__section--choose .choose__section--map {
-  text-align: center;
-  width: 100%;
-  height: 80%;
-}
-.create__section .overlayRed {
+.overlayRed {
   background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
 }
-.create__section .overlayRed .infocard__title,
-.create__section .overlayRed .infocard__text {
+.overlayRed .create-card__title,
+.overlayRed .create-card__text {
   color: white;
 }
-.create__section .overlayRed .button--infocard,
-.create__section .overlayRed .infocard__anchor {
+.overlayRed .btn--infocard {
   color: #212529;
   background-color: white;
 }
-.create__section .overlayWhite {
+
+.overlayWhite {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
 }
-.create__section .overlayWhite .infocard__title,
-.create__section .overlayWhite .infocard__text {
+.overlayWhite .create-card__title,
+.overlayWhite .create-card__text {
   color: #212529;
 }
-.create__section .overlayWhite .button--infocard,
-.create__section .overlayWhite .infocard__anchor {
+.overlayWhite .btn--infocard {
   color: #db0011;
   background-color: #212529;
 }
-.create__section .overlayBlack {
+
+.overlayBlack {
   background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
 }
-.create__section .overlayBlack .infocard__title,
-.create__section .overlayBlack .infocard__text {
+.overlayBlack .create-card__title,
+.overlayBlack .create-card__text {
   color: white;
 }
-.create__section .overlayBlack .button--infocard,
-.create__section .overlayBlack .infocard__anchor {
+.overlayBlack .btn--infocard {
   color: white;
   background-color: #db0011;
-}
-
-.choose__section--dropdown {
-  padding-top: 2rem;
-}
-.choose__section--dropdown .choose__title {
-  margin-bottom: 2rem;
-}
-.choose__section--dropdown .map__select {
-  text-align: center;
-  width: 20%;
-  padding: 1.3rem;
-  font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
-.choose__section--dropdown .location__button {
-  width: 15%;
-}
-
-.choose__section--infocards {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-.map__button {
-  width: 15%;
-  padding: 1.3rem;
-}
-
-.choose__title {
-  font-weight: 400;
-  font-size: 2.5rem;
-  color: #db0011;
-}
-
-.location__box {
-  width: 30%;
-  text-align: center;
-}
-.location__box .locCard__header {
-  color: #6c757d;
-  margin-bottom: 2rem;
-  font-size: 3rem;
-  opacity: 0.3;
-}
-.location__box.chosen .locCard__header {
-  text-decoration: underline;
-}
-form.loc__form {
-  background-color: transparent;
-  width: 90%;
-  height: 90%;
-  justify-content: flex-start;
-  align-items: center;
-}
-form.loc__form label {
-  background-color: transparent;
-  color: black;
-  font-size: 2.3rem;
-  font-weight: 600;
-}
-form.loc__form textarea {
-  background-color: transparent;
-  color: black;
-  font-size: 2rem;
-  width: 90%;
-  height: 10%;
-  padding: 0.5rem;
-  border: none;
-  resize: none;
 }
 
 input,
@@ -1115,10 +993,43 @@ form.form__register {
   width: 80%;
 }
 
-.section--contact {
-  height: auto;
-  background-image: url("../img/photos/map-image.jpg");
-  background-position: center;
+.form__label--map {
+  font-weight: 400;
+  font-size: 2.5rem;
+  color: #db0011;
+  margin-bottom: 2rem;
+}
+
+.form__select {
+  text-align: center;
+  width: 20%;
+  padding: 1.3rem;
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+form.loc__form {
+  background-color: transparent;
+  width: 90%;
+  height: 90%;
+  justify-content: flex-start;
+  align-items: center;
+}
+form.loc__form label {
+  background-color: transparent;
+  color: black;
+  font-size: 2.3rem;
+  font-weight: 600;
+}
+form.loc__form textarea {
+  background-color: transparent;
+  color: black;
+  font-size: 2rem;
+  width: 90%;
+  height: 10%;
+  padding: 0.5rem;
+  border: none;
+  resize: none;
 }
 
 section.dev {
@@ -1238,6 +1149,109 @@ a.portfolio__anchor {
   margin: 0 0.5rem;
 }
 
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.breakline {
+  height: 5rem;
+  align-self: center;
+  margin: 1.5rem 4rem;
+  border-bottom: 1px solid #212529;
+  display: block;
+  width: 70%;
+}
+
+.svg__icon {
+  fill: #db0011;
+  height: 5rem;
+  width: 5rem;
+}
+
+.h-grow {
+  transition: all 0.2s ease-in-out;
+  -webkit-font-smoothing: antialiased;
+  backface-visibility: hidden;
+}
+
+.h-grow:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.h-img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+.h-center-text {
+  text-align: center;
+}
+
+.h-red {
+  color: #db0011;
+}
+
+.h-bg-grey {
+  background-color: #f8f9fa;
+}
+
+.h-width-100 {
+  width: 100%;
+}
+
+.h-width-80 {
+  width: 80%;
+}
+
+.h-width-60 {
+  width: 60%;
+}
+
+.h-width-40 {
+  width: 40%;
+}
+
+.h-width-20 {
+  width: 20%;
+}
+
+.s-disabled {
+  pointer-events: none;
+}
+
+.s-hide {
+  display: none;
+  pointer-events: none;
+}
+
+.s-chosen {
+  grid-template-rows: 1fr 1fr 25%;
+  grid-template-areas: " overlay-text " "overlay-info" "overlay-button";
+}
+
+.nav__section--pages, .nav__section--user {
+  justify-self: end;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.create-card__overlay {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+}
+
+.create-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 @media (max-width: 1920px) {
   .l-container {
     width: 1890px;
@@ -1283,21 +1297,21 @@ a.portfolio__anchor {
     margin-bottom: 2rem;
   }
 
-  .create__section--choose .choose__section--buttons {
+  .section__map-choose .section__map-btns {
     padding-top: 3rem;
     padding-bottom: 3rem;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
   }
-  .create__section--choose .choose__section--buttons button.map__button {
+  .section__map-choose .section__map-btns button.btn--map {
     margin: 0.5rem 0;
     width: 50%;
   }
-  .create__section--choose .choose__section--dropdown select {
+  .section__map-choose .section__dropdown select {
     width: 50%;
   }
-  .create__section--choose .choose__section--dropdown .choose__button button {
+  .section__map-choose .section__dropdown .choose__button button {
     width: 50%;
   }
 
