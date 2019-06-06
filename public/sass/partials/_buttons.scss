@@ -1,0 +1,36 @@
+// the Button block styles basic eventhop buttons
+.btn { 
+    padding: 1.5rem;
+    cursor: pointer;
+    border: none;
+    font-family: $headerFonts;
+    color: $red;
+    background-color: $bgBlack;
+    font-size: 2rem;
+    margin-top: 3rem;
+    font-weight: 600;
+    width: 20%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 4px;
+    box-sizing: border-box;
+
+    // BUTTON MODIFIERS 
+    // (.btn--modifier)
+    @at-root #{&}--hero {
+        border: 1px solid $bgBlack;
+    }
+    @at-root #{&}--infocard {
+        grid-area: overlay-button;
+        align-self: start;
+        width: 60%;
+        padding: 1.3rem;
+    }
+    @at-root #{&}--chosen {
+        grid-area: overlay-button;
+    }
+    @at-root #{&}--map {
+        width: 15%;
+        padding: 1.3rem;
+    }
+}
