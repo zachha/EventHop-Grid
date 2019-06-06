@@ -13,62 +13,127 @@ main {
     margin-top: 8rem;
 }
 
+.hero__sub {
+    color: white;
+    font-size: 4.8rem;
+    margin-top: 0;
+}
+
+// @at-root #{&} allows nesting with BEM
+
 .section {
     position: relative;
     height: auto;
     margin-top: 4rem;
-}
 
-.section--hero {
-    background-image: linear-gradient(
-        rgba(0, 0, 0, 0.3),
-        rgba(0, 0, 0, 0.3)
-    ), url("../img/photos/header-bg.jpg");
-}
+    // SECTION ELEMENTS
+    // (.section__element)
+    @at-root #{&}__titles {
+        padding-bottom: 3rem;
+    }
+    @at-root #{&}__text {
+        font-family: $headerFonts;
+        color: $bgBlack;
+        font-size: 2rem;
+    }
+    @at-root #{&}__map {
+        text-align: center;
+        width: 100%;
+        height: 80%;
+    }
+    @at-root #{&}__map-choose {
+        width: 100%;
+        text-align: center;
+        align-items: stretch;
+    }
+    @at-root #{&}__map-btns {
+        width: 80%;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    @at-root #{&}__dropdown {
+        padding-top: 2rem;
+        width: 100%;
+    }
+    @at-root #{&}__location {
+        width: 30%;
+        text-align: center;
+    }
+    @at-root #{&}__header {
+        color: $red;
+        opacity: 1.0;
+        font-weight: 600;
+        margin-bottom: 2rem;
+        font-size: 3rem;
+        text-decoration: underline;
 
-// styles div for bg image to fully cover from top center
-.section--bg-img-cover {
-    margin-top: 0;
-    max-width: 100%;
-    background-repeat: no-repeat;
-    background-attachment: scroll;
-    background-position: top center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    opacity: 1.0;
-}
+        // SECTION__HEADER MODIFIERS
+        // (.section__header--modifier)
+        @at-root #{&}--inactive {
+            color: $grey;
+            font-weight: 400;
+            opacity: 0.3;
+            text-decoration: none;
+        }
+        @at-root #{&}--complete {
+            text-decoration: none;
+        }
+    }
+    // styles divs containing cards
+    @at-root #{&}__cards {
+        box-sizing: border-box;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
 
-.section--height-80 {
-    height: 80%;
-}
+        // SECTION__CARDS MODIFIERS
+        // (.section__cards--modifier)
+        @at-root #{&}--events {
+            // this div holds event/group cards
+            box-sizing: border-box;
+            justify-content: center;
+            margin: 0 -1.5rem;
+        }
+    }
+    
+    // SECTION MODIFIERS 
+    // (.section--modifier)
+    @at-root #{&}--hero {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.3)
+        ), url("../img/photos/header-bg.jpg");
+    }
+    @at-root #{&}--contact {
+        height: auto;
+        background-image: url("../img/photos/map-image.jpg");
+        background-position: center;
+    }
 
-// styles divs containing group cards (group cards, event cards, create cards, etc)
-.section__cards {
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
+    // styles div for bg image to fully cover from top center
+    @at-root #{&}--bg-img-cover {
+        margin-top: 0;
+        max-width: 100%;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+        background-position: top center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+        opacity: 1.0;
+    }
+    @at-root #{&}--height-80 {
+        height: 80%;
+    }
 }
-
-.section__titles {
-    padding-bottom: 3rem;
-}
-
-.section__text {
-    font-family: $headerFonts;
-    color: $bgBlack;
-    font-size: 2rem;
-}
-
-.button--hero {
-    border: 1px solid $bgBlack;
-    padding: 1.5rem;
-}
-
-// The following selectors are layout selectors, each starting with an 'l' for recognizability
+// LAYOUT SELECTORS
+// (.l-layout)
 
 .l-flex-col {
     display: flex;
