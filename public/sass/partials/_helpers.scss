@@ -1,22 +1,6 @@
-// styles default eventhop buttons
-.button { 
-    padding: 1.5rem;
-    cursor: pointer;
-    border: none;
-    font-family: $headerFonts;
-    color: $red;
-    background-color: $bgBlack;
-    font-size: 2rem;
-    margin-top: 3rem;
-    font-weight: 600;
-    width: 20%;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-.button--main-create {
+// styles the google maps div
+#map {
+    height: 400px;
     width: 100%;
 }
 
@@ -37,15 +21,8 @@
     width: 5rem;
 }
 
-// allows disabling of buttons/interactive elements
-.h-disabled {
-    pointer-events: none;
-}
-
-// hides element and doesn't preserve the space it was/is in
-.h-hide {
-    display: none
-}
+// HELPER CLASSES
+// (.h-helper)
 
 // button animations
 .h-grow {
@@ -67,17 +44,61 @@
     height: auto;
 }
 
-// aligns text to center
 .h-center-text {
     text-align: center;
 }
 
+.h-red {
+    color: $red;
+}
 
 .h-bg-grey {
     background-color: $bgGrey;
 }
 
-// sass extensions
+.h-width-100 {
+    width: 100%;
+}
+
+.h-width-80 {
+    width: 80%;
+}
+
+.h-width-60 {
+    width: 60%;
+}
+
+.h-width-40 {
+    width: 40%;
+}
+
+.h-width-20 {
+    width: 20%;
+}
+
+// State classes 
+// (.s-state)
+
+// allows disabling of buttons/interactive elements
+.s-disabled {
+    pointer-events: none;
+}
+
+.s-hide {
+    display: none;
+    pointer-events: none;
+}
+
+// when an event card location is 'chosen' this class is added to the card
+.s-chosen {
+    grid-template-rows: 1fr 1fr 25%;
+    grid-template-areas: " overlay-text "
+                            "overlay-info"
+                            "overlay-button";
+}
+
+// SASS EXTENSIONS
+// (%extension)
 %nav__layout {
     justify-self: end;
     display: flex;
@@ -85,11 +106,6 @@
     align-items: center;
 }
 
-%locCard__headers {
-    color: $red;
-    opacity: 1.0;
-    font-weight: 600;
-}
 %grid__center {
     display: grid;
     justify-items: center;

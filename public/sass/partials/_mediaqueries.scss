@@ -55,19 +55,19 @@
         }
     }
 
-    .create__section--choose {
-        .choose__section--buttons {
+    .section__map-choose {
+        .section__map-btns {
             padding-top: 3rem;
             padding-bottom: 3rem;
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            button.map__button {
+            button.btn--map {
                 margin: 0.5rem 0;
                 width: 50%;
             }
         }
-        & .choose__section--dropdown {
+        & .section__dropdown {
             select {
                 width: 50%;
             }
