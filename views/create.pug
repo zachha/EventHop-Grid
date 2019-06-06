@@ -14,22 +14,22 @@ block content
                             .create-card__info
                                 p.create-card__text.locAddress 112 S Duke St, Durham, NC 27701, USA
                                 p.create-card__text.event-card__stars Google Rating: 4.6
-                            button#locStart.btn.btn--infocard.s-hide Let's Go!
-                            button#locOneLink.btn.btn--infocard.btn--chosen.h-grow Website
+                            button#locStart.btn.btn--infocard.s-hide.s-disable Let's Go!
+                            button#locOneLink.btn.btn--infocard.h-grow Website
                 #locTwo.section__location
                     h3.section__header Location #2
                     .create-card.create-card__background.create-card__background--bullLocal
-                        .create-card__overlay.overlayBlack
+                        .create-card__overlay.create-card__overlay--black
                             h2.create-card__title Choose your next event type
-                            button#locStart.btn.btn--infocard.h-grow Let's Go!
-                            button#locTwoLink.btn.btn--infocard.btn--chosen.s-hide Website
+                            button#locStart.btn.btn--infocard.btn--red.h-grow Let's Go!
+                            button#locTwoLink.btn.btn--infocard.btn--red.s-hide.s-disable Website
                 #locThree.section__location
                     h3.section__header.section__header--inactive Location #3
                     .create-card.create-card--inactive.create-card__background
-                        .create-card__overlay.overlayWhite
+                        .create-card__overlay.create-card__overlay--white
                             h2.create-card__title Choose your last event type
                             button#locStart.btn.btn--infocard.s-disabled Let's Go!
-                            button#locThreeLink.btn.btn--infocard.btn--chosen.s-hide Website
+                            button#locThreeLink.btn.btn--infocard.btn--black.s-hide.s-disable Website
                             
         .section__map-choose.l-flex-col
             .section__title
@@ -109,7 +109,7 @@ block content
                             a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
                     .infocard__img-div
                             img.infocard__img(src="/img/photos/durham.jpeg")
-                .infocard
+                .infocard.infocard--red
                     .infocard__body
                         h2.infocard__title Tobacco Road Sports Cafe
                         p.infocard__text.infocard__text--rating Google Ratings: <br>
@@ -134,6 +134,6 @@ block content
                         p.infocard__text.infocard__text--address 280 S Mangum St #100, Durham, NC 27701, USA
                         p.infocard__text.infocard__text--phone Phone Number: (919) 937-9909
                         .infocard__footer
-                            a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
+                            a.infocard__anchor.infocard__anchor--white.infocard__website(href="www.google.com" target="_blank") Website
                     .infocard__img-div
                             img.infocard__img(src="/img/photos/durham.jpeg")
