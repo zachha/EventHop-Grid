@@ -1,140 +1,139 @@
 extends layout
 
 block content
-    section#create__content.create
-        .create__section.section.l-flex-col
-            .create__section--title.section__titles.l-flex-col
-                h2.create__title CREATE YOUR OWN EVENT
-                h4.create__subtitle Choose up to Three Event Locations!
-                .title__section.section__cards.l-container
-                    .location__box.complete
-                        h3.locCard__header Location Complete
-                        .locCard.locCard__background.chosen.shop
-                            .locCard__overlay.overlayRed.locChosen
-                                h2.infocard__title Ninth Street Bakery
-                                .locInfo
-                                    p.infocard__text.locAddress 112 S Duke St, Durham, NC 27701, USA
-                                    p.infocard__text.locStars Google Rating: 4.6
-                                button#locStart.button--infocard.button.h-hide Let's Go!
-                                button#locOneWeb.button--infocard.locWebsite.button.h-grow Website
-                    .location__box.chosen
-                        h3.locCard__header Location #2
-                        .locCard.locCard__background.bullLocal.chosen
-                            .locCard__overlay.overlayBlack
-                                h2.infocard__title Choose your next event type
-                                button#locStart.button--infocard.button.h-grow Let's Go!
-                                button#locTwoWeb.button--infocard.locWebsite.button.h-hide Website
-                    .location__box
-                        h3.locCard__header Location #3
-                        .locCard.locCard__background
-                            .locCard__overlay.overlayWhite
-                                h2.infocard__title Choose your last event type
-                                button#locStart.button--infocard.button.h-disabled Let's Go!
-                                button#locThreeWeb.button--infocard.locWebsite.button.h-hide Website
-                                
-            .create__section--choose.l-flex-col
-                .choose__section--title
-                    h3.choose__title Choose a Type of Event
-                .choose__section--buttons
-                    button#cafe.button.map__button Cafe
-                    button#bar.button.map__button Bar
-                    button#restaurant.button.map__button Food
-                    button#art_gallery.button.map__button Art
-                    button#movie_theater.button.map__button Movie
-                    button#spa.button.map__button.spa__button Spa
-                .choose__section--map
-                    h2.map__title Downtown Durham
-                    #map
-                .choose__section--dropdown
-                    .choose__dropdown
-                        label.choose__title(for="map-select") Then Choose a Location!
-                        select#map__select.map__select(name="map-select")
-                            option(value="") Select a Location!
-                    .choose__button
-                        button#addLoc.button.map__button.location__button Add Location
-                .breakline
-                .choose__section--infocards.l-container
-                    .infocard.overlayRed
-                        .infocard__body
-                            h2.infocard__title Bull City Burger and Brewery
-                            p.infocard__text.infocard__text--rating Google Ratings: <br>
-                                - let review = {rating:3.3}
-                                - let ratingMod = review.rating % 1;
-                                - let ratingRounded = review.rating - ratingMod
-                                span.stars(title= `Rated ${review.rating} out of 5 stars`)
-                                    if ratingMod < 0.25
-                                        - let rate = ratingRounded
-                                        = `★`.repeat(rate)
-                                        = `☆`.repeat(5 - rate)
-                                    else if ratingMod > 0.75
-                                        - let rate = ratingRounded + 1
-                                        = `★`.repeat(rate)
-                                        = `☆`.repeat(5 - rate)
-                                    else
-                                        - let rate = ratingRounded
-                                        = `★`.repeat(rate)
-                                        span.star-icon.half
-                                            = `☆`
-                                        = `☆`.repeat(5 - (rate + 1))
-                            p.infocard__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
-                            p.infocard__text.infocard__text--phone Phone Number: (919) 680-2333
-                            .infocard__footer
-                                a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
-                        .infocard__pic
-                                img(src="/img/photos/durham.jpeg").infocard__pic--image
-                    .infocard.overlayBlack
-                        .infocard__body
-                            h2.infocard__title Fullsteam Brewery
-                            p.infocard__text.infocard__text--rating Google Ratings: <br>
-                                - review = {rating:4.6}
-                                - ratingMod = review.rating % 1;
-                                - ratingRounded = review.rating - ratingMod
-                                span.stars(title= `Rated ${review.rating} out of 5 stars`)
-                                    if ratingMod < 0.25
-                                        - let rate = ratingRounded
-                                        = `★`.repeat(rate)
-                                        = `☆`.repeat(5 - rate)
-                                    else if ratingMod > 0.75
-                                        - let rate = ratingRounded + 1
-                                        = `★`.repeat(rate)
-                                        = `☆`.repeat(5 - rate)
-                                    else
-                                        - let rate = ratingRounded
-                                        = `★`.repeat(rate)
-                                        span.star-icon.half
-                                            = `☆`
-                                        = `☆`.repeat(5 - (rate + 1))
-                            p.infocard__text.infocard__text--address 726 Rigsbee Ave, Durham, NC 27701, USA
-                            p.infocard__text.infocard__text--phone Phone Number: (919) 682-2337
-                            .infocard__footer
-                                a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
-                        .infocard__pic
-                                img(src="/img/photos/durham.jpeg").infocard__pic--image
-                    .infocard.overlayWhite
-                        .infocard__body
-                            h2.infocard__title Tobacco Road Sports Cafe
-                            p.infocard__text.infocard__text--rating Google Ratings: <br>
-                                - review = {rating:4.2}
-                                - ratingMod = review.rating % 1;
-                                - ratingRounded = review.rating - ratingMod
-                                span.stars(title= `Rated ${review.rating} out of 5 stars`)
-                                    if ratingMod < 0.25
-                                        - let rate = ratingRounded
-                                        = `★`.repeat(rate)
-                                        = `☆`.repeat(5 - rate)
-                                    else if ratingMod > 0.75
-                                        - let rate = ratingRounded + 1
-                                        = `★`.repeat(rate)
-                                        = `☆`.repeat(5 - rate)
-                                    else
-                                        - let rate = ratingRounded
-                                        = `★`.repeat(rate)
-                                        span.star-icon.half
-                                            = `☆`
-                                        = `☆`.repeat(5 - (rate + 1))
-                            p.infocard__text.infocard__text--address 280 S Mangum St #100, Durham, NC 27701, USA
-                            p.infocard__text.infocard__text--phone Phone Number: (919) 937-9909
-                            .infocard__footer
-                                a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
-                        .infocard__pic
-                                img(src="/img/photos/durham.jpeg").infocard__pic--image
+    section#create__content.section.l-flex-col.h-width-100
+        .section__titles.l-flex-col.h-width-100
+            h2.section__title CREATE YOUR OWN EVENT
+            h4.section__subtitle Choose up to Three Event Locations!
+            .section__cards.l-container
+                #locOne.section__location
+                    h3.section__header.section__header--complete Location Complete
+                    .create-card.create-card__background.create-card__background--shop
+                        .create-card__overlay.overlayRed.s-chosen
+                            h2.create-card__title Ninth Street Bakery
+                            .create-card__info
+                                p.create-card__text.locAddress 112 S Duke St, Durham, NC 27701, USA
+                                p.create-card__text.event-card__stars Google Rating: 4.6
+                            button#locStart.btn.btn--infocard.s-hide Let's Go!
+                            button#locOneLink.btn.btn--infocard.btn--chosen.h-grow Website
+                #locTwo.section__location
+                    h3.section__header Location #2
+                    .create-card.create-card__background.create-card__background--bullLocal
+                        .create-card__overlay.overlayBlack
+                            h2.create-card__title Choose your next event type
+                            button#locStart.btn.btn--infocard.h-grow Let's Go!
+                            button#locTwoLink.btn.btn--infocard.btn--chosen.s-hide Website
+                #locThree.section__location
+                    h3.section__header.section__header--inactive Location #3
+                    .create-card.create-card--inactive.create-card__background
+                        .create-card__overlay.overlayWhite
+                            h2.create-card__title Choose your last event type
+                            button#locStart.btn.btn--infocard.s-disabled Let's Go!
+                            button#locThreeLink.btn.btn--infocard.btn--chosen.s-hide Website
+                            
+        .section__map-choose.l-flex-col
+            .section__title
+                h3 Choose a Type of Event
+            .section__map-btns.l-container
+                button#cafe.btn.btn--map Cafe
+                button#bar.btn.btn--map Bar
+                button#restaurant.btn.btn--map Food
+                button#art_gallery.btn.btn--map Art
+                button#movie_theater.btn.btn--map Movie
+                button#spa.btn.btn--map.spa__button Spa
+            .section__map
+                h2 Downtown Durham
+                #map
+            .section__dropdown
+                .choose__dropdown
+                    label.form__label.form__label--map(for="map-select") Then Choose a Location!
+                    select#mapSelect.form__select(name="map-select")
+                        option(value="") Select a Location!
+                .choose__button
+                    button#addLoc.btn.btn--map Add Location
+            .breakline
+            #infocards.l-container.l-flex-col
+                .infocard
+                    .infocard__body
+                        h2.infocard__title Bull City Burger and Brewery
+                        p.infocard__text.infocard__text--rating Google Ratings: <br>
+                            - let review = {rating:3.3}
+                            - let ratingMod = review.rating % 1;
+                            - let ratingRounded = review.rating - ratingMod
+                            span.stars(title= `Rated ${review.rating} out of 5 stars`)
+                                if ratingMod < 0.25
+                                    - let rate = ratingRounded
+                                    = `★`.repeat(rate)
+                                    = `☆`.repeat(5 - rate)
+                                else if ratingMod > 0.75
+                                    - let rate = ratingRounded + 1
+                                    = `★`.repeat(rate)
+                                    = `☆`.repeat(5 - rate)
+                                else
+                                    - let rate = ratingRounded
+                                    = `★`.repeat(rate)
+                                    span.star-icon.half
+                                        = `☆`
+                                    = `☆`.repeat(5 - (rate + 1))
+                        p.infocard__text.infocard__text--address 107 E Parrish St, Durham, NC 27701, USA
+                        p.infocard__text.infocard__text--phone Phone Number: (919) 680-2333
+                        .infocard__footer
+                            a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
+                    .infocard__img-div
+                            img.infocard__img(src="/img/photos/durham.jpeg")
+                .infocard
+                    .infocard__body
+                        h2.infocard__title Fullsteam Brewery
+                        p.infocard__text.infocard__text--rating Google Ratings: <br>
+                            - review = {rating:4.6}
+                            - ratingMod = review.rating % 1;
+                            - ratingRounded = review.rating - ratingMod
+                            span.stars(title= `Rated ${review.rating} out of 5 stars`)
+                                if ratingMod < 0.25
+                                    - let rate = ratingRounded
+                                    = `★`.repeat(rate)
+                                    = `☆`.repeat(5 - rate)
+                                else if ratingMod > 0.75
+                                    - let rate = ratingRounded + 1
+                                    = `★`.repeat(rate)
+                                    = `☆`.repeat(5 - rate)
+                                else
+                                    - let rate = ratingRounded
+                                    = `★`.repeat(rate)
+                                    span.star-icon.half
+                                        = `☆`
+                                    = `☆`.repeat(5 - (rate + 1))
+                        p.infocard__text.infocard__text--address 726 Rigsbee Ave, Durham, NC 27701, USA
+                        p.infocard__text.infocard__text--phone Phone Number: (919) 682-2337
+                        .infocard__footer
+                            a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
+                    .infocard__img-div
+                            img.infocard__img(src="/img/photos/durham.jpeg")
+                .infocard
+                    .infocard__body
+                        h2.infocard__title Tobacco Road Sports Cafe
+                        p.infocard__text.infocard__text--rating Google Ratings: <br>
+                            - review = {rating:4.2}
+                            - ratingMod = review.rating % 1;
+                            - ratingRounded = review.rating - ratingMod
+                            span.stars(title= `Rated ${review.rating} out of 5 stars`)
+                                if ratingMod < 0.25
+                                    - let rate = ratingRounded
+                                    = `★`.repeat(rate)
+                                    = `☆`.repeat(5 - rate)
+                                else if ratingMod > 0.75
+                                    - let rate = ratingRounded + 1
+                                    = `★`.repeat(rate)
+                                    = `☆`.repeat(5 - rate)
+                                else
+                                    - let rate = ratingRounded
+                                    = `★`.repeat(rate)
+                                    span.star-icon.half
+                                        = `☆`
+                                    = `☆`.repeat(5 - (rate + 1))
+                        p.infocard__text.infocard__text--address 280 S Mangum St #100, Durham, NC 27701, USA
+                        p.infocard__text.infocard__text--phone Phone Number: (919) 937-9909
+                        .infocard__footer
+                            a.infocard__anchor.infocard__website(href="www.google.com" target="_blank") Website
+                    .infocard__img-div
+                            img.infocard__img(src="/img/photos/durham.jpeg")
