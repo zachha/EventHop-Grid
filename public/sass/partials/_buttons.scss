@@ -25,12 +25,22 @@
         align-self: start;
         width: 60%;
         padding: 1.3rem;
+        color: white;
     }
     @at-root #{&}--chosen {
-        grid-area: overlay-button;
+        color: $bgBlack;
+        background-color: white;
     }
     @at-root #{&}--map {
         width: 15%;
         padding: 1.3rem;
+    }
+    @at-root #{&}--black {
+        color: $red;
+        background-color: $bgBlack;
+    }
+    @at-root #{&}--red {
+        color: white;
+        background-color: $red;
     }
 }

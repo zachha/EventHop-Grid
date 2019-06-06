@@ -363,15 +363,27 @@ template {
   align-self: start;
   width: 60%;
   padding: 1.3rem;
+  color: white;
 }
 
 .btn--chosen {
-  grid-area: overlay-button;
+  color: #212529;
+  background-color: white;
 }
 
 .btn--map {
   width: 15%;
   padding: 1.3rem;
+}
+
+.btn--black {
+  color: #db0011;
+  background-color: #212529;
+}
+
+.btn--red {
+  color: white;
+  background-color: #db0011;
 }
 
 @keyframes slideIn {
@@ -678,6 +690,7 @@ main {
   grid-template-areas: "logo pages user";
   justify-items: center;
   align-items: center;
+  border-bottom: 4px solid #db0011;
 }
 .nav__item {
   padding: 1rem 2rem;
@@ -751,10 +764,11 @@ main {
   grid-area: overlay-text;
   font-size: 3.5rem;
   margin: 2rem;
+  color: inherit;
 }
 
 .create-card__text {
-  color: white;
+  color: inherit;
   font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 2rem;
   font-size: 2rem;
@@ -772,6 +786,8 @@ main {
 .create-card__overlay {
   border-radius: 4px;
   position: absolute;
+  color: white;
+  background-color: rgba(219, 0, 17, 0.8);
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1fr;
   grid-template-areas: " overlay-text " "overlay-button";
@@ -782,6 +798,14 @@ main {
   height: 100%;
   width: 100%;
   z-index: 10;
+}
+.create-card__overlay--white {
+  background-color: rgba(255, 255, 255, 0.7);
+  color: #212529;
+}
+
+.create-card__overlay--black {
+  background-color: rgba(33, 37, 41, 0.9);
 }
 
 .create-card__background {
@@ -824,7 +848,8 @@ main {
   border-radius: 4px;
   width: 85%;
   height: auto;
-  background: linear-gradient(#212529, #212529);
+  background-color: #212529;
+  color: white;
 }
 .infocard__img-div {
   width: 330px;
@@ -844,7 +869,7 @@ main {
 
 .infocard__title {
   margin: 2.5rem;
-  color: white;
+  color: inherit;
 }
 
 .infocard__footer {
@@ -858,13 +883,17 @@ main {
   padding: 0.8rem;
   margin: 0 1.5rem 3rem 1.5rem;
   border-radius: 4px;
-  color: white;
+  color: inherit;
   background-color: #db0011;
+}
+.infocard__anchor--white {
+  color: #212529;
+  background-color: white;
 }
 
 .infocard__text {
   margin: 2rem;
-  color: white;
+  color: inherit;
 }
 .infocard__text--rating {
   font-style: italic;
@@ -877,6 +906,10 @@ main {
 .infocard__text--phone {
   margin-top: 0;
   margin-bottom: 2rem;
+}
+
+.infocard--red {
+  background-color: rgba(219, 0, 17, 0.8);
 }
 
 .stars {
@@ -898,42 +931,6 @@ main {
   left: 0;
   width: 50%;
   overflow: hidden;
-}
-
-.overlayRed {
-  background: linear-gradient(rgba(219, 0, 17, 0.8), rgba(219, 0, 17, 0.8));
-}
-.overlayRed .create-card__title,
-.overlayRed .create-card__text {
-  color: white;
-}
-.overlayRed .btn--infocard {
-  color: #212529;
-  background-color: white;
-}
-
-.overlayWhite {
-  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7));
-}
-.overlayWhite .create-card__title,
-.overlayWhite .create-card__text {
-  color: #212529;
-}
-.overlayWhite .btn--infocard {
-  color: #db0011;
-  background-color: #212529;
-}
-
-.overlayBlack {
-  background: linear-gradient(rgba(33, 37, 41, 0.9), rgba(33, 37, 41, 0.9));
-}
-.overlayBlack .create-card__title,
-.overlayBlack .create-card__text {
-  color: white;
-}
-.overlayBlack .btn--infocard {
-  color: white;
-  background-color: #db0011;
 }
 
 input,

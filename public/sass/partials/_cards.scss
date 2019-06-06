@@ -48,6 +48,7 @@
     flex-direction: column;
     opacity: 1.0;
     position: relative;
+    
 
     // CREATE CARD ELEMENTS 
     // (.create-card__element)
@@ -55,9 +56,10 @@
         grid-area: overlay-text;
         font-size: 3.5rem;
         margin: 2rem;
+        color: inherit;
     }
     @at-root #{&}__text {
-        color: white;
+        color: inherit;
         font-family: $headerFonts;
         margin: 2rem;
         font-size: 2rem;
@@ -72,6 +74,8 @@
     @at-root #{&}__overlay {
         border-radius: 4px;
         position: absolute;
+        color: white;
+        background-color: $rgbaRedEight;
         @extend %grid__center;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr;
@@ -84,6 +88,16 @@
         height: 100%;
         width: 100%;
         z-index: 10;
+
+        // CREATE-CARD__OVERLAY MODIFIERS
+        // (.create-card__overlay--modifier)
+        @at-root #{&}--white {
+            background-color: $rgbaWhiteSeven;
+            color: $bgBlack;
+        }
+        @at-root #{&}--black {
+            background-color: $rgbaBlackNine;
+        }
     }
     // background image stylings for 'choose location' event-cards
     @at-root #{&}__background {
@@ -127,7 +141,8 @@
     border-radius: 4px;
     width: 85%;
     height: auto;
-    background: linear-gradient( $rgbaBlack, $rgbaBlack );
+    background-color: $rgbaBlack;
+    color: white;
 
     // INFOCARD ELEMENTS
     // (.infocard__element)
@@ -152,7 +167,7 @@
     }
     @at-root #{&}__title {
         margin: 2.5rem;
-        color: white;
+        color: inherit;
     }
     @at-root #{&}__footer {
         height: 6rem;
@@ -164,12 +179,19 @@
         padding: 0.8rem;
         margin: 0 1.5rem 3rem 1.5rem;
         border-radius: 4px;
-        color: white;
+        color: inherit;
         background-color: $red;
+
+        // INFOCARD__ANCHOR MODIFIERS
+        // (.infocard__anchor--modifier)
+        @at-root #{&}--white {
+            color: $bgBlack;
+            background-color: white;
+        }
     }
     @at-root #{&}__text {
         margin: 2rem;
-        color: white;
+        color: inherit;
 
         // INFOCARD__TEXT MODIFIERS
         // (.infocard__text--modifier)
@@ -183,6 +205,12 @@
             margin-top: 0;
             margin-bottom: 2rem;
         }
+    }
+
+    // INFOCARD MODIFIERS
+    // (.infocard--modifier)
+    @at-root #{&}--red {
+        background-color: $rgbaRedEight;
     }
 }
 
