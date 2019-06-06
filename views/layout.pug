@@ -12,7 +12,7 @@ html
                     .nav__section.nav__section--logo
                         li.nav__logo
                             a.nav__link.nav__link--logo(href="/")
-                                <span class="red">Event</span>Hop
+                                <span class="h-red">Event</span>Hop
                     .nav__section.nav__section--pages
                         li.nav__item: a.nav__link(href="/events", class=(currentPath.startsWith('/events') ? 'nav__link--active' : '')) Events
                         li.nav__item: a.nav__link(href="/create", class=(currentPath.startsWith('/create') ? 'nav__link--active' : '')) Create
@@ -23,7 +23,7 @@ html
                         
         block messages
             if locals.flashes
-                .flex-center-all
+                .l-flex-row
                     .flash-messages
                         - const categories = Object.keys(locals.flashes)
                         each category in categories
