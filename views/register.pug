@@ -2,7 +2,7 @@ extends layout
 
 block content
     section#register__content.register
-        .flex-center-all
+        .l-flex-row
             form.form.form__register(action="/register" method="POST")
                 h2.form__title Sign Up Today!
                 label(for="name") Username
@@ -13,4 +13,4 @@ block content
                 input(type="password" name="password" value=`${form ? form.password : ''}` placeholder="Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required)
                 label(for="password2") Confirm Password
                 input(type="password" name="password2" value=`${form ? form.password2 : ''}` placeholder="Confirm Password" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" required)
-                input.button.submit__button(type="submit" value="Register")
+                input.btn.submit__button(type="submit" value="Register")
