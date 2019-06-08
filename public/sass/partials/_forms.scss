@@ -73,6 +73,61 @@ form.form__register {
     font-family: $headerFonts;
 }
 
+form.contact__form {
+    background: none;
+    width: 100%;
+    justify-content: center;
+    align-items: stretch;
+    label {
+        color: white;
+        font-weight: 600;
+    }
+    input, textarea {
+        border-radius: 0.4rem;
+        font-family: $headerFonts;
+        color: black;
+        padding: 1.6rem;
+        font-size: 1.8rem;
+        font-weight: 600;
+    }
+    input {
+        width: 90%;
+    }
+    textarea {
+        width: 90%;
+        height: 80%;
+        resize: none;
+    }
+    input:focus,
+    textarea:focus,
+    button:focus {
+        border: 2px solid black;
+    }
+    .contact__form--inputs {
+        justify-content: center;
+        display: flex;
+        
+        .contact__form--left,
+        .contact__form--right {
+            width: 100%;
+            display:flex;
+            flex-direction: column;
+        }
+    }
+    .contact__form--submit {
+        margin-top: 5rem;
+        text-align: center;
+        .contact__button {
+            border-radius: 4px;
+            padding: 1.6rem;
+            width: 25%;
+            font-weight: 600;
+            background-color: $red;
+            color: black;
+        }
+    }
+}
+
 form.loc__form {
     background-color: transparent;
     width: 90%;
