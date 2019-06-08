@@ -9,25 +9,22 @@ main {
     perspective: 2px;
 }
 
-.hero__anchor {
-    margin-top: 8rem;
-}
-
-.hero__sub {
+.section__subtitle--hero {
     color: white;
     font-size: 4.8rem;
     margin-top: 0;
 }
 
-// @at-root #{&} allows nesting with BEM
+//* @at-root #{&} allows nesting of BEM blocks 
 
+//~ The Section Block styles most of the divs pertaining to layout and structure throughout the site
 .section {
     position: relative;
     height: auto;
     margin-top: 4rem;
 
-    // SECTION ELEMENTS
-    // (.section__element)
+    //~ SECTION ELEMENTS
+    //~ (.section__element)
     @at-root #{&}__titles {
         padding-bottom: 3rem;
     }
@@ -54,6 +51,31 @@ main {
         align-items: center;
         flex-wrap: wrap;
     }
+    @at-root #{&}__dev {
+        width: 45%;
+        text-align: center;
+        margin-bottom: 8rem;
+    }
+    @at-root #{&}__portfolios {
+        justify-content: center;
+    }
+    @at-root #{&}__portfolio {
+        margin: 2rem;
+    }
+    @at-root #{&}__dev-role {
+        margin-top: 0;
+        margin-bottom: 0.5rem;
+    }
+    @at-root #{&}__anchor {
+        margin-top: 8rem;
+    }
+    @at-root #{&}__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: center;
+        width: 80%;
+    }
     @at-root #{&}__dropdown {
         padding-top: 2rem;
         width: 100%;
@@ -70,8 +92,8 @@ main {
         font-size: 3rem;
         text-decoration: underline;
 
-        // SECTION__HEADER MODIFIERS
-        // (.section__header--modifier)
+        //~ SECTION__HEADER MODIFIERS
+        //~ (.section__header--modifier)
         @at-root #{&}--inactive {
             color: $grey;
             font-weight: 400;
@@ -82,8 +104,8 @@ main {
             text-decoration: none;
         }
     }
-    // styles divs containing cards
     @at-root #{&}__cards {
+        // styles divs containing cards
         box-sizing: border-box;
         width: 100%;
         display: flex;
@@ -91,8 +113,8 @@ main {
         align-items: center;
         flex-wrap: wrap;
 
-        // SECTION__CARDS MODIFIERS
-        // (.section__cards--modifier)
+        //~ SECTION__CARDS MODIFIERS
+        //~ (.section__cards--modifier)
         @at-root #{&}--events {
             // this div holds event/group cards
             box-sizing: border-box;
@@ -101,8 +123,8 @@ main {
         }
     }
     
-    // SECTION MODIFIERS 
-    // (.section--modifier)
+    //~ SECTION MODIFIERS 
+    //~ (.section--modifier)
     @at-root #{&}--hero {
         background-image: linear-gradient(
             rgba(0, 0, 0, 0.3),
@@ -114,9 +136,8 @@ main {
         background-image: url("../img/photos/map-image.jpg");
         background-position: center;
     }
-
-    // styles div for bg image to fully cover from top center
     @at-root #{&}--bg-img-cover {
+        // styles div for bg image to fully cover from top center
         margin-top: 0;
         max-width: 100%;
         background-repeat: no-repeat;
@@ -132,8 +153,9 @@ main {
         height: 80%;
     }
 }
-// LAYOUT SELECTORS
-// (.l-layout)
+
+//~ LAYOUT SELECTORS
+//~ (.l-layout)
 
 .l-flex-col {
     display: flex;

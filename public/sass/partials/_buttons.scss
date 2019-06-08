@@ -1,4 +1,4 @@
-// the Button block styles basic eventhop buttons
+//* the Button block styles basic eventhop buttons
 .btn { 
     padding: 1.5rem;
     cursor: pointer;
@@ -15,8 +15,8 @@
     border-radius: 4px;
     box-sizing: border-box;
 
-    // BUTTON MODIFIERS 
-    // (.btn--modifier)
+    //* BUTTON MODIFIERS 
+    //* (.btn--modifier)
     @at-root #{&}--hero {
         border: 1px solid $bgBlack;
     }
@@ -44,3 +44,12 @@
         background-color: $red;
     }
 }
+
+.anchor--portfolio {
+    width: 40px;
+    height: 40px;
+    position: relative;
+    margin: 0 0.5rem;
+}
+
+
