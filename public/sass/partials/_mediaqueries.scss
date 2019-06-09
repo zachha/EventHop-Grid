@@ -27,13 +27,13 @@
     .l-container {
         width: 750px
     }
-    .contact__form {
+    .form--contact {
         align-items: center;
-        .contact__form--inputs {
+        .form__inputs {
             flex-direction: column;
         }
-        .contact__form--submit {
-            button.contact__button {
+        .form__submit {
+            button.btn--contact {
                 width: 40%;
             }
         }
