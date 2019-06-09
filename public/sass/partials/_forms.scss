@@ -1,42 +1,4 @@
-input,
-textarea {
-    font-family: $headerFonts;
-    font-size: 1.6rem;
-    color: $placeholder;
-    width: 30%;
-    padding: 1.6rem;
-    border: 1px solid $grey;
-    border-radius: 0.4rem;
-    &.input {
-        &--error {
-            border-color: $red;
-        }
-    }
-}
-
-input {
-    &:focus {
-        border: 2px solid black;
-    }
-}
-
-label {
-    font-family: $headerFonts;
-    color: black;
-    padding: 1rem 0;
-    display: block;
-    font-size: 2rem;
-}
-
-form.form--forgot,
-form.form__register {
-    margin-bottom: 6rem;
-}
-
-form .form__title {
-    text-align: center;
-}
-
+//~ FORM BLOCK styles forms found on several pages
 .form {
     display: flex;
     flex-direction: column;
@@ -45,25 +7,38 @@ form .form__title {
     padding: 2rem;
 }
 
-.login__inner {
-    flex-direction: column;
+//~ FORM ELEMENTS
+//~ (.form__element)
+.form__submit {
+    margin-top: 5rem;
+    text-align: center;
 }
 
-.form__content {
-    width: 100%;
+.form__textarea {
+    @extend %contact__inputs;
+    width: 90%;
+    height: 80%;
+    resize: none;
 }
 
-.login__section, 
-form.form__register {
-    width: 80%;
+.form__input {
+    font-family: $headerFonts;
+    font-size: 1.6rem;
+    color: $placeholder;
+    width: 30%;
+    padding: 1.6rem;
+    border: 1px solid $grey;
+    border-radius: 0.4rem;
+    &--error {
+        border: 2px solid $red;
+    }
 }
-
-.form__label--map {
-    font-weight: 400;
-    font-size: 2.5rem;
-    color: $red;
-    margin-bottom: 2rem;
-}
+    //~ FORM__INPUT MODIFIERS
+    //~ (.form__input--modifier)
+    .form__input--contact {
+        @extend %contact__inputs;
+        width: 90%;
+    }
 
 .form__select {
     text-align: center;
@@ -73,81 +48,66 @@ form.form__register {
     font-family: $headerFonts;
 }
 
-form.contact__form {
+.form__label {
+    font-family: $headerFonts;
+    color: black;
+    padding: 1rem 0;
+    display: block;
+    font-size: 2rem;
+}
+    //~ FORM__LABEL MODIFIERS
+    //~ (.form__label--modifier)
+    .form__label--map {
+        font-weight: 400;
+        font-size: 2.5rem;
+        color: $red;
+        margin-bottom: 2rem;
+    }
+    .form__label--contact {
+        color: white;
+        font-weight: 600;
+    }
+
+.form__title {
+    text-align: center;
+}
+
+.form__column {
+    width: 100%;
+    display:flex;
+    flex-direction: column;
+}
+
+.form__inputs {
+    justify-content: center;
+    display: flex;
+}
+
+//~ FORM MODIFIERS
+//~ (.form--modifier)
+.form--contact {
     background: none;
     width: 100%;
     justify-content: center;
     align-items: stretch;
-    label {
-        color: white;
-        font-weight: 600;
-    }
-    input, textarea {
-        border-radius: 0.4rem;
-        font-family: $headerFonts;
-        color: black;
-        padding: 1.6rem;
-        font-size: 1.8rem;
-        font-weight: 600;
-    }
-    input {
-        width: 90%;
-    }
-    textarea {
-        width: 90%;
-        height: 80%;
-        resize: none;
-    }
-    input:focus,
-    textarea:focus,
-    button:focus {
-        border: 2px solid black;
-    }
-    .contact__form--inputs {
-        justify-content: center;
-        display: flex;
-        
-        .contact__form--left,
-        .contact__form--right {
-            width: 100%;
-            display:flex;
-            flex-direction: column;
-        }
-    }
-    .contact__form--submit {
-        margin-top: 5rem;
-        text-align: center;
-        .contact__button {
-            border-radius: 4px;
-            padding: 1.6rem;
-            width: 25%;
-            font-weight: 600;
-            background-color: $red;
-            color: black;
-        }
-    }
 }
 
-form.loc__form {
-    background-color: transparent;
-    width: 90%;
-    height: 90%;
-    justify-content: flex-start;
-    align-items: center;
-    label {
-        background-color: transparent;
-        color: black;
-        font-size: 2.3rem;
-        font-weight: 600;
-    }
-    textarea {
-        background-color: transparent;
-        color: black;
-        font-size: 2rem;
-        width: 90%;
-        height: 10%;
-        padding: 0.5rem;
-        border: none;
-        resize: none;
-    }
+.form--forgot {
+    margin-bottom: 6rem;
 }
+
+.form--register {
+    width: 80%;
+    margin-bottom: 6rem;
+}
+
+//~ FORM FOCUS CLASSES
+.form__input:focus,
+.form__input--contact:focus,
+.form__textarea:focus,
+.btn--contact:focus {
+    border: 2px solid black;
+}
+
+
+
