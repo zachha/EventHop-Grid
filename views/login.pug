@@ -4,8 +4,7 @@ include mixins/_loginForm
 include mixins/_forgotForm
 
 block content
-    section#login__content.login
-        .l-flex-row.login__inner
-            .login__section
-                +loginForm()
-                +forgotForm()
+    section#login.section.l-flex-col
+        .section__login
+            +loginForm()
+            +forgotForm()
