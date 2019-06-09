@@ -6,20 +6,20 @@ block content
                     h2.section__title.h-white-txt CONTACT US
                     h4.section__subtitle.h-white-txt Let us plan your next event!
                 .section__form.l-container
-                    form.form.contact__form
-                        .contact__form--inputs
-                            .contact__form--left
-                                label(for="conName") Your Name
-                                input(type="text" name="name" id="conName" placeholder="Your Name*" autofocus required)
-                                label(for="conEmail") Your Email
-                                input(type="email" name="email" id="conEmail" placeholder="Your Email*" autocomplete="username" required)
-                                label(name="conTelNo") Your Telephone Number
-                                input(type="tel" name="telNo" id="conTelNo" placeholder="123-456-7890*" minlength="9" maxlength="14" required)
-                            .contact__form--right
-                                label(name="conMessage") Describe Your Event
-                                textarea(type="textarea" name="message" id="conMessage" placeholder="Describe Your Event*" maxlength="1000" required)
-                        .contact__form--submit
-                            button.btn.contact__button(name="submit") Send Message
+                    form.form.form--contact
+                        .form__inputs
+                            .form__column
+                                label.form__label.form__label--contact(for="conName") Your Name
+                                input.form__input.form__input--contact(type="text" name="name" id="conName" placeholder="Your Name*" autofocus required)
+                                label.form__label.form__label--contact(for="conEmail") Your Email
+                                input.form__input.form__input--contact(type="email" name="email" id="conEmail" placeholder="Your Email*" autocomplete="username" required)
+                                label.form__label.form__label--contact(name="conTelNo") Your Telephone Number
+                                input.form__input.form__input--contact(type="tel" name="telNo" id="conTelNo" placeholder="123-456-7890*" minlength="9" maxlength="14" required)
+                            .form__column
+                                label.form__label.form__label--contact(name="conMessage") Describe Your Event
+                                textarea.form__input.form__input--contact.form__textarea(type="textarea" name="message" id="conMessage" placeholder="Describe Your Event*" maxlength="1000" required)
+                        .form__submit
+                            button.btn.btn--contact(name="submit") Send Message
     section#dev.section.l-flex-col
             .section__dev
                 .section__titles.l-flex-col
