@@ -1,11 +1,11 @@
-// The Card block styles basic cards such as the about cards on the main page
+//~ The Card block styles basic cards such as the about cards on the main page
 .card {
     max-width: 33.333333%;
     box-sizing: border-box;
     border-radius: 4px;
 
-    // CARD MODIFIERS
-    // (.card--modifier)
+    //~ CARD MODIFIERS
+    //~ (.card--modifier)
     @at-root #{&}--about {
         box-sizing: border-box;
         text-align: center;
@@ -17,15 +17,15 @@
     }
 }
 
-// the Event Card block styles the event/group cards used on the main page and events page
+//~ the Event Card block styles the event/group cards used on the main page and events page
 .event-card {
     box-sizing: border-box;
     flex: 0 0 33.333333%;
     margin: 0 0 3rem;
     padding: 0 1.5rem;
 
-    // EVENT CARD ELEMENTS
-    // (.event-card__element)
+    //~ EVENT CARD ELEMENTS
+    //~ (.event-card__element)
     @at-root #{&}__body {
         background-color: white;
         text-align: center;
@@ -40,7 +40,7 @@
 }
 
 
-// the Create Card block styles the 'choose location'/'chosen summary' cards at the top of create page
+//~ the Create Card block styles the 'choose location'/'chosen summary' cards at the top of create page
 .create-card {
     @include box-shadow($cardShadow);
     @extend %flex__center;
@@ -50,8 +50,8 @@
     position: relative;
     
 
-    // CREATE CARD ELEMENTS 
-    // (.create-card__element)
+    //~ CREATE CARD ELEMENTS 
+    //~ (.create-card__element)
     @at-root #{&}__title {
         grid-area: overlay-text;
         font-size: 3.5rem;
@@ -89,8 +89,8 @@
         width: 100%;
         z-index: 10;
 
-        // CREATE-CARD__OVERLAY MODIFIERS
-        // (.create-card__overlay--modifier)
+        //~ CREATE-CARD__OVERLAY MODIFIERS
+        //~ (.create-card__overlay--modifier)
         @at-root #{&}--white {
             background-color: $rgbaWhiteSeven;
             color: $bgBlack;
@@ -99,15 +99,15 @@
             background-color: $rgbaBlackNine;
         }
     }
-    // background image stylings for 'choose location' event-cards
+    //~ background image stylings for 'choose location' event-cards
     @at-root #{&}__background {
         background-image: $bull;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
 
-        // CREATE-CARD__BACKGROUND MODIFIERS 
-        // (.create-card__background--modifier)
+        //~ CREATE-CARD__BACKGROUND MODIFIERS 
+        //~ (.create-card__background--modifier)
         @at-root #{&}--bullFaint {
             background-image: $bullFaint;
         }
@@ -125,14 +125,14 @@
         }
     }
 
-    // CREATE-CARD MODIFIERS
-    // (.create-card--modifier)
+    //~ CREATE-CARD MODIFIERS
+    //~ (.create-card--modifier)
     @at-root #{&}--inactive {
         opacity: 0.5;
     }
 }
 
-// The Infocard block styles the infocards for each location, which are dynamically generated using info from Google Maps API
+//~ The Infocard block styles the infocards for each location, which are dynamically generated using info from Google Maps API
 .infocard {
     margin: 2rem 0;
     display: flex;
@@ -144,21 +144,11 @@
     background-color: $rgbaBlack;
     color: white;
 
-    // INFOCARD ELEMENTS
-    // (.infocard__element)
+    //~ INFOCARD ELEMENTS
+    //~ (.infocard__element)
     @at-root #{&}__img-div {
         width: 330px;
     }
-    //
-    //ABSTRACT INTO IMAGE BLOCK/MODIFIER        !!!
-    //
-    @at-root #{&}__img {
-        border-radius: 4px;
-        margin: 0 3rem;
-    }
-    //
-    //ABSTRACT INTO IMAGE BLOCK/MODIFIER        !!!
-    //
     @at-root #{&}__body {
         width: 664.5px;
         font-family: $headerFonts;
@@ -182,8 +172,8 @@
         color: inherit;
         background-color: $red;
 
-        // INFOCARD__ANCHOR MODIFIERS
-        // (.infocard__anchor--modifier)
+        //~ INFOCARD__ANCHOR MODIFIERS
+        //~ (.infocard__anchor--modifier)
         @at-root #{&}--white {
             color: $bgBlack;
             background-color: white;
@@ -193,8 +183,8 @@
         margin: 2rem;
         color: inherit;
 
-        // INFOCARD__TEXT MODIFIERS
-        // (.infocard__text--modifier)
+        //~ INFOCARD__TEXT MODIFIERS
+        //~ (.infocard__text--modifier)
         @at-root #{&}--rating {
             font-style: italic;
         }
@@ -207,8 +197,8 @@
         }
     }
 
-    // INFOCARD MODIFIERS
-    // (.infocard--modifier)
+    //~ INFOCARD MODIFIERS
+    //~ (.infocard--modifier)
     @at-root #{&}--red {
         background-color: $rgbaRedEight;
     }

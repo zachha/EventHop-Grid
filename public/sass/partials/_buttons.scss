@@ -1,4 +1,4 @@
-//* the Button block styles basic eventhop buttons
+//~ the Button block styles basic eventhop buttons
 .btn { 
     padding: 1.5rem;
     cursor: pointer;
@@ -15,8 +15,8 @@
     border-radius: 4px;
     box-sizing: border-box;
 
-    //* BUTTON MODIFIERS 
-    //* (.btn--modifier)
+    //~ BUTTON MODIFIERS 
+    //~ (.btn--modifier)
     @at-root #{&}--hero {
         border: 1px solid $bgBlack;
     }
@@ -42,6 +42,19 @@
     @at-root #{&}--red {
         color: white;
         background-color: $red;
+    }
+    @at-root #{&}--submit {
+        &:focus {
+            border: 2px solid black;
+        }
+    }
+    @at-root #{&}--contact {
+        border-radius: 4px;
+        padding: 1.6rem;
+        width: 25%;
+        font-weight: 600;
+        background-color: $red;
+        color: black;
     }
 }
 

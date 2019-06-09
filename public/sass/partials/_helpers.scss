@@ -21,8 +21,8 @@
     width: 5rem;
 }
 
-// HELPER CLASSES
-// (.h-helper)
+//~ HELPER CLASSES
+//~ (.h-helper)
 
 // button animations
 .h-grow {
@@ -80,8 +80,8 @@
     width: 20%;
 }
 
-// State classes 
-// (.s-state)
+//~ STATE CLASSES
+//~ (.s-state)
 
 // allows disabling of buttons/interactive elements
 .s-disabled {
@@ -101,8 +101,8 @@
                             "overlay-button";
 }
 
-// SASS EXTENSIONS
-// (%extension)
+//~ SASS EXTENSIONS
+//~ (%extension)
 %nav__layout {
     justify-self: end;
     display: flex;
@@ -120,4 +120,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+%contact__inputs {
+    color: black;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
