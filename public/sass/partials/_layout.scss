@@ -56,6 +56,9 @@ main {
         text-align: center;
         margin-bottom: 8rem;
     }
+    @at-root #{&}__login {
+        width: 80%;
+    }
     @at-root #{&}__portfolios {
         justify-content: center;
     }
@@ -127,14 +130,9 @@ main {
     //~ (.section--modifier)
     @at-root #{&}--hero {
         background-image: linear-gradient(
-            rgba(0, 0, 0, 0.3),
+            rgba(0, 0, 0, 0.6),
             rgba(0, 0, 0, 0.3)
         ), url("../img/photos/header-bg.jpg");
-    }
-    @at-root #{&}--contact {
-        height: auto;
-        background-image: url("../img/photos/map-image.jpg");
-        background-position: center;
     }
     @at-root #{&}--bg-img-cover {
         // styles div for bg image to fully cover from top center
@@ -148,6 +146,14 @@ main {
         -o-background-size: cover;
         background-size: cover;
         opacity: 1.0;
+    }
+    @at-root #{&}--contact {
+        height: 700px;
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.6),
+            rgba(0, 0, 0, 0.2)
+        ),url("../img/photos/map-image.jpg");
+        background-position: center;
     }
     @at-root #{&}--height-80 {
         height: 80%;
