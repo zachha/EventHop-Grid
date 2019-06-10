@@ -21,25 +21,26 @@
     &:focus,
     &:hover {
         color: $red;
-        border-color: $red;
+        border-color: $red !important;
     } 
 }
+    //~ NAV__LINK MODIFIERS
+    //~ (.nav__link--modifier)
+    .nav__link--logo {
+        font-size: 3.0rem;
+        font-family: $logoFont;
+    }
+    .nav__link--signup {
+        font-size: 1.9rem;
+        padding: 1rem;
+        border: 1px solid white;
+        border-radius: 5px;
+    }
+    .nav__link--login {
+        font-size: 1.5rem;
+    }
 
-//~ NAV__LINK MODIFIERS
-//~ (.nav__link--modifier)
-.nav__link--logo {
-    font-size: 3.0rem;
-    font-family: $logoFont;
-}
-.nav__link--signup {
-    font-size: 1.9rem;
-    padding: 1rem;
-    border: 1px solid white;
-    border-radius: 5px;
-}
-.nav__link--login {
-    font-size: 1.5rem;
-}
+
 
 //~ NAV__SECTION MODIFIERS
 //~ (.nav__section--modifier)

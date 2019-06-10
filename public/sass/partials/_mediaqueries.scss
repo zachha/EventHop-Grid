@@ -33,7 +33,7 @@
             flex-direction: column;
         }
         .form__submit {
-            button.btn--contact {
+            .btn--contact {
                 width: 40%;
             }
         }
@@ -62,16 +62,16 @@
             flex-direction: column;
             justify-content: flex-start;
             align-items: center;
-            button.btn--map {
+            .btn--map {
                 margin: 0.5rem 0;
                 width: 50%;
             }
         }
         & .section__dropdown {
-            select {
+            .form__select {
                 width: 50%;
             }
-            .choose__button button {
+            .btn--map {
                 width: 50%;
             }
         }
@@ -81,13 +81,14 @@
         width: 737px;
     }
 
-    section.login,
-    section.register {
-        input {
-            width: 50%;
+    .form--login,
+    .form--forgot,
+    .form--register {
+        .form__input {
+            width: 90%;
         }
-        button {
-            width: 40%;
+        .btn--submit {
+            width: 60%;
         }
     }
 }

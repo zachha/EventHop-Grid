@@ -753,7 +753,7 @@ main {
 }
 .nav__link--active, .nav__link:focus, .nav__link:hover {
   color: #db0011;
-  border-color: #db0011;
+  border-color: #db0011 !important;
 }
 
 .nav__link--logo {
@@ -1263,7 +1263,7 @@ main {
   .form--contact .form__inputs {
     flex-direction: column;
   }
-  .form--contact .form__submit button.btn--contact {
+  .form--contact .form__submit .btn--contact {
     width: 40%;
   }
 }
@@ -1284,14 +1284,14 @@ main {
     justify-content: flex-start;
     align-items: center;
   }
-  .section__map-choose .section__map-btns button.btn--map {
+  .section__map-choose .section__map-btns .btn--map {
     margin: 0.5rem 0;
     width: 50%;
   }
-  .section__map-choose .section__dropdown select {
+  .section__map-choose .section__dropdown .form__select {
     width: 50%;
   }
-  .section__map-choose .section__dropdown .choose__button button {
+  .section__map-choose .section__dropdown .btn--map {
     width: 50%;
   }
 
@@ -1299,13 +1299,15 @@ main {
     width: 737px;
   }
 
-  section.login input,
-section.register input {
-    width: 50%;
+  .form--login .form__input,
+.form--forgot .form__input,
+.form--register .form__input {
+    width: 90%;
   }
-  section.login button,
-section.register button {
-    width: 40%;
+  .form--login .btn--submit,
+.form--forgot .btn--submit,
+.form--register .btn--submit {
+    width: 60%;
   }
 }
 
