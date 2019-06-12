@@ -587,6 +587,9 @@ main {
   width: 100%;
   height: 80%;
 }
+.section__map--events {
+  margin-bottom: 8rem;
+}
 
 .section__map-choose {
   width: 100%;
