@@ -30,7 +30,7 @@
         color: white;
     }
 
-    .btn--chosen {
+    .btn--white {
         color: $bgBlack;
         background-color: white;
     }
@@ -68,6 +68,20 @@
 
 //! Anchor Block styling
 //! (.anchor)
+.anchor--main-create {
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    font-family: $headerFonts;
+    border: 2px solid white;
+    border-radius: 25px;
+    color: white;
+    &:hover {
+        border-color: $red;
+        color: $red;
+    }
+}
+
 .anchor--portfolio {
     width: 40px;
     height: 40px;

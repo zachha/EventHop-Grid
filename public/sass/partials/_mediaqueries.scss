@@ -14,6 +14,9 @@
     .l-container {
         width: 970px
     }
+    .section--about {
+        height: auto;
+    }
 }
 
 // resizes sign-up nav link before it gets wonky
@@ -45,11 +48,14 @@
 
 @media (max-width: 767px) {
     .section--about {
+        .l-container {
+            width: auto;
+        }
         .section__cards {
             flex-direction: column;
             align-items: center;
             .card--about {
-                max-width: 70%;
+                max-width: 100%;
                 margin-bottom: 2rem;
             }
         }

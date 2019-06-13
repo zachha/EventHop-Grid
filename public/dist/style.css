@@ -367,7 +367,7 @@ template {
   color: white;
 }
 
-.btn--chosen {
+.btn--white {
   color: #212529;
   background-color: white;
 }
@@ -398,6 +398,20 @@ template {
   font-weight: 600;
   background-color: #db0011;
   color: black;
+}
+
+.anchor--main-create {
+  padding: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif, "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 2px solid white;
+  border-radius: 25px;
+  color: white;
+}
+.anchor--main-create:hover {
+  border-color: #db0011;
+  color: #db0011;
 }
 
 .anchor--portfolio {
@@ -565,7 +579,7 @@ main {
 .section {
   position: relative;
   height: auto;
-  margin-top: 4rem;
+  padding: 5rem 0;
 }
 
 .section__titles {
@@ -706,6 +720,11 @@ main {
   opacity: 1;
 }
 
+.section--main-create {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6)), url("../img/photos/para1.jpeg");
+  background-position: bottom;
+}
+
 .section--contact {
   height: 700px;
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.2)), url("../img/photos/map-image.jpg");
@@ -820,6 +839,7 @@ main {
 }
 
 .card--about {
+  justify-content: flex-start;
   box-sizing: border-box;
   text-align: center;
   position: relative;
@@ -1262,6 +1282,10 @@ main {
   .l-container {
     width: 970px;
   }
+
+  .section--about {
+    height: auto;
+  }
 }
 @media (max-width: 1082px) {
   .nav__item--signup {
@@ -1284,12 +1308,15 @@ main {
   }
 }
 @media (max-width: 767px) {
+  .section--about .l-container {
+    width: auto;
+  }
   .section--about .section__cards {
     flex-direction: column;
     align-items: center;
   }
   .section--about .section__cards .card--about {
-    max-width: 70%;
+    max-width: 100%;
     margin-bottom: 2rem;
   }
 
