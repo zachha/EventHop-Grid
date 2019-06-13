@@ -1,4 +1,5 @@
-//~ Nav Block styles nav bar in header
+//! NAV BLOCK styles nav bar in header
+//! (.nav)
 .nav {
     background-color: $bgBlack;
     padding: 1.5rem 0;
@@ -10,43 +11,45 @@
     border-bottom: 4px solid $red;
 }
 
-//~ NAV ELEMENTS
-//~ (.nav__element)
-.nav__item {
-    padding: 1rem 2rem;
-}
-.nav__link {
-    font-family: $headerFonts;
-    &--active,
-    &:focus,
-    &:hover {
-        color: $red;
-        border-color: $red !important;
-    } 
-}
-    //~ NAV__LINK MODIFIERS
-    //~ (.nav__link--modifier)
-    .nav__link--logo {
-        font-size: 3.0rem;
-        font-family: $logoFont;
-    }
-    .nav__link--signup {
-        font-size: 1.9rem;
-        padding: 1rem;
-        border: 1px solid white;
-        border-radius: 5px;
-    }
-    .nav__link--login {
-        font-size: 1.5rem;
+    //~ NAV ELEMENTS
+    //~ (.nav__element)
+    .nav__item {
+        padding: 1rem 2rem;
     }
 
+    .nav__link {
+        font-family: $headerFonts;
+        &--active,
+        &:focus,
+        &:hover {
+            color: $red;
+            border-color: $red !important;
+        } 
+    }
+        //~ NAV__LINK MODIFIERS
+        //~ (.nav__link--modifier)
+        .nav__link--logo {
+            font-size: 3.0rem;
+            font-family: $logoFont;
+        }
 
+        .nav__link--signup {
+            font-size: 1.9rem;
+            padding: 1rem;
+            border: 1px solid white;
+            border-radius: 5px;
+        }
 
-//~ NAV__SECTION MODIFIERS
-//~ (.nav__section--modifier)
-.nav__section--pages {
-    @extend %nav__layout;
-}
-.nav__section--user {
-    @extend %nav__layout;
-}
+        .nav__link--login {
+            font-size: 1.5rem;
+        }
+
+    //~ NAV__SECTION MODIFIERS
+    //~ (.nav__section--modifier)
+    .nav__section--pages {
+        @extend %nav__layout;
+    }
+
+    .nav__section--user {
+        @extend %nav__layout;
+    }
