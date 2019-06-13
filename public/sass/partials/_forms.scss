@@ -1,4 +1,5 @@
-//~ FORM BLOCK styles forms found on several pages
+//! FORM BLOCK styles forms found on several pages
+//! (.form)
 .form {
     display: flex;
     flex-direction: column;
@@ -63,6 +64,7 @@
         color: $red;
         margin-bottom: 2rem;
     }
+    
     .form__label--contact {
         color: white;
         font-weight: 600;
