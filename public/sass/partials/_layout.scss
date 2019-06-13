@@ -9,158 +9,174 @@ main {
     perspective: 2px;
 }
 
+//~ The Section Block styles most of the divs pertaining to layout and structure throughout the site
+.section {
+    position: relative;
+    height: auto;
+    margin-top: 4rem;
+}
+
+//~ SECTION ELEMENTS
+//~ (.section__element)
+.section__titles {
+    padding-bottom: 3rem;
+}
+
+.section__text {
+    font-family: $headerFonts;
+    color: $bgBlack;
+    font-size: 2rem;
+}
+
 .section__subtitle--hero {
     color: white;
     font-size: 4.8rem;
     margin-top: 0;
 }
 
-//* @at-root #{&} allows nesting of BEM blocks 
-
-//~ The Section Block styles most of the divs pertaining to layout and structure throughout the site
-.section {
-    position: relative;
-    height: auto;
-    margin-top: 4rem;
-
-    //~ SECTION ELEMENTS
-    //~ (.section__element)
-    @at-root #{&}__titles {
-        padding-bottom: 3rem;
-    }
-    @at-root #{&}__text {
-        font-family: $headerFonts;
-        color: $bgBlack;
-        font-size: 2rem;
-    }
-    @at-root #{&}__map {
-        text-align: center;
-        width: 100%;
-        height: 80%;
-        @at-root #{&}--events {
-            margin-bottom: 8rem;
-        }
-    }
-    @at-root #{&}__map-choose {
-        width: 100%;
-        text-align: center;
-        align-items: stretch;
-    }
-    @at-root #{&}__map-btns {
-        width: 80%;
-        align-self: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    @at-root #{&}__dev {
-        width: 45%;
-        text-align: center;
+.section__map {
+    text-align: center;
+    width: 100%;
+    height: 80%;
+}
+    //~ SECTION__MAP MODIFIERS
+    //~ (.section__map--modifier)
+    .section__map--events {
         margin-bottom: 8rem;
     }
-    @at-root #{&}__login {
-        width: 80%;
-    }
-    @at-root #{&}__portfolios {
-        justify-content: center;
-    }
-    @at-root #{&}__portfolio {
-        margin: 2rem;
-    }
-    @at-root #{&}__dev-role {
-        margin-top: 0;
-        margin-bottom: 0.5rem;
-    }
-    @at-root #{&}__anchor {
-        margin-top: 8rem;
-    }
-    @at-root #{&}__form {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        align-self: center;
-        width: 80%;
-    }
-    @at-root #{&}__dropdown {
-        padding-top: 2rem;
-        width: 100%;
-    }
-    @at-root #{&}__location {
-        width: 30%;
-        text-align: center;
-    }
-    @at-root #{&}__header {
-        color: $red;
-        opacity: 1.0;
-        font-weight: 600;
-        margin-bottom: 2rem;
-        font-size: 3rem;
-        text-decoration: underline;
 
-        //~ SECTION__HEADER MODIFIERS
-        //~ (.section__header--modifier)
-        @at-root #{&}--inactive {
-            color: $grey;
-            font-weight: 400;
-            opacity: 0.3;
-            text-decoration: none;
-        }
-        @at-root #{&}--complete {
-            text-decoration: none;
-        }
+.section__map-choose {
+    width: 100%;
+    text-align: center;
+    align-items: stretch;
+}
+
+.section__map-btns {
+    width: 80%;
+    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.section__dev {
+    width: 45%;
+    text-align: center;
+    margin-bottom: 8rem;
+}
+
+.section__login {
+    width: 80%;
+}
+
+.section__portfolios {
+    justify-content: center;
+}
+
+.section__portfolio {
+    margin: 2rem;
+}
+
+.section__dev-role {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.section__anchor {
+    margin-top: 8rem;
+}
+
+.section__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 80%;
+}
+
+.section__dropdown {
+    padding-top: 2rem;
+    width: 100%;
+}
+
+.section__location {
+    width: 30%;
+    text-align: center;
+}
+
+.section__header {
+    color: $red;
+    opacity: 1.0;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    font-size: 3rem;
+    text-decoration: underline;
+}
+    //~ SECTION__HEADER MODIFIERS
+    //~ (.section__header--modifier)
+    .section__header--inactive {
+        color: $grey;
+        font-weight: 400;
+        opacity: 0.3;
+        text-decoration: none;
     }
-    @at-root #{&}__cards {
-        // styles divs containing cards
+    .section__header--complete {
+        text-decoration: none;
+    }
+
+.section__cards {
+    // styles divs containing cards
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+    //~ SECTION__CARDS MODIFIERS
+    //~ (.section__cards--modifier)
+    .section__cards--events {
+        // this div holds event/group cards
         box-sizing: border-box;
-        width: 100%;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0 -1.5rem;
+    }
 
-        //~ SECTION__CARDS MODIFIERS
-        //~ (.section__cards--modifier)
-        @at-root #{&}--events {
-            // this div holds event/group cards
-            box-sizing: border-box;
-            justify-content: center;
-            margin: 0 -1.5rem;
-        }
-    }
-    
-    //~ SECTION MODIFIERS 
-    //~ (.section--modifier)
-    @at-root #{&}--hero {
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.3)
-        ), url("../img/photos/header-bg.jpg");
-    }
-    @at-root #{&}--bg-img-cover {
-        // styles div for bg image to fully cover from top center
-        margin-top: 0;
-        max-width: 100%;
-        background-repeat: no-repeat;
-        background-attachment: scroll;
-        background-position: top center;
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-        opacity: 1.0;
-    }
-    @at-root #{&}--contact {
-        height: 700px;
-        background-image: linear-gradient(
-            rgba(0, 0, 0, 0.6),
-            rgba(0, 0, 0, 0.2)
-        ),url("../img/photos/map-image.jpg");
-        background-position: center;
-    }
-    @at-root #{&}--height-80 {
-        height: 80%;
-    }
+//~ SECTION MODIFIERS 
+//~ (.section--modifier)
+.section--hero {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.3)
+    ), url("../img/photos/header-bg.jpg");
+}
+
+.section--bg-img-cover {
+    // styles div for bg image to fully cover from top center
+    margin-top: 0;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: top center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 1.0;
+}
+
+.section--contact {
+    height: 700px;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.6),
+        rgba(0, 0, 0, 0.2)
+    ),url("../img/photos/map-image.jpg");
+    background-position: center;
+}
+
+.section--height-80 {
+    height: 80%;
 }
 
 //~ LAYOUT SELECTORS
