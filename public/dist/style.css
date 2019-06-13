@@ -354,6 +354,7 @@ template {
   border-radius: 4px;
   box-sizing: border-box;
 }
+
 .btn--hero {
   border: 1px solid #212529;
 }
@@ -817,6 +818,7 @@ main {
   box-sizing: border-box;
   border-radius: 4px;
 }
+
 .card--about {
   box-sizing: border-box;
   text-align: center;
@@ -833,6 +835,7 @@ main {
   margin: 0 0 3rem;
   padding: 0 1.5rem;
 }
+
 .event-card__body {
   background-color: white;
   text-align: center;
@@ -856,6 +859,7 @@ main {
   opacity: 1;
   position: relative;
 }
+
 .create-card__title {
   grid-area: overlay-text;
   font-size: 3.5rem;
@@ -895,6 +899,7 @@ main {
   width: 100%;
   z-index: 10;
 }
+
 .create-card__overlay--white {
   background-color: rgba(255, 255, 255, 0.7);
   color: #212529;
@@ -910,6 +915,7 @@ main {
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 .create-card__background--bullFaint {
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9)), url("../img/icon/bull-city-white.png");
 }
@@ -947,6 +953,7 @@ main {
   background-color: #212529;
   color: white;
 }
+
 .infocard__img-div {
   width: 330px;
 }
@@ -977,6 +984,7 @@ main {
   color: inherit;
   background-color: #db0011;
 }
+
 .infocard__anchor--white {
   color: #212529;
   background-color: white;
@@ -986,6 +994,7 @@ main {
   margin: 2rem;
   color: inherit;
 }
+
 .infocard__text--rating {
   font-style: italic;
 }

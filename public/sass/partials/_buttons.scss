@@ -1,4 +1,5 @@
-//~ the Button block styles basic eventhop buttons
+//! the Button block styles basic eventhop buttons
+//! (.btn)
 .btn { 
     padding: 1.5rem;
     cursor: pointer;
@@ -14,41 +15,48 @@
     margin-right: auto;
     border-radius: 4px;
     box-sizing: border-box;
-
+}
     //~ BUTTON MODIFIERS 
     //~ (.btn--modifier)
-    @at-root #{&}--hero {
+    .btn--hero {
         border: 1px solid $bgBlack;
     }
-    @at-root #{&}--infocard {
+
+    .btn--infocard {
         grid-area: overlay-button;
         align-self: start;
         width: 60%;
         padding: 1.3rem;
         color: white;
     }
-    @at-root #{&}--chosen {
+
+    .btn--chosen {
         color: $bgBlack;
         background-color: white;
     }
-    @at-root #{&}--map {
+
+    .btn--map {
         width: 15%;
         padding: 1.3rem;
     }
-    @at-root #{&}--black {
+
+    .btn--black {
         color: $red;
         background-color: $bgBlack;
     }
-    @at-root #{&}--red {
+
+    .btn--red {
         color: white;
         background-color: $red;
     }
-    @at-root #{&}--submit {
+
+    .btn--submit {
         &:focus {
             border: 2px solid black;
         }
     }
-    @at-root #{&}--contact {
+
+    .btn--contact {
         border-radius: 4px;
         padding: 1.6rem;
         width: 25%;
@@ -56,8 +64,10 @@
         background-color: $red;
         color: black;
     }
-}
 
+
+//! Anchor Block styling
+//! (.anchor)
 .anchor--portfolio {
     width: 40px;
     height: 40px;

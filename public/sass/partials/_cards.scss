@@ -1,12 +1,13 @@
-//~ The Card block styles basic cards such as the about cards on the main page
+//! The Card block styles basic cards such as the about cards on the main page
+//! (.card)
 .card {
     max-width: 33.333333%;
     box-sizing: border-box;
     border-radius: 4px;
-
+}
     //~ CARD MODIFIERS
     //~ (.card--modifier)
-    @at-root #{&}--about {
+    .card--about {
         box-sizing: border-box;
         text-align: center;
         position: relative;
@@ -15,32 +16,36 @@
         max-width: 33.333333%;
         float: left;
     }
-}
 
-//~ the Event Card block styles the event/group cards used on the main page and events page
+
+//! the Event Card block styles the event/group cards used on the main page and events page
+//! (.event-card)
 .event-card {
     box-sizing: border-box;
     flex: 0 0 33.333333%;
     margin: 0 0 3rem;
     padding: 0 1.5rem;
-
+}
     //~ EVENT CARD ELEMENTS
     //~ (.event-card__element)
-    @at-root #{&}__body {
+    .event-card__body {
         background-color: white;
         text-align: center;
     }
-    @at-root #{&}__title {
+
+    .event-card__title {
         margin-top: 0;
         padding-top: 1.5rem;
     }
-    @at-root #{&}__subtitle {
+
+    .event-card__subtitle {
         padding-bottom: 1.5rem;
     }
-}
 
 
-//~ the Create Card block styles the 'choose location'/'chosen summary' cards at the top of create page
+
+//! the Create Card block styles the 'choose location'/'chosen summary' cards at the top of create page
+//! (.create-card)
 .create-card {
     @include box-shadow($cardShadow);
     @extend %flex__center;
@@ -48,30 +53,33 @@
     flex-direction: column;
     opacity: 1.0;
     position: relative;
-    
-
+}
     //~ CREATE CARD ELEMENTS 
     //~ (.create-card__element)
-    @at-root #{&}__title {
+    .create-card__title {
         grid-area: overlay-text;
         font-size: 3.5rem;
         margin: 2rem;
         color: inherit;
     }
-    @at-root #{&}__text {
+
+    .create-card__text {
         color: inherit;
         font-family: $headerFonts;
         margin: 2rem;
         font-size: 2rem;
     }
-    @at-root #{&}__info {
+
+    .create-card__info {
         grid-area: overlay-info;
         align-self: start;
     }
-    @at-root #{&}__stars {
+
+    .create-card__stars {
         margin-top: 1rem;
     }
-    @at-root #{&}__overlay {
+
+    .create-card__overlay {
         border-radius: 4px;
         position: absolute;
         color: white;
@@ -88,51 +96,55 @@
         height: 100%;
         width: 100%;
         z-index: 10;
-
+    }
         //~ CREATE-CARD__OVERLAY MODIFIERS
         //~ (.create-card__overlay--modifier)
-        @at-root #{&}--white {
+        .create-card__overlay--white {
             background-color: $rgbaWhiteSeven;
             color: $bgBlack;
         }
-        @at-root #{&}--black {
+
+        .create-card__overlay--black {
             background-color: $rgbaBlackNine;
         }
-    }
-    //~ background image stylings for 'choose location' event-cards
-    @at-root #{&}__background {
+
+    // background image stylings for 'choose location' create-cards
+    .create-card__background {
         background-image: $bull;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
-
+    }
         //~ CREATE-CARD__BACKGROUND MODIFIERS 
         //~ (.create-card__background--modifier)
-        @at-root #{&}--bullFaint {
+        .create-card__background--bullFaint {
             background-image: $bullFaint;
         }
-        @at-root #{&}--shop {
+
+        .create-card__background--shop {
             background-image: $shop;
         }
-        @at-root #{&}--shopFaint {
+
+        .create-card__background--shopFaint {
             background-image: $shopFaint;
         }
-        @at-root #{&}--bullLocal {
+
+        .create-card__background--bullLocal {
             background-image: $bullLocal;
         }
-        @at-root #{&}--bullLocalFaint {
+
+        .create-card__background--bullLocalFaint {
             background-image: $bullLocalFaint;
         }
-    }
 
     //~ CREATE-CARD MODIFIERS
     //~ (.create-card--modifier)
-    @at-root #{&}--inactive {
+    .create-card--inactive {
         opacity: 0.5;
     }
-}
 
-//~ The Infocard block styles the infocards for each location, which are dynamically generated using info from Google Maps API
+//! The Infocard block styles the infocards for each location, which are dynamically generated using info from Google Maps API
+//! (.infocard)
 .infocard {
     margin: 2rem 0;
     display: flex;
@@ -143,27 +155,31 @@
     height: auto;
     background-color: $rgbaBlack;
     color: white;
-
+}
     //~ INFOCARD ELEMENTS
     //~ (.infocard__element)
-    @at-root #{&}__img-div {
+    .infocard__img-div {
         width: 330px;
     }
-    @at-root #{&}__body {
+
+    .infocard__body {
         width: 664.5px;
         font-family: $headerFonts;
         font-size: 2rem;
         margin: 0;
     }
-    @at-root #{&}__title {
+
+    .infocard__title {
         margin: 2.5rem;
         color: inherit;
     }
-    @at-root #{&}__footer {
+
+    .infocard__footer {
         height: 6rem;
         text-align: center;
     }
-    @at-root #{&}__anchor {
+
+    .infocard__anchor {
         font-weight: 600;
         font-size: 2.5rem;
         padding: 0.8rem;
@@ -171,38 +187,38 @@
         border-radius: 4px;
         color: inherit;
         background-color: $red;
-
+    }
         //~ INFOCARD__ANCHOR MODIFIERS
         //~ (.infocard__anchor--modifier)
-        @at-root #{&}--white {
+        .infocard__anchor--white {
             color: $bgBlack;
             background-color: white;
         }
-    }
-    @at-root #{&}__text {
+
+    .infocard__text {
         margin: 2rem;
         color: inherit;
-
+    }
         //~ INFOCARD__TEXT MODIFIERS
         //~ (.infocard__text--modifier)
-        @at-root #{&}--rating {
+        .infocard__text--rating {
             font-style: italic;
         }
-        @at-root #{&}--address {
+
+        .infocard__text--address {
             margin-bottom: 0;
         }
-        @at-root #{&}--phone {
+
+        .infocard__text--phone {
             margin-top: 0;
             margin-bottom: 2rem;
         }
-    }
 
     //~ INFOCARD MODIFIERS
     //~ (.infocard--modifier)
-    @at-root #{&}--red {
+    .infocard--red {
         background-color: $rgbaRedEight;
     }
-}
 
 // Styles the review stars on the infocards
 .stars {
