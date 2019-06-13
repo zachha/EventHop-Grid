@@ -14,7 +14,7 @@ main {
 .section {
     position: relative;
     height: auto;
-    margin-top: 4rem;
+    padding: 5rem 0;
 }
 
     //~ SECTION ELEMENTS
@@ -166,6 +166,14 @@ main {
         -o-background-size: cover;
         background-size: cover;
         opacity: 1.0;
+    }
+
+    .section--main-create {
+        background-image: linear-gradient(
+            rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.6)
+        ),url("../img/photos/para1.jpeg");
+        background-position: bottom;
     }
 
     .section--contact {
