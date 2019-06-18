@@ -1,3 +1,49 @@
 [
-    {"name": "andy james", "created_time": "date", "email": "andy@email.com", "groups_created": "groups created", "groups_joined": "groups joined", "friends": "friends list" }
+    {
+        "name": "Andy James",
+        "created_time": "date",
+        "email": "andy@email.com",
+        "groups_created": "groups created",
+        "groups_joined": "groups joined",
+        "friends": "friends list"
+    },
+    {
+        "name": "Jesse Stevens",
+        "created_time": "date",
+        "email": "jesse@email.com",
+        "groups_created": "groups created",
+        "groups_joined": "groups joined",
+        "friends": "friends list"
+    },
+    {
+        "name": "Hunter Long",
+        "created_time": "date",
+        "email": "hunter@email.com",
+        "groups_created": "groups created",
+        "groups_joined": "groups joined",
+        "friends": "friends list"
+    },
+    {
+        "name": "Pam Kai",
+        "created_time": "date",
+        "email": "pam@email.com",
+        "groups_created": "groups created",
+        "groups_joined": "groups joined",
+        "friends": "friends list"
+    },
+    {
+        "name": "Charles Monger",
+        "created_time": "date",
+        "email": "charles@email.com",
+        "groups_created": "groups created",
+        "groups_joined": "groups joined",
+        "friends": "friends list"
+    },{
+        "name": "Kaitlyn Smith",
+        "created_time": "date",
+        "email": "kaitlyn@email.com",
+        "groups_created": "groups created",
+        "groups_joined": "groups joined",
+        "friends": "friends list"
+    }
 ]
