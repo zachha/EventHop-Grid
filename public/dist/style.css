@@ -641,6 +641,19 @@ main {
   margin: 2rem;
 }
 
+.section__sponsored {
+  box-sizing: border-box;
+}
+
+.section__image {
+  width: 40%;
+}
+
+.section__description {
+  width: 60%;
+  margin: 0 4rem;
+}
+
 .section__dev-role {
   margin-top: 0;
   margin-bottom: 0.5rem;
@@ -830,6 +843,10 @@ main {
 .img__infocard {
   border-radius: 4px;
   margin: 0 3rem;
+}
+
+.img__sponsored {
+  height: 70%;
 }
 
 .card {
