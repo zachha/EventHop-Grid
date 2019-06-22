@@ -8,7 +8,7 @@ mixin sponsored()
                 .section__image
                     img.img.img__sponsored.h-img-fluid(src=`/img/photos/${event.event_image}`)
                 .section__description
-                    p.section__text.h-center-text= event.event_description
+                    p.section__text= event.event_description
             .section__map.section__map--events
                 h2 Event Route
                 #map.map--events
