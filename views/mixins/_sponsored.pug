@@ -9,6 +9,8 @@ mixin sponsored()
                     img.img.img__sponsored.h-img-fluid(src=`/img/photos/${event.event_image}`)
                 .section__description
                     p.section__text= event.event_description
+            .section__members.lflex-row.l-container
+                
             .section__map.section__map--events
                 h2 Event Route
                 #map.map--events
